@@ -1,0 +1,40 @@
+body {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 50px);
+    height: -webkit-fill-available;
+}
+
+header {
+    background: #6769E0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: -webkit-fill-available;
+    width: 49px;
+    color: white;
+    font-family: arial;
+    border-right: 2px black solid;
+}
+
+webview {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 50px);
+    height: -webkit-fill-available;
+}
+
+.nav {
+    display: grid;
+}
+.nav a {
+    text-decoration: none;
+    background: #6769E0;
+    color: white;
+    padding: 16px 15px 30px 16px;
+    margin-bottom: 1px;
+    margin: 3px 3px;
+    border-radius: 5px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "FalixNodes",
+  "version": "2.0.0",
+  "description": "A quicker access to your servers!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "KorbsStudio",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.5"
+  }
+}

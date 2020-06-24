@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+webview {
+  z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: -webkit-fill-available;
+    height: calc(100% - 33px);
+}
+
+.splashy h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.splashy {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: #6769E0;
+    z-index: 10;
+    color: white;
+    opacity: 0;
+    cursor: default;
+    animation: 1.73s splashy ease;
+    pointer-events: none;
+}
+
+@keyframes splashy {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+button#verify {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: white;
+    background: linear-gradient(45deg, #61d87a, #7aa54f);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.37);
+}
+
+.sidebar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: #1F1F1F;
+    width: 200px;
+    height: calc(100% - 28px);
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+.sidebar a {
+    display: grid;
+    color: white;
+    background: transparent;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background: #292929;
+    box-shadow: 15px 0px #292929;
+}
+
+.HelpBody {
+    background: #292929;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: calc(100% - 200px);
+    padding: 60px;
+    height: calc(100% - 28px);
+}
+
+#Home {background-color: #415CF3;}
+#ControlPanel {background-color: #6769E0;}
+#Status {background-color: #26303F;}
+#About {background-color: #6769E0;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#415CF3')">FalixNodes</button>
+<button class="tablink" onclick="openPage('ControlPanel', this, '#6769E0')" id="defaultOpen">Control Panel</button>
+<button class="tablink" onclick="openPage('Status', this, '#26303F')">Status</button>
+<button class="tablink" onclick="openPage('About', this, '#6769E0')">Help</button>
+
+<div class="splashy">
+  <h1>FalixNodes</h1>
+</div>
+
+<div id="Home" class="tabcontent">
+  <webview id="falixnodes" src="https://client.FalixNodes.net"></webview>
+</div>
+
+<div id="ControlPanel" class="tabcontent">
+  <webview src="https://gp.FalixNodes.net"  allowpopups></webview>
+</div>
+
+<div id="Status" class="tabcontent">
+  <webview src="https://status.FalixNodes.net"></webview>
+</div>
+
+<div id="About" class="tabcontent">
+  <div class="sidebar">
+    <a href="#">About</a>
+    <a href="#">Updates</a>
+    <a href="#">This and that</a>
+    <a href="#">FAQ</a>
+    <a href="#">More of this</a>
+  </div>
+  <div class="HelpBody">
+    <h3>About</h3>
+    <p>v2.0 Beta</p>
+    <p style="width: 500px">This software was built to be used used with the Pterodactyl software, so it's meant for be used for the Minecraft servers of FalixNodes. Overtime the software will be updated to have quicker access to web hosting and have more information helping with Discord bot hosting.</p>
+    <button id="verify"> ✓ Verified by FalixNodes</button>
+  </div>
+
+</div>
+
+<script>
+  var webview = document.getElementById('falixnodes');
+  webview.addEventListener('dom-ready', function () {
+  webview.insertCSS("body{background:#292929!important}.main-panel{background-color:#292929!important}.navbar.navbar-transparent{border-bottom:none!important}.navbar.navbar-transparent a:not(.dropdown-item):not(.btn){color:#fff!important}.card-body{background:#1f1f1f!important;color:#fff!important;border-radius:8px!important}.card-footer{display:none!important}.card-header{background:#1f1f1f!important;color:#fff!important}.card{background:#1f1f1f!important}td{color:#fff!important}.off-canvas-sidebar[data-color=white]:after,.sidebar[data-color=white]:after{background:#1f1f1f!important}.off-canvas-sidebar,.sidebar{border-right:1px solid #34ce98!important}p{color:#fff!important}.off-canvas-sidebar[data-color=white] .nav li a,.off-canvas-sidebar[data-color=white] .nav li a i,.off-canvas-sidebar[data-color=white] .nav li a[data-toggle=collapse],.off-canvas-sidebar[data-color=white] .nav li a[data-toggle=collapse] i,.off-canvas-sidebar[data-color=white] .nav li a[data-toggle=collapse]~div>ul>li .sidebar-mini-icon,.off-canvas-sidebar[data-color=white] .nav li a[data-toggle=collapse]~div>ul>li>a,.sidebar[data-color=white] .nav li a,.sidebar[data-color=white] .nav li a i,.sidebar[data-color=white] .nav li a[data-toggle=collapse],.sidebar[data-color=white] .nav li a[data-toggle=collapse] i,.sidebar[data-color=white] .nav li a[data-toggle=collapse]~div>ul>li .sidebar-mini-icon,.sidebar[data-color=white] .nav li a[data-toggle=collapse]~div>ul>li>a{color:#fff!important;opacity:1!important}.modal-content{background:#1f1f1f!important}div#changecpu{backdrop-filter:blur(10px)!important}.modal-footer{border:none!important}.modal-header{border:none!important}div#changedisk{backdrop-filter:blur(10px)!important}a{color:#fff!important}.modal-body{color:#fff!important}h4.modal-title{color:#fff!important}")
+});
+</script>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+<script>
+	document.addEventListener("keydown", function (e) {
+		if (e.which === 123) {
+			require('remote').getCurrentWindow().toggleDevTools();
+		} else if (e.which === 116) {
+			location.reload();
+		}
+	});
+</script>
+</body>
+</html> 
