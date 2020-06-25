@@ -9,6 +9,9 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1300,
     height: 800,
+    minWidth: 1000,
+    minHeight: 460,
+    darkTheme: true,
     autoHideMenuBar: true,
     icon: path.join(__dirname, './icon.png'),
     webPreferences: {
@@ -19,6 +22,7 @@ function createWindow () {
       navigateOnDragDrop: true,
       spellcheck: true,
       experimentalFeatures: true,
+      autoplayPolicy: true,
     }
   })
 
@@ -226,8 +230,10 @@ var contextMenu = Menu.buildFromTemplate([
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 }
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -257,4 +263,11 @@ app.on('web-contents-created', function (webContentsCreatedEvent, contents) {
       newWindowEvent.preventDefault();
     });
   }
+});
+
+myWindow.webContents.session.webRequest.onHeadersReceived({}, (details, callback) => {
+  if(details.responseHeaders['x-frame-options']) {
+      delete details.responseHeaders['x-frame-options'];
+  }
+  callback({ cancel: false, responseHeaders: details.responseHeaders });
 });

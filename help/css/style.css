@@ -1,48 +1,42 @@
 * {box-sizing: border-box}
-
+::-webkit-scrollbar-thumb{background-color:#6b6b6b!important}
 body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-  overflow: hidden;
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    background: #1F1F1F;
+    right: 0px;
+    position: absolute;
+    width: calc(100% - 120px);
 }
 
 .tabs {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: -webkit-fill-available;
-    height: 33px;
+    width: 200px;
+    height: -webkit-fill-available;
     background: #353535;
     cursor: default;
     z-index: 10;
+    display: inline-block;
 }
 button.tablink:hover {
     background: rgba(31, 31, 31, 0.8);
     transition: background 0.3s;
 }
 button.tablink {
-    background: transparent;
-    color: white;
-    border: none;
-    padding: 6.9px 20px;
-    border-radius: 7px 7px 0px 0px;
-    margin-top: 4px;
-    transition: background 0.3s;
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 6.9px 20px;
+  transition: background 0.3s;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
 }
 button.tablink:focus {
     outline: none; /* Get of a rid of ugly yellow border when selecting a tab */
-}
-
-.tabs::before {
-    content: "";
-    position: fixed;
-    top: 33px;
-    left: 0px;
-    width: -webkit-fill-available;
-    background: #1F1F1F;
-    height: 4px;
-    z-index: 5;
 }
 
 webview {
@@ -88,24 +82,35 @@ webview {
   }
 }
 
-#Client {background-color: #415CF3;}
-#ControlPanel {background-color: #6769E0;}
-#Status {background-color: #57B470 !important;}
-#About {background-color: #6769E0;}
-
 button#Primary {
   margin-left: 8px;
 }
 
-.inBody {
-  position: absolute;
-  top: 37px;
-  left: 0px;
-  width: -webkit-fill-available;
-  background: #1F1F1F;
+button#verify {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 7px;
   color: white;
-  height: -webkit-fill-available;
-  z-index: 2;
+  background: linear-gradient(45deg, #61d87a, #7aa54f);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.37);
+}
+button#verify:active {
+  outline: none;
+}
+
+.inBody {
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    width: -webkit-fill-available;
+    background: #1F1F1F;
+    color: white;
+    height: fit-content;
+    z-index: 2;
+}
+
+.inBody p {
+  width: calc(100% - 340px);
 }
 
 .leftSide {
@@ -142,4 +147,49 @@ p#version {
   margin: 5px 0px;
   border-radius: 5px;
   text-decoration: none;
+}
+
+.rightSidebar {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    width: 250px;
+}
+.rightSidebar .box h1 {
+    background: #3d3d3d;
+    margin: -1px -20px 0px -20px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 6px 20px;
+    font-size: 26px;
+}
+.rightSidebar .box {
+    background: #353535;
+    padding: 1px 20px;
+    border-radius: 10px;
+}
+
+.rightSidebar p {
+  width: 100% !important;
+}
+
+a#buttonWithIcon img {
+  position: absolute;
+  margin-top: -8px;
+  margin-left: -44px;
+}
+a#buttonWithIcon {
+  background: black;
+  border-radius: 10px;
+  padding: 15px 20px 15px 60px;
+  text-decoration: none;
+  color: white;
+}
+
+.videoGrid iframe {
+  margin-bottom: 15px;
+}
+.videoGrid {
+  background: #2b2b2b;
+  padding: 10px;
+  display: inline-grid;
 }
