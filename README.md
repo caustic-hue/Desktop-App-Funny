@@ -27,3 +27,4 @@ npm start
 - [ ] Replace videos in Help page with content from *official* YouTube channel
 - [ ] Finish dark mode for Control Panel
 - [ ] Finish Help page
+- [ ] Seperate Help page from app, allowing it be updated without updating the app
