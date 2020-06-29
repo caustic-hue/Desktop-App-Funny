@@ -4,8 +4,12 @@ A quick access to your servers!
 ![image](https://imgur.com/TFPV1ni.png)
 
 # Install
-You'll be required to [Git] and [Node] in order to install FalixNodes during it's beta stages.
-Once all requirements are installed, on Windows open powershell or if you're on macOS or Linux then open your terminal.
+## Windows
+To install FalixNodes on your Windows operating system, click [here](https://github.com/FalixNodes-Software/FalixNodes-Software/releases/download/v2.0.0-Beta-2/FalixNodes-Setup.zip) to download the setup file.
+
+# macOS or Linux
+Install [Git](https://git-scm.com/downloads) and [Node 14](https://nodejs.org/en/download/current/)
+Once all requirements are installed, open the terminal.
 
 Type in the following commands:
 ```
