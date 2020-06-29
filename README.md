@@ -7,7 +7,7 @@ A quick access to your servers!
 ## Windows
 To install FalixNodes on your Windows operating system, click [here](https://github.com/FalixNodes-Software/FalixNodes-Software/releases/download/v2.0.0-Beta-2/FalixNodes-Setup.zip) to download the setup file.
 
-# macOS or Linux
+## macOS or Linux
 Install [Git](https://git-scm.com/downloads) and [Node 14](https://nodejs.org/en/download/current/)
 Once all requirements are installed, open the terminal.
 
