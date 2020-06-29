@@ -17,3 +17,7 @@ Then to run it, use this command:
 ```
 npm start
 ```
+
+## To Do List
+- [ ] Change install folder to "FalixNodes" instead of "Korbs Studio"
+- [ ] Replace videos in Help page with content from *official* YouTube channel
