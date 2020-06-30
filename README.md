@@ -22,6 +22,10 @@ Then to run it, use this command:
 npm start
 ```
 
+## Known Bugs
+ - When minimizing the window on Linux, the app closes. (Linux/Pantheon Desktop)
+ - The setup file for Windows doesn't add FalixNodes shortcut to user's start menu. (Windows)
+
 ## To Do List
 - [ ] Change install folder to "FalixNodes" instead of "Korbs Studio"
 - [ ] Replace videos in Help page with content from *official* YouTube channel
