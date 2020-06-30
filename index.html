@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/76c26bec94.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -12,6 +13,7 @@
   <button class="tablink" onclick="openPage('ControlPanel', this, '#1F1F1F')" id="defaultOpen">Control Panel</button>
   <button class="tablink" onclick="openPage('Status', this, '#1F1F1F')">Status</button>
   <button class="tablink" onclick="openPage('About', this, '#1F1F1F')">Help</button>
+  <button style="position: absolute; right: 10px;" class="tablink" onclick="openPage('Coins', this, '#1F1F1F')"><i class="fas fa-coins"></i></button>
 </div>
 
 <div class="splashy">
@@ -23,7 +25,7 @@
     <div style="pointer-events: none;" class="leftSide">
       <h1>FalixNodes</h1>
       <p>A quick access to your servers!</p>
-      <p id="version">v2.0 Beta 2</p>
+      <p id="version">v2.0 Beta 3</p>
     </div>
   </div>
 </div>
@@ -41,7 +43,11 @@
 </div>
 
 <div id="About" class="tabcontent">
-  <webview src="./help/about.html" allowpopups></webview>
+  <webview src="https://FalixNodes.KorbsStudio.com/help/" allowpopups></webview>
+</div>
+
+<div id="Coins" class="tabcontent">
+  <webview style="filter: invert(1); background: gainsboro;" src="https://client.falixnodes.net/earn/arc"></webview>
 </div>
 
 <script>
