@@ -4,8 +4,13 @@ A quick access to your servers!
 
 ![image](https://software.falixnodes.xyz/src/images/preview.png)
 
-# Downloads
+# Download
 You can download the software at https://software.falixnodes.xyz/
+
+# Features
+ - Dark mode for Client and Panel
+ - Built in help page
+ - Seperate coins tab(logging in each required)
 
 # Building
 
