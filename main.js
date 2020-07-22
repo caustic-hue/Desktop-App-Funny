@@ -15,7 +15,7 @@ function createWindow () {
     autoHideMenuBar: true,
     icon: path.join(__dirname, './icon.png'),
     webPreferences: {
-      devTools: true,
+      devTools: false,
       preload: path.join(__dirname, 'preload.js'),
       webviewTag: true,
       safeDialogsMessage: true,
@@ -51,7 +51,7 @@ var contextMenu = Menu.buildFromTemplate([
       label: 'FalixNodes',
       submenu: [
         {
-          label: 'Version 2.0 Beta',
+          label: 'Version 2.0',
         }
       ]
     },
@@ -137,8 +137,19 @@ var contextMenu = Menu.buildFromTemplate([
           type: 'separator'
         },
         {
+          label: 'FAQ',
+          click () { require('electron').shell.openExternal('https://software.falixnodes.xyz/faq/') }
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: 'Check for Updates',
+          click () { require('electron').shell.openExternal('https://github.com/FalixNodes-Software/FalixNodes-Software/releases') }
+        },
+        {
           label: 'Report Issue',
-          click () { require('electron').shell.openExternal('https://Twitter.com/KorbsStudio') }
+          click () { require('electron').shell.openExternal('https://github.com/FalixNodes-Software/FalixNodes-Software/issues') }
         },
       ]
     }
@@ -229,8 +240,8 @@ var contextMenu = Menu.buildFromTemplate([
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+   // Open the DevTools.
+   // mainWindow.webContents.openDevTools()
 }
 
 
@@ -264,4 +275,3 @@ app.on('web-contents-created', function (webContentsCreatedEvent, contents) {
     });
   }
 });
-
