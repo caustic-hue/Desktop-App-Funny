@@ -5,6 +5,7 @@ body, html {
   margin: 0;
   font-family: Arial;
   overflow: hidden;
+  background: #1F1F1F;
 }
 
 .tabs {
@@ -108,6 +109,16 @@ button#Primary {
   z-index: 2;
 }
 
+a#UpdateButton {
+  background: #585858;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  margin: 0px -6px 0px 10px;
+}
+
 .leftSide {
   position: absolute;
   top: 50%;
@@ -115,6 +126,7 @@ button#Primary {
   transform: translate(0px, -50%);
   width: 50%;
   padding: 0px 100px;
+  cursor: default;
 }
 .rightSide {
   position: absolute;
@@ -130,7 +142,6 @@ p#version {
   width: fit-content;
   padding: 6px;
   border-radius: 5px;
-  pointer-events: none;
 }
 
 .rightSide a {
