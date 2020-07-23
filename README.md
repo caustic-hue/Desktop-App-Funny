@@ -31,5 +31,5 @@ npm start
 ```
 Use the build command will package the software for Windows, macOS, and Linux, using this command:
 ```
-npm build
+npm run build
 ```
