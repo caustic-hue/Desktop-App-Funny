@@ -1,5 +1,5 @@
 This has been verified by __Pamar__
-# FalixNodes
+# FalixNodes Desktop App
 A quick access to your servers!
 
 ![image](https://software.falixnodes.xyz/src/images/preview.png)
