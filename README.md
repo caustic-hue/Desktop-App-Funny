@@ -21,15 +21,11 @@ You can download the software at https://software.falixnodes.xyz/
 
 ## Building
 ```
-git clone https://github.com/FalixNodes-Software/FalixNodes-Software
-cd FalixNodes-Software
+git clone https://github.com/FalixNodes-Software/Desktop-App
+cd Desktop-App
 npm i
 ```
 To start the software in development mode, use:
 ```
 npm start
-```
-Use the build command will package the software for Windows, macOS, and Linux, using this command:
-```
-npm run build
 ```
