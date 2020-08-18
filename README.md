@@ -1,4 +1,4 @@
-This has been verified by __Pamar__
+This has been verified by owner of FalixNodes
 # FalixNodes Desktop App
 A quick access to your servers!
 
@@ -10,7 +10,7 @@ You can download the software at https://software.falixnodes.xyz/
 # Features
  - Dark mode for Client and Panel
  - Built in help page
- - Seperate coins tab(logging in each required)
+ - Seperate coins tab
 
 # Building
 
