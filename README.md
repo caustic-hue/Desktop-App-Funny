@@ -14,7 +14,7 @@ You can download the software at https://software.falixnodes.xyz/
 
 # Building
 
-The applications embeds a website from a web server. The website uses elements `<webview>` which is not possible to use a normal web browser.
+The application embeds a website from a web server. The website uses elements `<webview>` which is not possible to use a normal web browser.
 ## Requirements
 [Git](https://git-scm.com/downloads)
 
