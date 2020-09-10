@@ -2,7 +2,7 @@ This has been verified by owner of FalixNodes
 # FalixNodes Desktop App
 A quick access to your servers!
 
-![image](https://software.falixnodes.xyz/src/images/preview.png)
+![image](https://software.falixnodes.net/src/images/preview.png)
 
 # Download
 You can download the software at https://software.falixnodes.xyz/
