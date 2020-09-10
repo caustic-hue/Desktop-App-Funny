@@ -1,4 +1,3 @@
-This has been verified by owner of FalixNodes
 # FalixNodes Desktop App
 A quick access to your servers!
 
