@@ -1,35 +1,31 @@
-This has been verified by __Pamar__
+> You're currently viewing the README file for v2.20, which is not out yet. v2.20 is planned to be released on __December 1st__.
 # FalixNodes
-A quick access to your servers!
+![image](https://i.imgur.com/nHUmzBG.png)
+The FalixNodes application was built for users to have a quicker access to their FalixNodes client, panel, servers, and VPS(s) all through one place. We also include our help center in there if needed.
 
-![image](https://software.falixnodes.xyz/src/images/preview.png)
-
-# Download
-You can download the software at https://software.falixnodes.xyz/
-
-# Features
- - Dark mode for Client and Panel
- - Built in help page
- - Seperate coins tab(logging in each required)
-
-# Building
-
-## Requirements
+### Requirements
 [Git](https://git-scm.com/downloads)
 
 [Node](https://nodejs.org/en/download/)(v12 or up)
 
-## Building
+### Building
+Clone project:
 ```
-git clone https://github.com/FalixNodes-Software/FalixNodes-Software
-cd FalixNodes-Software
-npm i
+git clone https://github.com/FalixNodes-Software/Desktop-App
 ```
-To start the software in development mode, use:
+Change directory:
 ```
-npm start
+cd Desktop-App
 ```
-Use the build command will package the software for Windows, macOS, and Linux, using this command:
+Install packages:
+```
+npm install electron@9.0.5
+npm install electron-builder
+```
+*Electron 9.0.5 is recommended for FalixNodes Software, as certain things broke in newer versions*
+
+Run Build command:
 ```
 npm run build
 ```
+When building, it will build a setup for your operating, so if you're on Windows, it will create a EXE file; or if you're on Linux, it will create an AppImage and a Snap file; or if you're on macOS, it will create a DMG file.
