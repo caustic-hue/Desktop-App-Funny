@@ -28,4 +28,36 @@ Run Build command:
 ```
 npm run build
 ```
-When building, it will build a setup for your operating, so if you're on Windows, it will create a EXE file; or if you're on Linux, it will create an AppImage and a Snap file; or if you're on macOS, it will create a DMG file.
+When building, it will build a setup file for your operating system, so if you're on Windows, it will create a EXE file; or if you're on Linux, it will create an AppImage and a Snap file; or if you're on macOS, it will create a DMG file.
+
+### Setting up Auto Update
+If you're forking the project and want to create something similar, but also want auto updating, here's how. Electron Builder is required for this, which is why it's used in v2.20 of FalixNodes Software. From personal experience, this appears to mostly work on Windows only.
+
+There are some requirements in this:
+ - A [GitHub token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+ - [`electron-builder`](https://www.npmjs.com/package/electron-builder) package
+ 
+ You need to change a few things in `package.json` so that Electron Builder knows where to publish updates, we recommend GitHub as provider.
+ What you need to change, is the build area of the `package.json` file, example:
+ ```
+   "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "UsernameOrOrangization",
+        "repo": "repo-name",
+        "token": "GITHUBTOKEN"
+      }
+    ]
+  }
+  ```
+ 
+ GitHub token is required so that Electron Builder has permission to create new releases in the repo.
+ 
+ Once you're ready to publish an update, make the version number in `package.json` has been raised to a newer number. Then run the publish command:
+ ```
+ npm run publish
+ ```
+ When running the publish command, Electron Builder will start building setup files for your operating system, create a new release under the name of the version number(x.x.x), and then upload setup files to the new release. By default, Electron Builder will create a new release as a draft, giving you time to add a changelog and such to the release. You'll need to set it to publish and you're done!
+ 
+ Once the release is set to publish on GitHub, the app will detect it, starting downloading, then install it.
