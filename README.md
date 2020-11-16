@@ -1,3 +1,5 @@
+Beta branch has opened: https://github.com/FalixNodes-Software/Desktop-App/tree/beta
+
 # FalixNodes
 A quick access to your servers!
 
