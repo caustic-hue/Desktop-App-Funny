@@ -1,4 +1,3 @@
-This has been verified by __Pamar__
 # FalixNodes
 A quick access to your servers!
 
