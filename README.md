@@ -1,4 +1,4 @@
-Beta branch has opened: https://github.com/FalixNodes-Software/Desktop-App/tree/beta
+Beta has opened: https://github.com/FalixNodes-Software/Desktop-App-Beta
 
 # FalixNodes
 A quick access to your servers!
