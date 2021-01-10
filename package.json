@@ -1,18 +1,58 @@
 {
-  "name": "FalixNodes",
-  "version": "2.0.0",
-  "description": "A quicker access to your servers!",
+  "name": "falixnodes",
+  "version": "2.2.3",
   "main": "main.js",
+  "description": "A quick access to your servers",
+  "author": "Korbs Studio",
+  "email": "admin@korbsstudio.com",
   "scripts": {
+    "publish": "electron-builder --publish=always",
+    "build": "electron-builder build",
+    "build1": "electron-builder build --mac",
     "start": "electron ."
   },
-  "author": "KorbsStudio",
-  "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.5",
-    "lodash": "4.17.19"
+    "electron-builder": "^20.44.4"
   },
   "dependencies": {
-    "electron-packager": "^15.0.0"
+    "electron-log": "^1.3.0",
+    "electron-process-manager": "^1.0.0",
+    "electron-updater": "^4.0.6",
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "FalixNodes-Software",
+        "repo": "Desktop-App-Beta",
+        "releaseType": "release",
+        "token": ""
+      }
+    ],
+    "win": {
+      "asar": true,
+      "target": "nsis",
+      "icon": "src/img/icons/app/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/img/icons/app/icon.icns"
+    },
+    "linux": {
+      "target": "snap",
+      "icon": "src/img/icons/app/splash.png",
+      "maintainer": "package.korbsstudio.falixnodes",
+      "synopsis": "A quick access to your servers.",
+      "category": "Network",
+      "vendor": "Korbs Studio"
+    },
+    "nsis": {
+      "installerIcon": "src/img/icons/app/icon.ico",
+      "installerHeaderIcon": "src/img/app/icons/splash.png",
+      "deleteAppDataOnUninstall": true,
+      "shortcutName": "FalixNodes Software"
+    }
   }
 }

@@ -1,240 +1,69 @@
-const {app, BrowserWindow, Menu} = require('electron')
-const path = require('path')
-const electron = require('electron')
-const ipc = require('electron').ipcRenderer
+const {app, BrowserWindow, Menu, protocol, ipcMain} = require('electron');
+const log = require('electron-log');
+const {autoUpdater} = require("electron-updater");
+const { truncate } = require('fs');
+const isMac = process.platform === 'darwin';
+var path = require('path');
 
-function createWindow () {
-  const mainWindow = new BrowserWindow({
-    width: 1300,
-    height: 800,
-    minWidth: 1000,
-    minHeight: 460,
-    darkTheme: true,
-    autoHideMenuBar: true,
-    icon: path.join(__dirname, './Icon.png'),
-    webPreferences: {
-      devTools: true,
-      preload: path.join(__dirname, 'preload.js'),
-      webviewTag: true,
-      safeDialogsMessage: true,
-      navigateOnDragDrop: true,
-      spellcheck: true,
-      experimentalFeatures: true,
-      autoplayPolicy: true,
-    }
-  })
+autoUpdater.logger = log;
+autoUpdater.logger.transports.file.level = 'info';
+let win;
 
-var contextMenu = Menu.buildFromTemplate([
-  { label: 'Show App', click:  function(){
-      mainWindow.show();
-  } },
-  { label: 'Quit', click:  function(){
-      application.isQuiting = true;
-      application.quit();
-  } }
-]);
-
-  
-  const template = [
-    {
-      label: 'About',
-      submenu: [
-        {
-          label: 'Version 2.1',
-        }
-      ]
-    },
-    {
-      label: 'Edit',
-      submenu: [
-        {
-          role: 'undo'
-        },
-        {
-          role: 'redo'
-        },
-        {
-          type: 'separator'
-        },
-        {
-          role: 'cut'
-        },
-        {
-          role: 'copy'
-        },
-        {
-          role: 'paste'
-        },
-        {
-          role: 'delete'
-        },
-        {
-          role: 'selectall'
-        }
-      ]
-    },
-    {
-      label: 'View',
-      submenu: [
-        {
-          label: 'Reload',
-          accelerator: 'CmdOrCtrl+R',
-          click (item, focusedWindow) {
-            if (focusedWindow) focusedWindow.reload()
-          }
-        },
-        {
-          type: 'separator'
-        },
-        {
-          role: 'resetzoom'
-        },
-        {
-          role: 'zoomin'
-        },
-        {
-          role: 'zoomout'
-        },
-        {
-          type: 'separator'
-        },
-      ]
-    },
-    {
-      role: 'window',
-      submenu: [
-        {
-          role: 'minimize'
-        },
-        {
-          role: 'close'
-        }
-      ]
-    },
-    {
-      role: 'help',
-      submenu: [
-        {
-          label: 'Status',
-          click () { require('electron').shell.openExternal('https://status.falixnodes.net/') }
-        },
-        {
-          label: 'Discord',
-          click () { require('electron').shell.openExternal('https://discord.falixnodes.net/') }
-        },
-        {
-          type: 'separator'
-        },
-        {
-          label: 'FAQ',
-          click () { require('electron').shell.openExternal('https://software.falixnodes.xyz/faq/') }
-        },
-        {
-          type: 'separator'
-        },
-        {
-          label: 'Report Issue',
-          click () { require('electron').shell.openExternal('https://github.com/FalixNodes-Software/FalixNodes-Software/issues') }
-        },
-      ]
-    }
-  ]
-  
-  if (process.platform === 'darwin') {
-    const name = app.getName()
-    template.unshift({
-      label: name,
-      submenu: [
-        {
-          role: 'about'
-        },
-        {
-          type: 'separator'
-        },
-        {
-          role: 'services',
-          submenu: []
-        },
-        {
-          type: 'separator'
-        },
-        {
-          role: 'hide'
-        },
-        {
-          role: 'hideothers'
-        },
-        {
-          role: 'unhide'
-        },
-        {
-          type: 'separator'
-        },
-        {
-          role: 'quit'
-        }
-      ]
-    })
-    template[1].submenu.push(
-      {
-        type: 'separator'
-      },
-      {
-        label: 'Speech',
-        submenu: [
-          {
-            role: 'startspeaking'
-          },
-          {
-            role: 'stopspeaking'
-          }
-        ]
-      }
-    )
-    template[3].submenu = [
-      {
-        label: 'Close',
-        accelerator: 'CmdOrCtrl+W',
-        role: 'close'
-      },
-      {
-        label: 'Minimize',
-        accelerator: 'CmdOrCtrl+M',
-        role: 'minimize'
-      },
-      {
-        label: 'Zoom',
-        role: 'zoom'
-      },
-      {
-        type: 'separator'
-      },
-      {
-        label: 'Bring All to Front',
-        role: 'front'
-      }
-    ]
-  }
-  
-  const menu = Menu.buildFromTemplate(template)
-  Menu.setApplicationMenu(menu)
-  
-  
-  mainWindow.loadFile('index.html')
-  // Due to issue with opening the developer with DevTool, even when setting to "true", it's best to keep this here:
-   mainWindow.webContents.openDevTools()
+function sendStatusToWindow(text) {
+  log.info(text);
+  win.webContents.send('message', text);
 }
-
-app.on('ready', createWindow)
-
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
+function createDefaultWindow() {
+  win = new BrowserWindow({
+    width: 1200,
+    height: 700,
+    minWidth: 540,
+    minHeight: 33,
+    frame: true,
+    autoHideMenuBar: true,
+    webPreferences: {
+      icon: path.join(__dirname, '/src/img/icons/app/splash.png'), // Set app icon
+      webviewTag: true,
+      nodeIntegration: true,
+      devTools: false
+    }
+  });
+  win.setIcon(path.join(__dirname, '/src/img/icons/app/splash.png')); // Set app icon
+  win.on('closed', () => {
+    win = null;
+  });
+  win.loadURL(`file://${__dirname}/index.html#v${app.getVersion()}`);
+  return win;
+}
+// Auto Updater
+autoUpdater.on('checking-for-update', () => {
+  sendStatusToWindow('Checking for update...');
 })
-
-
-app.on('activate', function () {
-  if (BrowserWindow.getAllWindows().length === 0) createWindow()
+autoUpdater.on('update-available', (info) => {
+  sendStatusToWindow('Update available.');
 })
+autoUpdater.on('update-not-available', (info) => {
+  sendStatusToWindow('Update not available.');
+})
+autoUpdater.on('error', (err) => {
+  sendStatusToWindow('Error in auto-updater. ' + err);
+})
+autoUpdater.on('download-progress', (progressObj) => {
+  let log_message = "Download speed: " + progressObj.bytesPerSecond;
+  log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+  log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+  sendStatusToWindow(log_message);
+})
+app.on('ready', function() {
+  createDefaultWindow();
+  
+});
+app.on('window-all-closed', () => {
+  app.quit();
+});
+app.on('ready', function()  {
+  autoUpdater.checkForUpdatesAndNotify();
+});
 
 app.on('web-contents-created', function (webContentsCreatedEvent, contents) {
   if (contents.getType() === 'webview') {
@@ -244,3 +73,26 @@ app.on('web-contents-created', function (webContentsCreatedEvent, contents) {
     });
   }
 });
+
+// Alt Menu
+const template = [
+  {
+    role: '',
+  }
+]
+
+if (process.platform === 'darwin') {
+  const name = app.getName()
+  template.unshift({
+    label: name,
+    submenu: [
+      {
+        role: 'quit'
+      }
+    ]
+  })
+}
+
+
+ const menu = Menu.buildFromTemplate(template)
+ Menu.setApplicationMenu(menu)

@@ -1,4 +1,107 @@
 <html>
-  <title>FalixNodes | Starting...</title>
-  <meta http-equiv="Refresh" content="0; url='http://localhost:8000/'" />
+  <head>
+    <meta charset="UTF-8">
+    <title>FalixNodes Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <div id="offline" class="message"><i class="fas fa-exclamation-circle"></i> Connection lost</div>
+    <div id="online" class="message"><i class="fas fa-check"></i> Connection restored</div>
+    <span id="version">Loading version...</span> <!-- Version number is automatically added by a script -->
+    <div id="messages"></div>
+    <div id="myDropdown" class="dropdown-content">
+      <a type='button'  id="coinOpened" onclick="openCoinsWin(); toggleText()"><i class="fas fa-coins"></i> Coins</a>
+      <a onclick="openHelpCenterWin();"><i class="fas fa-question-circle"></i> Help</a>
+      <a onclick="openUptimeWin();"><i class="fas fa-clock"></i> Uptime</a>
+      <div id="seperator"></div>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://software.falixnodes.net/beta/')"><i class="fas fa-exclamation-triangle"></i> Beta</a>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App-Beta/')"><i class="fab fa-github"></i> Source Code</a>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App-Beta/issues')"><i class="fas fa-book"></i> Report Issue</a>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://software.falixnodes.net/feedback.html')"><i class="fas fa-comment"></i> Feedback</a>
+      <div id="seperator"></div>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/terms-and-conditions.php')"><i class="fas fa-book"></i> Terms & Conditions</a>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/privacy-policy.php')"><i class="fas fa-user-secret"></i> Privacy Policy</a>
+      <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/cookie-policy.php')"><i class="fas fa-cookie-bite"></i> Cookie Policy</a>
+      <div id="seperator"></div>
+      <a onclick="openAboutWin();"><i class="fas fa-info-circle"></i> About</a>
+      <a style="cursor: not-allowed; opacity: 0.5;"><i class="fas fa-cogs"></i> Settings</a>
+    </div>
+    <header id="titlebar">
+      <div class="tabs">
+          <button class="tablink" onclick="openPage('dash', this, 'var(--content-bg')" id="defaultOpen">Dashboard</button>
+          <button style="padding: 6px 40px 6px 20px !important" class="tablink" onclick="openPage('client', this, 'var(--content-bg')">Client</button><a id="reloadButton" onClick="javascript: reloadClient()"><i class="fas fa-redo"></i></a>
+          <button style="padding: 6px 55px 6px 20px !important" class="tablink" onclick="openPage('panel', this, 'var(--content-bg')">Panel</button><a style="margin: 0px 25px 0px -32px;" id="reloadButton" onClick="javascript: reloadPanel()"><i class="fas fa-redo"></i></a>
+          <a type='button'  id="addPanel" onclick="openNewPanel(); toggleText()"><i class="fas fa-plus"></i></a>
+        </div>
+      <button onclick="myFunction()" class="dropbtn">=</button>
+      <div>
+        <div id="window-controls">
+          <div class="button" id="min-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/min-w-10.png 1x, ./src/img/icons/titlebar/min-w-12.png 1.25x, ./src/img/icons/titlebar/min-w-15.png 1.5x, ./src/img/icons/titlebar/min-w-15.png 1.75x, ./src/img/icons/titlebar/min-w-20.png 2x, ./src/img/icons/titlebar/min-w-20.png 2.25x, ./src/img/icons/titlebar/min-w-24.png 2.5x, ./src/img/icons/titlebar/min-w-30.png 3x, ./src/img/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/max-w-10.png 1x, ./src/img/icons/titlebar/max-w-12.png 1.25x, ./src/img/icons/titlebar/max-w-15.png 1.5x, ./src/img/icons/titlebar/max-w-15.png 1.75x, ./src/img/icons/titlebar/max-w-20.png 2x, ./src/img/icons/titlebar/max-w-20.png 2.25x, ./src/img/icons/titlebar/max-w-24.png 2.5x, ./src/img/icons/titlebar/max-w-30.png 3x, ./src/img/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/restore-w-10.png 1x, ./src/img/icons/titlebar/restore-w-12.png 1.25x, ./src/img/icons/titlebar/restore-w-15.png 1.5x, ./src/img/icons/titlebar/restore-w-15.png 1.75x, ./src/img/icons/titlebar/restore-w-20.png 2x, ./src/img/icons/titlebar/restore-w-20.png 2.25x, ./src/img/icons/titlebar/restore-w-24.png 2.5x, ./src/img/icons/titlebar/restore-w-30.png 3x, ./src/img/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/close-w-10.png 1x, ./src/img/icons/titlebar/close-w-12.png 1.25x, ./src/img/icons/titlebar/close-w-15.png 1.5x, ./src/img/icons/titlebar/close-w-15.png 1.75x, ./src/img/icons/titlebar/close-w-20.png 2x, ./src/img/icons/titlebar/close-w-20.png 2.25x, ./src/img/icons/titlebar/close-w-24.png 2.5x, ./src/img/icons/titlebar/close-w-30.png 3x, ./src/img/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="splashScreen">
+      <img src="./src/img/icons/app/splash.png">
+      <i class="fas fa-spinner"></i>
+    </div>
+    <div class="content">
+        <div id="dash" class="tabContent">
+            <div class="Left">
+                <h1 style="margin-left: 30px; margin-bottom: 15px;">FalixNodes Software</h1>
+                <p style="margin-left: 30px;" id="version">v2.2.1</p>
+                <div class="menu_sidebar">
+                  <button class="tablink_2" onclick="openPage_2('news', this, 'var(--tabs-bg-hover)')"><i class="fas fa-newspaper" id="defaultOpen1"></i> News</button>
+                  <button class="tablink_2" onclick="openPage_2('releaseNotes', this, 'var(--tabs-bg-hover)')"><i class="fas fa-book"></i> Release Notes</button>
+                </div>
+            </div>
+            <div class="right">
+              <div id="news" class="tabContent_2">
+                <h1>News</h1>
+                <webview id="news" src="https://falixnodes.korbsstudio.com/"></webview>
+              </div>
+              <div id="releaseNotes" class="tabContent_2">
+                <h1>Release Notes</h1>
+                <webview id="news" src="https://falixnodes.korbsstudio.com/?page_id=74"></webview>
+              </div>
+            </div>
+        </div>
+        <div id="panel" class="tabContent">
+          <webview src="https://gp.falixnodes.net"></webview>
+        </div>
+        <div id="client" class="tabContent">
+            <webview src="https://client.falixnodes.net"></webview>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>require('./renderer.js')</script>=
+    <script src="https://kit.fontawesome.com/76c26bec94.js" crossorigin="anonymous"></script>
+    <!-- JS - Open Windows -->
+    <script src="./src/js/openWin/about.js"></script>
+    <script src="./src/js/openWin/coins.js"></script>
+    <script src="./src/js/openWin/help-center.js"></script>
+    <script src="./src/js/openWin/new-panel.js"></script>
+    <script src="./src/js/openWin/uptime.js"></script>
+    <!-- JS - ETC -->
+    <script src="./src/js/etc/offline.js"></script>
+    <script src="./src/js/etc/tabs-dashboard.js"></script>
+    <script src="./src/js/etc/tabs.js"></script>
+    <script src="./src/js/etc/dropdown-menu.js"></script>
+    <!-- JS - Features -->
+    <script src="./src/js/features/auto-updater.js"></script>
+    <!-- JS - Reload -->
+    <script src="./src/js/reload/client.js"></script>
+    <script src="./src/js/reload/panel.js"></script>
+  </body>
 </html>
