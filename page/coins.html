@@ -42,10 +42,11 @@
       <webview id="coins" src="https://client.falixnodes.net/earn/arc"></webview>
     </div>
     <script>require('../renderer.js')</script>
+    <script src="../src/js/reload/coins.js"></script>
   </body>
 </html>
 <style>
-  /* Linux */
+  /* Linux *
   webview {
       height: 100% !important;
   }
@@ -62,6 +63,14 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #000000;
   color: #FFF;
+}
+
+a#reloadCoins {
+    position: fixed;
+    bottom: 20px;
+    background: #7068E4;
+    padding: 10px 20px;
+    border-radius: 2px;
 }
 
 webview {
