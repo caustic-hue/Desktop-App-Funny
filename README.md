@@ -9,5 +9,4 @@ As of now, the software isn't fully functional in v3, as currently the user inte
  - [x] Add new blur effect for Windows
  - [x] Add new blur effect for macOS
  - [x] Add new blur effect for Linux(should work with supported DEs)
- - [ ] Fix titlebar button functions on Windows
- - [ ] Change style of frame for Windows 7 and Windows 8.1
+ - [x] Fix titlebar button functions on Windows
