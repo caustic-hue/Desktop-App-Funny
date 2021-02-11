@@ -16,6 +16,7 @@ As of now, the software isn't fully functional in v3, as currently the user inte
 
 You're required to have the following in order to build FalixNodes Software:
  - [Python](https://www.python.org/downloads/) v3.6 or later
+ - [Visual C++ Redistributable](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
  - [Node](https://nodejs.org/en/download/) v12 or later
 
 ### Install Packages
