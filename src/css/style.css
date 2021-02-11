@@ -1,0 +1,440 @@
+.linux #titlebar { /* Hide the custom titlebar if user is using Linux */
+    display: none !important; 
+}
+html.mac [data-for-os=windows] { /* Hide the custom titlebar if user is using macOS */
+    display: none !important
+}
+html.windows [data-for-os=mac] { /* Hide macOS adjustments if user is using Windows */
+    display: none !important
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(35, 35, 35, 0.90);
+  color: white;
+  margin-top: 33px;
+  overflow: hidden;
+}
+
+#titlebar {
+    display: block;
+    position: fixed;
+    height: 33px;
+    width: 100%;
+    background: transparent;
+    top: 0px;
+    left: 0px;
+    -webkit-app-region: drag;
+    color: #FFF;
+    z-index: 5;
+}
+
+.maximized #titlebar {
+  width: 100%;
+  padding: 0;
+}
+
+#window-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+#window-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1000;
+}
+
+#window-controls {
+  -webkit-app-region: no-drag;
+}
+
+#window-controls .button {
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (-webkit-device-pixel-ratio: 1.5), (device-pixel-ratio: 1.5),
+(-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2),
+(-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3) {
+  #window-controls .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+#window-controls .button {
+  user-select: none;
+}
+
+#window-controls .button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+#window-controls .button:active {
+  background: rgba(255,255,255,0.2);
+}
+
+#close-button:hover {
+  background: #E81123 !important;
+}
+
+#close-button:active {
+  background: #F1707A !important;
+}
+#close-button:active .icon {
+  filter: invert(1);
+}
+
+#min-button {
+  grid-column: 1;
+}
+#max-button, #restore-button {
+  grid-column: 2;
+}
+#close-button {
+  grid-column: 3;
+}
+
+#restore-button {
+  display: none !important;
+}
+
+.maximized #restore-button {
+  display: flex !important;
+}
+
+.maximized #max-button {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 200px;
+  padding: 20px 20px;
+}
+.sidebar .menu {
+  display: grid;
+  grid-gap: 10px;
+}
+.sidebar .menu button {
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: left;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: 0.3s background;
+}
+.sidebar .menu button:hover {
+  cursor: pointer;
+  background: rgba(108, 96, 215, 0.25);
+  transition: 0.3s background;
+}
+.sidebar .menu button:active {
+  background: rgba(108, 96, 215, 0.5);
+  transition: 0.3s background;
+}
+.sidebar .menu button:focus {
+  outline: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInWait {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border: 8px solid #404040;
+  border-radius: 50%;
+  border-top: 8px solid #9159ff;
+  width: 50px;
+  height: 50px;
+  animation: spin 5s linear infinite;
+}
+p#loading_takingLong {
+  position: fixed;
+  bottom: 20%;
+  left: 49%;
+  animation: 10s fadeInWait ease;
+}
+
+.content {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: calc(100% - 235px);
+  height: 100%;
+  background: #232323;
+}
+.panel_unloaded {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 570px;
+}
+.panel_unloaded button {
+  border: none;
+  color: white;
+  background: #6B5FD7;
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+div#dashboard .left h1 {
+  font-size: 24px;
+  margin-top: 28px;
+}
+div#dashboard .left h2 {
+  font-size: 20px;
+}
+div#dashboard .left .news .card {
+  background: #313131;
+  width: 500px;
+  height: 53px;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  border-radius: 7px;
+}
+div#dashboard .left .news h1 {
+  font-size: 18px;
+  margin: -46px 0px 0px 110px;
+}
+div#dashboard .left .news p {
+  margin: 6px 0px 0px 110px;
+}
+div#dashboard .left .news img {
+  width: 100px;
+  height: 53px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+div#dashboard .left .news a {
+  position: absolute;
+  margin: -62px 0px 0px -10px;
+  width: 520px;
+  height: 73px;
+  border-radius: 7px;
+}
+div#dashboard .left .news a:hover {
+  backdrop-filter: brightness(0.9);
+}
+
+div#panel webview {
+  position: fixed;
+  top: 0px;
+  height: calc(100% - 0px) !important;
+  width: calc(100% - 235px) !important;
+  z-index: 10;
+}
+div#client webview {
+  position: fixed;
+  top: 0px;
+  height: calc(100% - 0px) !important;
+  width: calc(100% - 235px) !important;
+  z-index: 10;
+}
+div#controls {
+  background: #252525;
+  display: flex;
+}
+input[type="submit"] {
+  display: none;
+}
+input#location {
+  border-radius: 7px;
+  border: none;
+  height: 30px;
+  width: 600px;
+  background: #3e3e3e;
+  color: white;
+  padding: 0px 0px 0px 10px;
+  z-index: 5;
+  position: fixed;
+  top: 50px;
+  left: 296px;
+}
+form#location-form {
+  margin-block-end: 0px;
+}
+button#back, button#forward, button#reload {
+  height: 30px;
+  border-radius: 0px;
+  border: none;
+  color: white;
+  width: 30px;
+}
+button#forward {
+  position: fixed;
+  z-index: 10;
+  top: 138px;
+  left: 185px;
+  background: transparent;
+  font-size: 22px;
+}
+button#back {
+  position: fixed;
+  z-index: 10;
+  top: 138px;
+  left: 160px;
+  background: transparent;
+  font-size: 22px;
+}
+button#reload {
+  position: fixed;
+  z-index: 10;
+  top: 138px;
+  left: 135px;
+  background: transparent;
+  font-size: 17px;
+}
+button#home {
+  position: fixed;
+  z-index: 10;
+  top: 138px;
+  left: 110px;
+  background: transparent;
+  font-size: 17px;
+  height: 30px;
+  border-radius: 0px;
+  border: none;
+  color: white;
+  width: 30px;
+}
+
+#load_panel {
+  display: none;
+  background-color: black;
+}
+
+div#sad-webview {
+  position: fixed;
+  background: #232323;
+  top: 0px;
+  padding: 60px;
+  text-align: left;
+  width: 0px;
+  z-index: 4;
+}
+
+span#info_restarting {
+  text-decoration: underline;
+}
+span#info_restarting:hover {
+  cursor: help;
+}
+span#info_restarting:hover::before {
+  content: "Press Ctrl + R";
+  position: absolute;
+  background: #3a3a3a;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin: -8px 0px 0px 138px;
+  font-weight: bold;
+}
+
+form#location-form{pointer-events: none;}
+form#location-form h2 {
+  position: fixed;
+  top: 15px;
+  z-index: 5;
+  left: 297px;
+  font-size: 14px;
+}
+form#location-form p {
+  position: fixed;
+  top: 75px;
+  z-index: 5;
+  left: 297px;
+  font-size: 10.5px;
+}
+form#location-form span#address {
+  opacity: back;
+  background: #3e3e3e;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+
+
+div#loading_panel {
+  position: fixed;
+  z-index: 6;
+  background: black;
+  padding: 3px 43px;
+  left: 0px;
+  top: 190px;
+  display: none;
+}
+
+div#dashboard .left {
+  width: 530px;
+  padding: 20px;
+}
+div#dashboard .right {
+  position: absolute;
+  right: 0px;
+  width: 270px;
+  top: 20px;
+  list-style: none;
+}
+div#dashboard .right a {
+  color: white;
+}
+div#dashboard .right li {
+  margin-bottom: 5px;
+}
+span#divider {
+  background: #3c3c3c;
+  width: 200px;
+  height: 1px;
+  display: block;
+  margin-bottom: 5px;
+}

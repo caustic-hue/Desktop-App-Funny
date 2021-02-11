@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <title>FalixNodes Software</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
+  </head>
+  <header data-for-os="windows" id="titlebar" class="titlebar">
+      <div>
+        <div id="window-controls">
+          <div class="button" id="min-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/min-w-10.png 1x, ./src/img/icons/titlebar/min-w-12.png 1.25x, ./src/img/icons/titlebar/min-w-15.png 1.5x, ./src/img/icons/titlebar/min-w-15.png 1.75x, ./src/img/icons/titlebar/min-w-20.png 2x, ./src/img/icons/titlebar/min-w-20.png 2.25x, ./src/img/icons/titlebar/min-w-24.png 2.5x, ./src/img/icons/titlebar/min-w-30.png 3x, ./src/img/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/max-w-10.png 1x, ./src/img/icons/titlebar/max-w-12.png 1.25x, ./src/img/icons/titlebar/max-w-15.png 1.5x, ./src/img/icons/titlebar/max-w-15.png 1.75x, ./src/img/icons/titlebar/max-w-20.png 2x, ./src/img/icons/titlebar/max-w-20.png 2.25x, ./src/img/icons/titlebar/max-w-24.png 2.5x, ./src/img/icons/titlebar/max-w-30.png 3x, ./src/img/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/restore-w-10.png 1x, ./src/img/icons/titlebar/restore-w-12.png 1.25x, ./src/img/icons/titlebar/restore-w-15.png 1.5x, ./src/img/icons/titlebar/restore-w-15.png 1.75x, ./src/img/icons/titlebar/restore-w-20.png 2x, ./src/img/icons/titlebar/restore-w-20.png 2.25x, ./src/img/icons/titlebar/restore-w-24.png 2.5x, ./src/img/icons/titlebar/restore-w-30.png 3x, ./src/img/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div onclick="window.close()" class="button" id="close-button">
+            <img class="icon" srcset="./src/img/icons/titlebar/close-w-10.png 1x, ./src/img/icons/titlebar/close-w-12.png 1.25x, ./src/img/icons/titlebar/close-w-15.png 1.5x, ./src/img/icons/titlebar/close-w-15.png 1.75x, ./src/img/icons/titlebar/close-w-20.png 2x, ./src/img/icons/titlebar/close-w-20.png 2.25x, ./src/img/icons/titlebar/close-w-24.png 2.5x, ./src/img/icons/titlebar/close-w-30.png 3x, ./src/img/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
+          </div>
+      </div>
+    </header>
+  <body>
+    <div class="sidebar">
+      <div class="menu">
+        <button class="tablink" onclick="openPage('dashboard', this, '#6B5FD7')" id="defaultOpen">Dashboard</button>
+        <button class="tablink" onclick="openPage('client', this, '#6B5FD7')">Client</button>
+        <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')">Panel</button>
+      </div>
+    </div>
+    <div class="content">
+      <div id="dashboard" class="content_Tab">
+        <div class="left">
+          <h1>Dashboard</h1>
+          <h2>News</h2>
+          <div class="news">
+            <div w3-include-html="https://software.falixnodes.net/posts/grab-posts.html"></div>
+          </div>
+        </div>
+        <div class="right">
+          <h2>Menu</h2>
+          <ui id="Win32_5792" data-for-os="windows"> <!-- Allow external windows to open with custom titlebar -->
+            <li><a onclick="openAboutWin();">About</a></li>
+            <li><a onclick="openTroubleshootWin();">Troubleshoot</a></li>
+            <span id="divider"></span>
+            <li><a onclick="openHelpWin();">Help Center</a></li>
+            <li><a onclick="openUpdateWin();">Uptime</a></li>
+            <span id="divider"></span>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
+          </ui>
+          <ui data-for-os="mac"> <!-- Allow external windows to open without Windows custom titlebar -->
+            <li><a onclick="openAboutWinM();">About</a></li>
+            <li><a onclick="openTroubleshootWinM();">Troubleshoot</a></li>
+            <span id="divider"></span>
+            <li><a onclick="openHelpWinM();">Help Center</a></li>
+            <li><a onclick="openUpdateWinM();">Uptime</a></li>
+            <span id="divider"></span>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
+          </ui>
+          <ui id="Linux_5792"> <!-- Allow external windows to open with native titlebar and without Windows custom titlebar -->
+            <li><a onclick="openAboutWinL();">About</a></li>
+            <li><a onclick="openTroubleshootWinL();">Troubleshoot</a></li>
+            <span id="divider"></span>
+            <li><a onclick="openHelpWinL();">Help Center</a></li>
+            <li><a onclick="openUpdateWinL();">Uptime</a></li>
+            <span id="divider"></span>
+            <li><a onclick="const { shell } = require('electron'); shell.beep()">Terms and Conditions</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
+            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
+          </ui>
+        </div>
+      </div>
+      <div id="panel" class="content_Tab">
+        <div class="panel_unloaded">
+          <h1>Welcome to the Panel</h1>
+          <p>To help save resources, the panel doesn't load when you start the app.</p>
+          <p>If you want to load the panel now, simply click "Load Panel" below.</p>
+          <button id="gotopanel" title="Load">Load Panel</button>
+        </div>
+        <div id="load_panel" class="panel_webiew">
+          <div id="controls">
+      
+            <button id="back" title="Go Back" disabled="true"><i class="fa fa-angle-left"></i></button>
+            <button id="forward" title="Go Forward" disabled="true"><i class="fa fa-angle-right"></i></button>
+            <button id="home" title="Unload Panel"><i class="fa fa-times"></i></button>
+            <button id="reload" title="Reload"><i class="fa fa-hourglass-end"></i></button>
+      
+            <form id="location-form">
+              <div id="center-column">
+                <h2>Current Web Address:</h2>
+                <input id="location" type="text" value="https://software.falixnodes.net/blank/">
+                <p>If the address is <span id="address">https://software.falixnodes.net/blank/</span>, then please click the back or fowards button, or unload and load the panel again.</p>
+              </div>
+              <input type="submit" value="Go">
+            </form>
+            <button id="zoom" title="Change Zoom">&#128270;</button>
+            <button id="find" title="Find in Page">&#128294;</button>
+          </div>
+      
+          <div id="zoom-box">
+            <form id="zoom-form">
+              <input id="zoom-text" type="text">
+              <input type="submit" value="&#128270;">
+              <button id="zoom-in">&#10133;</button>
+              <button id="zoom-out">&#10134;</button>
+            </form>
+          </div>
+      
+          <div id="find-box">
+            <form id="find-form">
+              <input id="find-text" type="text">
+              <div id="find-results"></div>
+              <input type="submit" style="position:absolute; visibility:hidden">
+              <button id="match-case">aA</button>
+              <button id="find-backward">&#60;</button>
+              <button id="find-forward">&#62;</button>
+            </form>
+          </div>
+      
+          <webview id="panel" src="https://software.falixnodes.net/blank/"></webview> <!-- Use blank domain first -->
+          <!-- Even if the user hasn't loaded the panel yet, the site is still loading in the background. So using a blank site as default should help. -->
+      
+          <div id="sad-webview">
+            <div id="sad-webview-icon">&#9888;</div>
+            <h2 id="crashed-label">Aw, Snap!</h2>
+            <h2 id="killed-label">Something went wrong.</h2>
+            <p>If you're seeing this, this means the panel has crashed or is taking too long to load, or you've disconnected from the internet.</p>
+            <p>To continue, click the reload button on the panel tab.</p>
+            <br>
+            <p>If reloading is not working, try <span id="info_restarting">restarting</span> the app.</p>
+            <br>
+            <p>If restarting didn't work, then the panel may be down.</p>
+            <div class="internet-check">
+              <h2>Check Internet Connection</h2>
+              <p> About > Troubleshoot > Check Internet Connection</p>
+            </div>
+          </div>
+          <div style="opacity: 0; z-index: 4; position: fixed !important;top: 0px !important;left: 233px !important;animation: 20s fadeOut ease;z-index: 5;width: 100%;height: 100%;background: #232323;" id="panel">
+            <h1 class="loader" style="position: fixed;top: 46%;left: 57%;transform: translate(0%, -50%);"></h1>
+            <p id="loading_takingLong">It's taking longer than usual to load</p>
+          </div>
+        </div>
+      </div>
+      <div id="client" class="content_Tab"> <!-- The above controls will choose the first webview that gets listed, therefore panel comes before client in the code -->
+        <webview src="https://client.falixnodes.net/"></webview>
+      </div>
+    </div>
+    <script>require('./renderer.js')</script> <!-- Titlebar controls on Windows -->
+    <script src="./src/js/windows-or-mac.js"></script> <!-- Detecting Windows or macOS -->
+    <script src="./src/js/etc/tabs.js"></script>
+    <!-- Scripts - Panel -->
+    <script src="./src/js/panel/browser.js"></script>
+    <script src="./src/js/panel/loadPanel.js"></script>
+    <!-- Scripts - Opening External Windows -->
+    <script src="./src/js/openWin/win32/about.js"></script>
+    <script src="./src/js/openWin/win32/help-center.js"></script>
+    <script src="./src/js/openWin/win32/new-panel.js"></script>
+    <script src="./src/js/openWin/win32/uptime.js"></script>
+    <script src="./src/js/openWin/macOS/about.js"></script>
+    <script src="./src/js/openWin/macOS/help-center.js"></script>
+    <script src="./src/js/openWin/macOS/new-panel.js"></script>
+    <script src="./src/js/openWin/macOS/uptime.js"></script>
+    <script src="./src/js/openWin/linux/about.js"></script>
+    <script src="./src/js/openWin/linux/help-center.js"></script>
+    <script src="./src/js/openWin/linux/new-panel.js"></script>
+    <script src="./src/js/openWin/linux/uptime.js"></script>
+
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+<script>
+  includeHTML();
+</script>
+
+  </body>
+</html>

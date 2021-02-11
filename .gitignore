@@ -1,1 +1,350 @@
 node_modules
+.vs/Desktop-App/v16/.suo
+.vs/Desktop-App/v16/Browse.VC.db
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+dist/.icon-ico/icon.ico
+dist/builder-effective-config.yaml
+dist/falixnodes Setup 2.2.9.exe
+dist/falixnodes Setup 2.2.9.exe.blockmap
+dist/falixnodes-2.2.9.AppImage
+dist/falixnodes-software.zip
+dist/falixnodes-software_2.2.9_amd64.snap
+dist/falixnodes-software_2.3.0_amd64.snap
+dist/falixnodes_2.2.9_amd64.deb
+dist/falixnodes_2.2.9_amd64.snap
+dist/latest-linux.yml
+dist/latest.yml
+dist/linux-unpacked/chrome-sandbox
+dist/linux-unpacked/chrome_100_percent.pak
+dist/linux-unpacked/chrome_200_percent.pak
+dist/linux-unpacked/falixnodes
+dist/linux-unpacked/icudtl.dat
+dist/linux-unpacked/libEGL.so
+dist/linux-unpacked/libffmpeg.so
+dist/linux-unpacked/libGLESv2.so
+dist/linux-unpacked/libvk_swiftshader.so
+dist/linux-unpacked/libvulkan.so
+dist/linux-unpacked/LICENSE.electron.txt
+dist/linux-unpacked/LICENSES.chromium.html
+dist/linux-unpacked/locales/am.pak
+dist/linux-unpacked/locales/ar.pak
+dist/linux-unpacked/locales/bg.pak
+dist/linux-unpacked/locales/bn.pak
+dist/linux-unpacked/locales/ca.pak
+dist/linux-unpacked/locales/cs.pak
+dist/linux-unpacked/locales/da.pak
+dist/linux-unpacked/locales/de.pak
+dist/linux-unpacked/locales/el.pak
+dist/linux-unpacked/locales/en-GB.pak
+dist/linux-unpacked/locales/en-US.pak
+dist/linux-unpacked/locales/es-419.pak
+dist/linux-unpacked/locales/es.pak
+dist/linux-unpacked/locales/et.pak
+dist/linux-unpacked/locales/fa.pak
+dist/linux-unpacked/locales/fi.pak
+dist/linux-unpacked/locales/fil.pak
+dist/linux-unpacked/locales/fr.pak
+dist/linux-unpacked/locales/gu.pak
+dist/linux-unpacked/locales/he.pak
+dist/linux-unpacked/locales/hi.pak
+dist/linux-unpacked/locales/hr.pak
+dist/linux-unpacked/locales/hu.pak
+dist/linux-unpacked/locales/id.pak
+dist/linux-unpacked/locales/it.pak
+dist/linux-unpacked/locales/ja.pak
+dist/linux-unpacked/locales/kn.pak
+dist/linux-unpacked/locales/ko.pak
+dist/linux-unpacked/locales/lt.pak
+dist/linux-unpacked/locales/lv.pak
+dist/linux-unpacked/locales/ml.pak
+dist/linux-unpacked/locales/mr.pak
+dist/linux-unpacked/locales/ms.pak
+dist/linux-unpacked/locales/nb.pak
+dist/linux-unpacked/locales/nl.pak
+dist/linux-unpacked/locales/pl.pak
+dist/linux-unpacked/locales/pt-BR.pak
+dist/linux-unpacked/locales/pt-PT.pak
+dist/linux-unpacked/locales/ro.pak
+dist/linux-unpacked/locales/ru.pak
+dist/linux-unpacked/locales/sk.pak
+dist/linux-unpacked/locales/sl.pak
+dist/linux-unpacked/locales/sr.pak
+dist/linux-unpacked/locales/sv.pak
+dist/linux-unpacked/locales/sw.pak
+dist/linux-unpacked/locales/ta.pak
+dist/linux-unpacked/locales/te.pak
+dist/linux-unpacked/locales/th.pak
+dist/linux-unpacked/locales/tr.pak
+dist/linux-unpacked/locales/uk.pak
+dist/linux-unpacked/locales/vi.pak
+dist/linux-unpacked/locales/zh-CN.pak
+dist/linux-unpacked/locales/zh-TW.pak
+dist/linux-unpacked/resources.pak
+dist/linux-unpacked/resources/app.asar
+dist/linux-unpacked/snapshot_blob.bin
+dist/linux-unpacked/swiftshader/libEGL.so
+dist/linux-unpacked/swiftshader/libGLESv2.so
+dist/linux-unpacked/v8_context_snapshot.bin
+dist/linux-unpacked/vk_swiftshader_icd.json
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Electron Framework
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Helpers
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Libraries
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Resources
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/chrome_crashpad_handler
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libEGL.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libswiftshader_libEGL.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libswiftshader_libGLESv2.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libvk_swiftshader.dylib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/vk_swiftshader_icd.json
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/chrome_100_percent.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/chrome_200_percent.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/MainMenu.nib
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/resources.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/v8_context_snapshot.bin
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak
+dist/mac/falixnodes.app/Contents/Frameworks/Electron Framework.framework/Versions/Current
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (GPU).app/Contents/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (GPU).app/Contents/MacOS/falixnodes Helper (GPU)
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (GPU).app/Contents/PkgInfo
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Plugin).app/Contents/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Plugin).app/Contents/MacOS/falixnodes Helper (Plugin)
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Plugin).app/Contents/PkgInfo
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Renderer).app/Contents/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Renderer).app/Contents/MacOS/falixnodes Helper (Renderer)
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper (Renderer).app/Contents/PkgInfo
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper.app/Contents/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper.app/Contents/MacOS/falixnodes Helper
+dist/mac/falixnodes.app/Contents/Frameworks/falixnodes Helper.app/Contents/PkgInfo
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Headers
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Mantle
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Modules
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Resources
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/Mantle.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLJSONAdapter.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLManagedObjectAdapter.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel+NSCoding.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLValueTransformer.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSArray+MTLManipulationAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSDictionary+MTLManipulationAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSObject+MTLComparisonAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLInversionAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLPredefinedTransformerAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Modules/module.modulemap
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/A/Resources/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/Mantle.framework/Versions/Current
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Headers
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Modules
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/ReactiveCocoa
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Resources
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTKeyPathCoding.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTScope.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/metamacros.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSArray+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACCommandSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACTextSignalSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSData+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSDictionary+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSEnumerator+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSFileHandle+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSIndexSet+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSNotificationCenter+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACAppKitBindings.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACDeallocating.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACLifting.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACPropertySubscribing.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACSelectorSignal.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSOrderedSet+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSSet+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSequenceAdditions.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSText+RACSignalSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSURLConnection+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSUserDefaults+RACSupport.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBacktrace.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBehaviorSubject.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACChannel.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCommand.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCompoundDisposable.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACDisposable.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACEvent.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACGroupedSignal.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACKVOChannel.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACMulticastConnection.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler+Subclass.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACReplaySubject.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler+Subclass.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScopedDisposable.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSequence.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSerialDisposable.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal+Operations.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACStream.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubject.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriber.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriptingAssignmentTrampoline.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTargetQueueScheduler.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTestScheduler.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTuple.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACUnit.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/ReactiveCocoa.h
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Modules/module.modulemap
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/ReactiveCocoa
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Resources/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/Current
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Headers
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Modules
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Resources
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Squirrel
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSBundle+SQRLVersionExtensions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSProcessInfo+SQRLVersionExtensions.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLDownloadedUpdate.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdate.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdater.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/Squirrel.h
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Modules/module.modulemap
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel
+dist/mac/falixnodes.app/Contents/Frameworks/Squirrel.framework/Versions/Current
+dist/mac/falixnodes.app/Contents/Info.plist
+dist/mac/falixnodes.app/Contents/MacOS/falixnodes
+dist/mac/falixnodes.app/Contents/PkgInfo
+dist/mac/falixnodes.app/Contents/Resources/app.asar
+dist/mac/falixnodes.app/Contents/Resources/falixnodes.icns
+dist/win-unpacked/chrome_100_percent.pak
+dist/win-unpacked/chrome_200_percent.pak
+dist/win-unpacked/d3dcompiler_47.dll
+dist/win-unpacked/falixnodes.exe
+dist/win-unpacked/ffmpeg.dll
+dist/win-unpacked/icudtl.dat
+dist/win-unpacked/libEGL.dll
+dist/win-unpacked/libGLESv2.dll
+dist/win-unpacked/LICENSE.electron.txt
+dist/win-unpacked/LICENSES.chromium.html
+dist/win-unpacked/locales/am.pak
+dist/win-unpacked/locales/ar.pak
+dist/win-unpacked/locales/bg.pak
+dist/win-unpacked/locales/bn.pak
+dist/win-unpacked/locales/ca.pak
+dist/win-unpacked/locales/cs.pak
+dist/win-unpacked/locales/da.pak
+dist/win-unpacked/locales/de.pak
+dist/win-unpacked/locales/el.pak
+dist/win-unpacked/locales/en-GB.pak
+dist/win-unpacked/locales/en-US.pak
+dist/win-unpacked/locales/es-419.pak
+dist/win-unpacked/locales/es.pak
+dist/win-unpacked/locales/et.pak
+dist/win-unpacked/locales/fa.pak
+dist/win-unpacked/locales/fi.pak
+dist/win-unpacked/locales/fil.pak
+dist/win-unpacked/locales/fr.pak
+dist/win-unpacked/locales/gu.pak
+dist/win-unpacked/locales/he.pak
+dist/win-unpacked/locales/hi.pak
+dist/win-unpacked/locales/hr.pak
+dist/win-unpacked/locales/hu.pak
+dist/win-unpacked/locales/id.pak
+dist/win-unpacked/locales/it.pak
+dist/win-unpacked/locales/ja.pak
+dist/win-unpacked/locales/kn.pak
+dist/win-unpacked/locales/ko.pak
+dist/win-unpacked/locales/lt.pak
+dist/win-unpacked/locales/lv.pak
+dist/win-unpacked/locales/ml.pak
+dist/win-unpacked/locales/mr.pak
+dist/win-unpacked/locales/ms.pak
+dist/win-unpacked/locales/nb.pak
+dist/win-unpacked/locales/nl.pak
+dist/win-unpacked/locales/pl.pak
+dist/win-unpacked/locales/pt-BR.pak
+dist/win-unpacked/locales/pt-PT.pak
+dist/win-unpacked/locales/ro.pak
+dist/win-unpacked/locales/ru.pak
+dist/win-unpacked/locales/sk.pak
+dist/win-unpacked/locales/sl.pak
+dist/win-unpacked/locales/sr.pak
+dist/win-unpacked/locales/sv.pak
+dist/win-unpacked/locales/sw.pak
+dist/win-unpacked/locales/ta.pak
+dist/win-unpacked/locales/te.pak
+dist/win-unpacked/locales/th.pak
+dist/win-unpacked/locales/tr.pak
+dist/win-unpacked/locales/uk.pak
+dist/win-unpacked/locales/vi.pak
+dist/win-unpacked/locales/zh-CN.pak
+dist/win-unpacked/locales/zh-TW.pak
+dist/win-unpacked/resources.pak
+dist/win-unpacked/resources/app-update.yml
+dist/win-unpacked/resources/app.asar
+dist/win-unpacked/resources/elevate.exe
+dist/win-unpacked/snapshot_blob.bin
+dist/win-unpacked/swiftshader/libEGL.dll
+dist/win-unpacked/swiftshader/libGLESv2.dll
+dist/win-unpacked/v8_context_snapshot.bin
+dist/win-unpacked/vk_swiftshader.dll
+dist/win-unpacked/vk_swiftshader_icd.json
+dist/win-unpacked/vulkan-1.dll
