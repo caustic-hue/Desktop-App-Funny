@@ -24,10 +24,8 @@ git clone https://github.com/FalixNodes-Software/Desktop-App/
 cd Desktop-App
 npm install electron@9.4.3
 npm install glasstron
-npm install electron-packager -g
+npm install electron-builder
 ```
-The last command ending with `-g` must be installed as admin/sudo.
-
 Please only use Electron v9.0.0 - v9.4.3 or variables will be undefined.
 
 ### Running
@@ -38,12 +36,5 @@ npm start
 ### Packaging
 To create a package of the software, use:
 ```
-electron-packager .
+npm build
 ```
-This will package the software for your operating system.
-
-If you want to package it for all operating systems(Windows, macOS, Linux), then use:
-```
-electron-packager . --platform=all
-```
-or if you want to be specific about the platform, replace `all` with `darwin`(macOS), `win32`, or `linux`.
