@@ -108,13 +108,13 @@ function spawnWindowMac(){
 		resizable: true,
 		autoHideMenuBar: true,
 		frame: false,
-		titlebarStyle: "hiddenInset",
+		transparent: true,
 		show: false,
 		blur: true,
 		blurType: "vibrancy",
 		blurGnomeSigma: 100,
 		blurCornerRadius: 20,
-		vibrancy: "fullscreen-ui",
+		vibrancy: "under-window",
 		webPreferences: {
 			preload: path.join(__dirname, "preload.js"), // use a preload script
 			nodeIntegration: true,
