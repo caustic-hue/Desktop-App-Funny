@@ -34,47 +34,7 @@ body {
   left: 0px;
   width: 236px;
   height: 33px;
-  -webkit-app-region: drag;
 }
-
-/* macOS Titlebar */
-div#window-controls [data-for-os=mac] {
-  left: 20px;
-  top: 10px;
-}
-#min-button [data-for-os=mac] {
-  grid-column: 2 ;
-}
-#max-button, #restore-button [data-for-os=mac] {
-  grid-column: 3 ;
-}
-#close-button [data-for-os=mac] {
-  grid-column: 1 ;
-}
-div#close-button [data-for-os=mac] {
-  background: #FC5A5B;
-  border-radius: 50px;
-}
-div#min-button [data-for-os=mac] {
-  background: #FEBE46;
-  border-radius: 50px;
-}
-div#max-button [data-for-os=mac] {
-  background: #3BCC50;
-  border-radius: 50px;
-}
-div#restore-button [data-for-os=mac] {
-  background: #3BCC50;
-  border-radius: 50px;
-}
-#window-controls .button [data-for-os=mac] {
-  width: 15px ;
-  height: 15px ;
-}
-#window-controls [data-for-os=mac] {
-  grid-template-columns: repeat(3, 24px) ;
-}
-/* */
 
 .maximized #titlebar {
   width: 100%;

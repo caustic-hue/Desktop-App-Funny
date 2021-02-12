@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
   </head>
-  <header id="titlebar" class="titlebar">
+  <header data-for-os="windows" id="titlebar" class="titlebar">
       <div>
-        <div data-for-os="windows" id="window-controls">
+        <div id="window-controls">
           <div class="drag-space"></div>
           <div class="button" id="min-button">
             <img class="icon" srcset="./src/img/icons/titlebar/min-w-10.png 1x, ./src/img/icons/titlebar/min-w-12.png 1.25x, ./src/img/icons/titlebar/min-w-15.png 1.5x, ./src/img/icons/titlebar/min-w-15.png 1.75x, ./src/img/icons/titlebar/min-w-20.png 2x, ./src/img/icons/titlebar/min-w-20.png 2.25x, ./src/img/icons/titlebar/min-w-24.png 2.5x, ./src/img/icons/titlebar/min-w-30.png 3x, ./src/img/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
@@ -17,17 +17,9 @@
           <div class="button" id="restore-button">
             <img class="icon" srcset="./src/img/icons/titlebar/restore-w-10.png 1x, ./src/img/icons/titlebar/restore-w-12.png 1.25x, ./src/img/icons/titlebar/restore-w-15.png 1.5x, ./src/img/icons/titlebar/restore-w-15.png 1.75x, ./src/img/icons/titlebar/restore-w-20.png 2x, ./src/img/icons/titlebar/restore-w-20.png 2.25x, ./src/img/icons/titlebar/restore-w-24.png 2.5x, ./src/img/icons/titlebar/restore-w-30.png 3x, ./src/img/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
           </div>
-          <div class="button" id="close-button">
+          <div onclick="window.close()" class="button" id="close-button">
             <img class="icon" srcset="./src/img/icons/titlebar/close-w-10.png 1x, ./src/img/icons/titlebar/close-w-12.png 1.25x, ./src/img/icons/titlebar/close-w-15.png 1.5x, ./src/img/icons/titlebar/close-w-15.png 1.75x, ./src/img/icons/titlebar/close-w-20.png 2x, ./src/img/icons/titlebar/close-w-20.png 2.25x, ./src/img/icons/titlebar/close-w-24.png 2.5x, ./src/img/icons/titlebar/close-w-30.png 3x, ./src/img/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
           </div>
-        </div>
-        <div data-for-os="mac" id="window-controls">
-          <div class="drag-space"></div>
-          <div class="button" id="close-button"></div>
-          <div class="button" id="min-button"></div>
-          <div class="button" id="max-button"></div>
-          <div class="button" id="restore-button"></div>
-        </div>
       </div>
     </header>
   <body>
