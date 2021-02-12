@@ -9,7 +9,7 @@ electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 var osvar = process.platform; /* Detecting OS */
 if (osvar == 'darwin') {electron.app.on("ready", () => {setTimeout(spawnWindowMac,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
 }else if(osvar == 'win32'){electron.app.on("ready", () => {setTimeout(spawnWindow,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
-}else{electron.app.on("ready", () => {setTimeout(spawnWindowLinux,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});}
+}else{electron.app.on("ready", () => {setTimeout(spawnWindowMac,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});}
 
 
 
@@ -110,17 +110,19 @@ function spawnWindowMac(){
 		frame: false,
 		transparent: true,
 		show: false,
-		blur: true,
-		blurType: "vibrancy",
-		blurGnomeSigma: 100,
-		blurCornerRadius: 20,
-		vibrancy: "under-window",
+		blur: false,
 		webPreferences: {
 			preload: path.join(__dirname, "preload.js"), // use a preload script
 			nodeIntegration: true,
 			webviewTag: true
 		}
 })
+
+
+win.webContents.loadFile('index.html');
+win.webContents.webContents.on('did-finish-load', function() {
+  win.webContents.webContents.insertCSS('html.windows [data-for-os=mac]{display:none !important}ui#Win32_5792{display: none !important;}ui#Linux_5792{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+});
 	
 	win.webContents.loadURL(`file://${__dirname}/index.html`);
     
