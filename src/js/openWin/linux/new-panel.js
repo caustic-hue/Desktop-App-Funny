@@ -1,4 +1,4 @@
-function openNewPanel() {
+function openNewPanelL() {
     const remote = require('electron').remote;
     const BrowserWindow = remote.BrowserWindow;
 

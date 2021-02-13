@@ -8,12 +8,33 @@ html.windows [data-for-os=mac] { /* Hide macOS adjustments if user is using Wind
     display: none !important
 }
 
+html::before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: calc(100% - 236px);
+  height: 100%;
+  background: #232323;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: rgba(35, 35, 35, 0.90);
   color: white;
   margin-top: 33px;
   overflow: hidden;
+}
+h1{pointer-events: none;}
+h2{pointer-events: none;}
+h3{pointer-events: none;}
+p{pointer-events: none;}
+
+webview#fullscreen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 #titlebar {
@@ -34,6 +55,7 @@ body {
   left: 0px;
   width: 236px;
   height: 33px;
+  -webkit-app-region: drag;
 }
 
 .maximized #titlebar {
@@ -132,6 +154,8 @@ body {
   height: 100%;
   width: 200px;
   padding: 20px 20px;
+  animation: 1s fadeInSB ease;
+  background: rgba(35, 35, 35, 0.85);
 }
 .sidebar .menu {
   display: grid;
@@ -181,6 +205,17 @@ body {
     opacity: 1;
   }
 }
+@keyframes fadeInSB {
+  0% {
+    background: rgba(35, 35, 35, 1);
+  }
+  10% {
+    background: rgba(35, 35, 35, 1);
+  }
+  100% {
+    background: rgba(35, 35, 35, 0.85);
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -219,6 +254,7 @@ p#loading_takingLong {
   width: calc(100% - 235px);
   height: 100%;
   background: #232323;
+  animation: 1s fadeIn ease;
 }
 .panel_unloaded {
   text-align: center;
@@ -322,7 +358,7 @@ button#back, button#forward, button#reload {
 button#forward {
   position: fixed;
   z-index: 10;
-  top: 138px;
+  top: 157px;
   left: 185px;
   background: transparent;
   font-size: 22px;
@@ -330,7 +366,7 @@ button#forward {
 button#back {
   position: fixed;
   z-index: 10;
-  top: 138px;
+  top: 157px;
   left: 160px;
   background: transparent;
   font-size: 22px;
@@ -338,7 +374,7 @@ button#back {
 button#reload {
   position: fixed;
   z-index: 10;
-  top: 138px;
+  top: 157px;
   left: 135px;
   background: transparent;
   font-size: 17px;
@@ -346,7 +382,7 @@ button#reload {
 button#home {
   position: fixed;
   z-index: 10;
-  top: 138px;
+  top: 157px;
   left: 110px;
   background: transparent;
   font-size: 17px;
@@ -435,6 +471,7 @@ div#dashboard .right {
 }
 div#dashboard .right a {
   color: white;
+  cursor: pointer;
 }
 div#dashboard .right li {
   margin-bottom: 5px;
@@ -445,4 +482,32 @@ span#divider {
   height: 1px;
   display: block;
   margin-bottom: 5px;
+}
+.wired,
+.unwired {
+  display: none;
+}
+body.online .wired {
+  display: block;
+}
+body.offline .unwired {
+  display: block;
+}
+body.offline .wired {
+  display: none;
+}
+.wired.alert.alert-success {
+  display: none;
+}
+.unwired.alert.alert-danger {
+  background: red;
+  font-weight: bold;
+  position: fixed;
+  width: 160px;
+  left: 0px;
+  bottom: 0px;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  animation: 5s fadeIn ease;
 }

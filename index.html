@@ -29,6 +29,10 @@
         <button class="tablink" onclick="openPage('client', this, '#6B5FD7')">Client</button>
         <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')">Panel</button>
       </div>
+      <div class="internet-checker">
+        <div class="wired alert alert-success">You're online</div>
+        <div class="unwired alert alert-danger">You're offline</div>
+      </div>
     </div>
     <div class="content">
       <div id="dashboard" class="content_Tab">
@@ -43,21 +47,17 @@
           <h2>Menu</h2>
           <ui id="Win32_5792" data-for-os="windows"> <!-- Allow external windows to open with custom titlebar -->
             <li><a onclick="openAboutWin();">About</a></li>
-            <li><a onclick="openTroubleshootWin();">Troubleshoot</a></li>
             <span id="divider"></span>
-            <li><a onclick="openHelpWin();">Help Center</a></li>
-            <li><a onclick="openUpdateWin();">Uptime</a></li>
+            <li><a onclick="openHelpCenterWin();">Help Center</a></li>
+            <li><a onclick="openUptimeWin();">Uptime</a></li>
             <span id="divider"></span>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
           </ui>
-          <ui data-for-os="mac"> <!-- Allow external windows to open without Windows custom titlebar -->
-            <li><a onclick="openAboutWinM();">About</a></li>
-            <li><a onclick="openTroubleshootWinM();">Troubleshoot</a></li>
-            <span id="divider"></span>
-            <li><a onclick="openHelpWinM();">Help Center</a></li>
-            <li><a onclick="openUpdateWinM();">Uptime</a></li>
+          <ui data-for-os="mac"> <!-- Allow external windows to open without Windows custom titlebar --> <!-- About removed and moved to menubar -->
+            <li><a onclick="openHelpCenterWinM();">Help Center</a></li>
+            <li><a onclick="openUptimeWinM();">Uptime</a></li>
             <span id="divider"></span>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
@@ -65,10 +65,9 @@
           </ui>
           <ui id="Linux_5792"> <!-- Allow external windows to open with native titlebar and without Windows custom titlebar -->
             <li><a onclick="openAboutWinL();">About</a></li>
-            <li><a onclick="openTroubleshootWinL();">Troubleshoot</a></li>
             <span id="divider"></span>
-            <li><a onclick="openHelpWinL();">Help Center</a></li>
-            <li><a onclick="openUpdateWinL();">Uptime</a></li>
+            <li><a onclick="openHelpCenterWinL();">Help Center</a></li>
+            <li><a onclick="openUptimeWinL();">Uptime</a></li>
             <span id="divider"></span>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
             <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
@@ -133,13 +132,9 @@
             <p>If you're seeing this, this means the panel has crashed or is taking too long to load, or you've disconnected from the internet.</p>
             <p>To continue, click the reload button on the panel tab.</p>
             <br>
-            <p>If reloading is not working, try <span id="info_restarting">restarting</span> the app.</p>
+            <p>If reloading is not working, try restarting the app.</p>
             <br>
             <p>If restarting didn't work, then the panel may be down.</p>
-            <div class="internet-check">
-              <h2>Check Internet Connection</h2>
-              <p> About > Troubleshoot > Check Internet Connection</p>
-            </div>
           </div>
           <div style="opacity: 0; z-index: 4; position: fixed !important;top: 0px !important;left: 233px !important;animation: 20s fadeOut ease;z-index: 5;width: 100%;height: 100%;background: #232323;" id="panel">
             <h1 class="loader" style="position: fixed;top: 46%;left: 57%;transform: translate(0%, -50%);"></h1>
@@ -170,7 +165,8 @@
     <script src="./src/js/openWin/linux/help-center.js"></script>
     <script src="./src/js/openWin/linux/new-panel.js"></script>
     <script src="./src/js/openWin/linux/uptime.js"></script>
-
+    <!-- Scripts - ETC -->
+    <script src="./src/js/etc/offline.js"></script>
 <script>
   function includeHTML() {
     var z, i, elmnt, file, xhttp;

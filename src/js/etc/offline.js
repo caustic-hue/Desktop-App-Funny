@@ -1,28 +1,23 @@
-let loaded;
-
-const loadApp = () => {
-  App(
-    () => {
-      loaded = true;
-      clearTimeout(isSlow);
-      setTimeout(() => { document.body.className = ""; }, 1000);
-      console.debug("loaded");
-  });
-};
-
-window.addEventListener("offline", () => {
-  document.body.className = "offline";
-});
-
-window.addEventListener("online", () => {
-  document.body.className = "online";
-  console.debug("online");
-  setTimeout(() => { document.body.className = ""; }, 1000);
-
-  if (!loaded) {
-    console.debug("Reconnecting...");
-    loadApp();
+function updateConnectionStatus(msg, connected) {
+  if (connected) {
+    document.body.className = "online";
+  } else {
+    document.body.className = "offline";
   }
-});
+}
 
-window.addEventListener("DOMContentLoaded", loadApp);
+window.addEventListener('load', function(e) {
+  if (navigator.onLine) {
+    updateConnectionStatus('Online', true);
+  } else {
+    updateConnectionStatus('Offline', false);
+  }
+}, false);
+
+window.addEventListener('online', function(e) {
+  updateConnectionStatus('Online', true);
+}, false);
+
+window.addEventListener('offline', function(e) {
+  updateConnectionStatus('Offline', false);
+}, false);
