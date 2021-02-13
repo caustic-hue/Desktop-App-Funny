@@ -1,8 +1,10 @@
-function openAboutWin() {
+function openAboutWinM() {
     const remote = require('electron').remote;
-    var path = require('path');
     const BrowserWindow = remote.BrowserWindow;
 
-    var win = new BrowserWindow({ width: 400, height: 340, resizable: false, frame: false, autoHideMenuBar: true, webPreferences: {webviewTag: true, nodeIntergration: true}});
-    win.loadURL(`file://${__dirname}/page/about.html`);
+    var win = new BrowserWindow({ width: 800, height: 600, frame: false, transparent: true, titleBarStyle: 'hiddenInset', autoHideMenuBar: true});
+    win.webContents.loadURL(`file://${__dirname}/page/about.html`);   
+    win.webContents.webContents.on('did-finish-load', function() {
+      win.webContents.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux/macOS */
+    });
 }
