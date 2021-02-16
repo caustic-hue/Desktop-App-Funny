@@ -2,6 +2,7 @@
   <head>
     <title>FalixNodes Software</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link id="theme-setting" rel="stylesheet" type="text/css" href="dark.css">
     <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
   </head>
   <header data-for-os="windows" id="titlebar" class="titlebar">
@@ -25,9 +26,10 @@
   <body>
     <div class="sidebar">
       <div class="menu">
-        <button class="tablink" onclick="openPage('dashboard', this, '#6B5FD7')" id="defaultOpen">Dashboard</button>
-        <button class="tablink" onclick="openPage('client', this, '#6B5FD7')">Client</button>
-        <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')">Panel</button>
+        <button class="tablink" onclick="openPage('dashboard', this, '#6B5FD7')" id="defaultOpen"><i class="fas fa-home"></i> Dashboard</button>
+        <button class="tablink" onclick="openPage('client', this, '#6B5FD7')"><i class="fas fa-id-card"></i> Client</button>
+        <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')"><i class="fas fa-server"></i> Panel</button>
+        <button id="settings" class="tablink" onclick="openPage('setting', this, '#6B5FD7')"><i class="fas fa-cog"></i> Settings</button>
       </div>
       <div class="internet-checker">
         <div class="wired alert alert-success">You're online</div>
@@ -101,7 +103,6 @@
             <button id="zoom" title="Change Zoom">&#128270;</button>
             <button id="find" title="Find in Page">&#128294;</button>
           </div>
-      
           <div id="zoom-box">
             <form id="zoom-form">
               <input id="zoom-text" type="text">
@@ -110,7 +111,6 @@
               <button id="zoom-out">&#10134;</button>
             </form>
           </div>
-      
           <div id="find-box">
             <form id="find-form">
               <input id="find-text" type="text">
@@ -121,7 +121,6 @@
               <button id="find-forward">&#62;</button>
             </form>
           </div>
-      
           <webview id="panel" src="https://software.falixnodes.net/blank/"></webview> <!-- Use blank domain first -->
           <!-- Even if the user hasn't loaded the panel yet, the site is still loading in the background. So using a blank site as default should help. -->
       
@@ -136,14 +135,21 @@
             <br>
             <p>If restarting didn't work, then the panel may be down.</p>
           </div>
-          <div style="opacity: 0; z-index: 4; position: fixed !important;top: 0px !important;left: 233px !important;animation: 20s fadeOut ease;z-index: 5;width: 100%;height: 100%;background: #232323;" id="panel">
-            <h1 class="loader" style="position: fixed;top: 46%;left: 57%;transform: translate(0%, -50%);"></h1>
-            <p id="loading_takingLong">It's taking longer than usual to load</p>
-          </div>
         </div>
       </div>
       <div id="client" class="content_Tab"> <!-- The above controls will choose the first webview that gets listed, therefore panel comes before client in the code -->
         <webview src="https://client.falixnodes.net/"></webview>
+      </div>
+      <div id="setting" class="content_Tab">
+        <div class="left">
+          <h1>Settings</h1>
+          <h2>Appearances</h2>
+          <h3>Theme</h3>
+          <button id="lightMode" onclick="swapStyle('./src/css/light.css')")>Light</button>
+          <button id="darkMode" onclick="swapStyle('./src/css/dark.css')")>Dark</button>
+          <h3 style="opacity: 0.3; pointer-events: none;">Sidebar Transparency</h3>
+          <input style="opacity: 0.3; pointer-events: none;" type="range" min="1" max="100" value="50">
+        </div>
       </div>
     </div>
     <script>require('./renderer.js')</script> <!-- Titlebar controls on Windows -->
@@ -164,6 +170,9 @@
     <script src="./src/js/openWin/linux/uptime.js"></script>
     <!-- Scripts - ETC -->
     <script src="./src/js/etc/offline.js"></script>
+    <script src="./src/js/etc/include.js"></script>
+    <!-- Scripts - Application Setting -->
+    <script src="./src/js/settings/theme.js"></script>
     <script>includeHTML();</script>
   </body>
 </html>

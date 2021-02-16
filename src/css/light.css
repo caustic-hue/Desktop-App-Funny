@@ -1,0 +1,24 @@
+/* Please delete this :) */
+/* Please don't use this */
+/* WHY WOULD YOU USE THIS */
+/* I SAID DELETE IT */
+
+body {
+    color: black !important;
+}
+.sidebar {
+    background: rgba(255, 255, 255, 0.85);
+}
+.content, div#sad-webview {
+    background: white;
+}
+.sidebar .menu button {
+    color: black;
+}
+div#dashboard .left .news .card, input#location, form#location-form span#address {
+    background: #eee;
+    color: black;
+}
+div#dashboard .right a, div#setting .right a {
+    color: black;
+}

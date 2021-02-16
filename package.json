@@ -1,6 +1,6 @@
 {
   "name": "falixnodes",
-  "version": "2.2.9",
+  "version": "2.2.91",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -28,7 +28,7 @@
       "target": "pkg"
     },
     "linux": {
-      "target": "appImage",
+      "target": "snap",
       "icon": "src/img/app/icon.png",
       "maintainer": "package.korbsstudio.falixnodes",
       "synopsis": "A quick access to your servers.",

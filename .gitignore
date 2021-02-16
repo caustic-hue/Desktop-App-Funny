@@ -348,3 +348,10 @@ dist/win-unpacked/v8_context_snapshot.bin
 dist/win-unpacked/vk_swiftshader.dll
 dist/win-unpacked/vk_swiftshader_icd.json
 dist/win-unpacked/vulkan-1.dll
+dist/falixnodes_2.2.91_amd64.snap
+dist/falixnodes-2.2.91.AppImage
+dist/falixnodes Setup 2.2.91.exe.blockmap
+dist/falixnodes Setup 2.2.91.exe
+.vs/Desktop-App/v16/Browse.VC.opendb
+.vs/Desktop-App/v16/Browse.VC.db-wal
+.vs/Desktop-App/v16/Browse.VC.db-shm
