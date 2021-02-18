@@ -1,4 +1,4 @@
-function openAboutWinL() {
+function openAboutWinM() {
   const { remote } = require('electron');
   const path = require('path');
   const url = require('url');
