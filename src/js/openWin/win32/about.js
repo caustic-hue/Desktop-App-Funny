@@ -1,8 +1,28 @@
-function openAboutWin() {
-    const remote = require('electron').remote;
-    var path = require('path');
+function openAboutWinL() {
+    const { remote } = require('electron');
+    const path = require('path');
+    const url = require('url');
     const BrowserWindow = remote.BrowserWindow;
-
-    var win = new BrowserWindow({ width: 400, height: 340, resizable: false, frame: false, autoHideMenuBar: true, webPreferences: {webviewTag: true, nodeIntergration: true}});
-    win.loadURL(`file://${__dirname}/page/about.html`);
-}
+  
+    var win = new BrowserWindow({
+      width: 800,
+      height: 400,
+      backgroundColor: "#00000000",
+      title: "About",
+      resizable: false,
+      skipTaskbar: true,
+      alwaysOnTop: true,
+      center: true,
+      autoHideMenuBar: true,
+      frame: false,
+      transparent: true,
+      webPreferences: {
+          preload: path.join(__dirname, "preload.js"), // use a preload script
+          nodeIntegration: true
+      }
+  })
+    win.webContents.loadURL(`file://${__dirname}/page/about.html`);   
+    win.webContents.webContents.on('did-finish-load', function() {
+      win.webContents.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+    });
+  }

@@ -34,9 +34,12 @@ function spawnWindow(){
 			webviewTag: true
 		}
 })
-	
-  	win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
-	win.webContents.loadURL(`file://${__dirname}/index.html`);
+
+win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
+win.webContents.loadFile('index.html');
+win.webContents.on('did-finish-load', function() {
+  win.webContents.insertCSS('.ddLinux, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+});
     
 	if(process.platform === "linux"){
 		win.on("resize", () => {
@@ -120,8 +123,12 @@ function spawnWindowMac(){
 			webviewTag: true
 		}
 })
-	
-	win.webContents.loadURL(`file://${__dirname}/index.html`);
+
+win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
+win.webContents.loadFile('index.html');
+win.webContents.on('did-finish-load', function() {
+  win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddLinux{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+});
 
 	const template = [
 		// { role: 'appMenu' }
