@@ -1,7 +1,7 @@
 var setTheme = localStorage.getItem('theme')
 console.log('theme:', setTheme)
 if (setTheme == null){
-  swapStyle('dark.css')
+  swapStyle('./src/css/settings/theme/dark.css')
 }else{
   swapStyle(setTheme)
 }

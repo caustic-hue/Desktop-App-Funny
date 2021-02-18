@@ -1,0 +1,12 @@
+.first_boot {
+    display: none !important;
+}
+.content, html::before {
+    background: #232323;
+}
+.sidebar {
+    background: #23232375;
+}
+.sidebar, div#dashboard {
+    opacity: 1;
+}

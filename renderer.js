@@ -28,6 +28,21 @@ function handleWindowControls() {
     document.getElementById('close-button').addEventListener("click", event => {
         win.close();
     });
+    document.getElementById('min-button-Linux').addEventListener("click", event => {
+        win.minimize();
+    });
+
+    document.getElementById('max-button-Linux').addEventListener("click", event => {
+        win.maximize();
+    });
+
+    document.getElementById('restore-button-Linux').addEventListener("click", event => {
+        win.unmaximize();
+    });
+
+    document.getElementById('close-button-Linux').addEventListener("click", event => {
+        win.close();
+    });
 
     toggleMaxRestoreButtons();
     win.on('maximize', toggleMaxRestoreButtons);

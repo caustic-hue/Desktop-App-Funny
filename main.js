@@ -261,7 +261,7 @@ function spawnWindowLinux(){
 win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
 win.webContents.loadFile('index.html');
 win.webContents.on('did-finish-load', function() {
-  win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+  win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 });
 
     

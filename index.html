@@ -2,34 +2,68 @@
   <head>
     <title>FalixNodes Software</title>
     <link rel="stylesheet" href="./src/css/style.css">
-    <link id="theme-setting" rel="stylesheet" type="text/css" href="dark.css">
     <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
+    <link id="theme-setting" rel="stylesheet" type="text/css" href="./src/css/settings/theme/dark.css">
+    <link id="theme-setting-1" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/collapse/open.css">
+    <link id="theme-setting-2" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/opacity/75.css">
+    <link id="first-boot-s" rel="stylesheet" type="text/css" href="./src/css/first_boot/on.css">
   </head>
   <header data-for-os="windows" id="titlebar" class="titlebar">
-      <div>
-        <div id="window-controls">
-          <div class="drag-space"></div>
-          <div class="button" id="min-button">
-            <img class="icon" srcset="./src/img/icons/titlebar/min-w-10.png 1x, ./src/img/icons/titlebar/min-w-12.png 1.25x, ./src/img/icons/titlebar/min-w-15.png 1.5x, ./src/img/icons/titlebar/min-w-15.png 1.75x, ./src/img/icons/titlebar/min-w-20.png 2x, ./src/img/icons/titlebar/min-w-20.png 2.25x, ./src/img/icons/titlebar/min-w-24.png 2.5x, ./src/img/icons/titlebar/min-w-30.png 3x, ./src/img/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
-          </div>
-          <div class="button" id="max-button">
-            <img class="icon" srcset="./src/img/icons/titlebar/max-w-10.png 1x, ./src/img/icons/titlebar/max-w-12.png 1.25x, ./src/img/icons/titlebar/max-w-15.png 1.5x, ./src/img/icons/titlebar/max-w-15.png 1.75x, ./src/img/icons/titlebar/max-w-20.png 2x, ./src/img/icons/titlebar/max-w-20.png 2.25x, ./src/img/icons/titlebar/max-w-24.png 2.5x, ./src/img/icons/titlebar/max-w-30.png 3x, ./src/img/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
-          </div>
-          <div class="button" id="restore-button">
-            <img class="icon" srcset="./src/img/icons/titlebar/restore-w-10.png 1x, ./src/img/icons/titlebar/restore-w-12.png 1.25x, ./src/img/icons/titlebar/restore-w-15.png 1.5x, ./src/img/icons/titlebar/restore-w-15.png 1.75x, ./src/img/icons/titlebar/restore-w-20.png 2x, ./src/img/icons/titlebar/restore-w-20.png 2.25x, ./src/img/icons/titlebar/restore-w-24.png 2.5x, ./src/img/icons/titlebar/restore-w-30.png 3x, ./src/img/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
-          </div>
-          <div onclick="window.close()" class="button" id="close-button">
-            <img class="icon" srcset="./src/img/icons/titlebar/close-w-10.png 1x, ./src/img/icons/titlebar/close-w-12.png 1.25x, ./src/img/icons/titlebar/close-w-15.png 1.5x, ./src/img/icons/titlebar/close-w-15.png 1.75x, ./src/img/icons/titlebar/close-w-20.png 2x, ./src/img/icons/titlebar/close-w-20.png 2.25x, ./src/img/icons/titlebar/close-w-24.png 2.5x, ./src/img/icons/titlebar/close-w-30.png 3x, ./src/img/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
-          </div>
+    <div>
+      <div id="window-controls">
+        <div class="drag-space"></div>
+        <div class="button" id="min-button">
+          <img class="icon" srcset="./src/img/icons/titlebar/min-w-10.png 1x, ./src/img/icons/titlebar/min-w-12.png 1.25x, ./src/img/icons/titlebar/min-w-15.png 1.5x, ./src/img/icons/titlebar/min-w-15.png 1.75x, ./src/img/icons/titlebar/min-w-20.png 2x, ./src/img/icons/titlebar/min-w-20.png 2.25x, ./src/img/icons/titlebar/min-w-24.png 2.5x, ./src/img/icons/titlebar/min-w-30.png 3x, ./src/img/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="max-button">
+          <img class="icon" srcset="./src/img/icons/titlebar/max-w-10.png 1x, ./src/img/icons/titlebar/max-w-12.png 1.25x, ./src/img/icons/titlebar/max-w-15.png 1.5x, ./src/img/icons/titlebar/max-w-15.png 1.75x, ./src/img/icons/titlebar/max-w-20.png 2x, ./src/img/icons/titlebar/max-w-20.png 2.25x, ./src/img/icons/titlebar/max-w-24.png 2.5x, ./src/img/icons/titlebar/max-w-30.png 3x, ./src/img/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="restore-button">
+          <img class="icon" srcset="./src/img/icons/titlebar/restore-w-10.png 1x, ./src/img/icons/titlebar/restore-w-12.png 1.25x, ./src/img/icons/titlebar/restore-w-15.png 1.5x, ./src/img/icons/titlebar/restore-w-15.png 1.75x, ./src/img/icons/titlebar/restore-w-20.png 2x, ./src/img/icons/titlebar/restore-w-20.png 2.25x, ./src/img/icons/titlebar/restore-w-24.png 2.5x, ./src/img/icons/titlebar/restore-w-30.png 3x, ./src/img/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
+        </div>
+        <div class="button" id="close-button">
+          <img class="icon" srcset="./src/img/icons/titlebar/close-w-10.png 1x, ./src/img/icons/titlebar/close-w-12.png 1.25x, ./src/img/icons/titlebar/close-w-15.png 1.5x, ./src/img/icons/titlebar/close-w-15.png 1.75x, ./src/img/icons/titlebar/close-w-20.png 2x, ./src/img/icons/titlebar/close-w-20.png 2.25x, ./src/img/icons/titlebar/close-w-24.png 2.5x, ./src/img/icons/titlebar/close-w-30.png 3x, ./src/img/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <header id="titlebarLinux" class="titlebarLinux">
+    <div>
+      <div id="window-controls-linux">
+        <div class="drag-space"></div>
+        <div class="button" id="min-button-Linux"></div>
+        <div class="button" id="max-button-Linux"></div>
+        <div class="button" id="restore-button-Linux"></div>
+        <div class="button" id="close-button-Linux"></div>
+      </div>
+    </div>
+  </header>
   <body>
     <div class="sidebar">
       <div class="menu">
         <button class="tablink" onclick="openPage('dashboard', this, '#6B5FD7')" id="defaultOpen"><i class="fas fa-home"></i> Dashboard</button>
         <button class="tablink" onclick="openPage('client', this, '#6B5FD7')"><i class="fas fa-id-card"></i> Client</button>
         <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')"><i class="fas fa-server"></i> Panel</button>
+        <button id="menuDropDown" onclick="dropDown();"><i class="fas fa-ellipsis-h"></i></button>
         <button id="settings" class="tablink" onclick="openPage('setting', this, '#6B5FD7')"><i class="fas fa-cog"></i> Settings</button>
+      </div>
+      <div id="myDropdown" class="dropdown-content">
+        <div data-for-os="windows" class="ddWindows">
+          <a onclick="openAboutWin();"><i class="fas fa-info-circle"></i> About</a>
+          <a onclick="openHelpCenterWin();"><i class="fas fa-question-circle"></i> Help</a>
+          <a onclick="openUptimeWin();"><i class="fas fa-clock"></i> Uptime</a>
+        </div>
+        <div data-for-os="mac" class="ddMac">
+          <a onclick="openAboutWinM();"><i class="fas fa-info-circle"></i> About</a>
+          <a onclick="openHelpCenterWinM();"><i class="fas fa-question-circle"></i> Help</a>
+          <a onclick="openUptimeWinM();"><i class="fas fa-clock"></i> Uptime</a>
+        </div>
+        <div class="ddLinux">
+          <a onclick="openAboutWinL();"><i class="fas fa-info-circle"></i> About</a>
+          <a onclick="openHelpCenterWinL();"><i class="fas fa-question-circle"></i> Help</a>
+          <a onclick="openUptimeWinL();"><i class="fas fa-clock"></i> Uptime</a>
+        </div>
+        <p><i class="fas fa-caret-down"></i></p>
       </div>
       <div class="internet-checker">
         <div class="wired alert alert-success">You're online</div>
@@ -37,6 +71,11 @@
       </div>
     </div>
     <div class="content">
+      <div class="first_boot">
+        <h1>Welcome to FalixNodes Software</h1>
+        <p>Accessing FalixNodes, all from one place</p>
+        <button onclick="swapFirstBoot('./src/css/first_boot/off.css');"></button>
+      </div>
       <div id="dashboard" class="content_Tab">
         <div class="left">
           <h1>Dashboard</h1>
@@ -44,37 +83,6 @@
           <div class="news">
             <div w3-include-html="https://software.falixnodes.net/posts/grab-posts.html"></div>
           </div>
-        </div>
-        <div class="right">
-          <h2>Menu</h2>
-          <ui id="Win32_5792" data-for-os="windows"> <!-- Allow external windows to open with custom titlebar -->
-            <li><a onclick="openAboutWin();">About</a></li>
-            <span id="divider"></span>
-            <li><a onclick="openHelpCenterWin();">Help Center</a></li>
-            <li><a onclick="openUptimeWin();">Uptime</a></li>
-            <span id="divider"></span>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
-          </ui>
-          <ui data-for-os="mac"> <!-- Allow external windows to open without Windows custom titlebar --> <!-- About removed and moved to menubar(Thanks to macOS API) -->
-            <li><a onclick="openHelpCenterWinM();">Help Center</a></li>
-            <li><a onclick="openUptimeWinM();">Uptime</a></li>
-            <span id="divider"></span>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
-          </ui>
-          <ui id="Linux_5792"> <!-- Allow external windows to open with native titlebar and without Windows custom titlebar -->
-            <li><a onclick="openAboutWinL();">About</a></li>
-            <span id="divider"></span>
-            <li><a onclick="openHelpCenterWinL();">Help Center</a></li>
-            <li><a onclick="openUptimeWinL();">Uptime</a></li>
-            <span id="divider"></span>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Terms and Conditions</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Privacy Policy</a></li>
-            <li><a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.korbsstudio.com/')">Cookie Policy</a></li>
-          </ui>
         </div>
       </div>
       <div id="panel" class="content_Tab">
@@ -145,14 +153,29 @@
           <h1>Settings</h1>
           <h2>Appearances</h2>
           <h3>Theme</h3>
-          <button id="lightMode" onclick="swapStyle('./src/css/light.css')")>Light</button>
-          <button id="darkMode" onclick="swapStyle('./src/css/dark.css')")>Dark</button>
-          <h3 style="opacity: 0.3; pointer-events: none;">Sidebar Transparency</h3>
-          <input style="opacity: 0.3; pointer-events: none;" type="range" min="1" max="100" value="50">
+          <button id="lightMode" style="cursor: not-allowed;")><i class="fas fa-sun"></i> Light</button>
+          <button id="darkMode" onclick="swapStyle('./src/css/settings/theme/dark.css')")><i class="fas fa-moon"></i> Dark</button>
+          <h3>Sidebar Opacity</h3>
+          <p id="sidebarOpacity-grid" style="pointer-events: all !important;background: url(https://cdn.wallpaperhub.app/cloudcache/6/9/0/e/e/f/690eefe3ba1f553e0ea527f51ee407b604b681b4.jpg);width: fit-content;padding: 10px 20px;background-size: cover;background-position: center;border-radius: 7px;">
+            <button id="sidebarOpacity0" style="opacity: 0.0;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/0.css')">0%</button>
+            <button id="opacitySidebar10" style="opacity: 0.1;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/10.css')">10%</button>
+            <button id="opacitySidebar20" style="opacity: 0.2;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/20.css')">20%</button>
+            <button id="opacitySidebar30" style="opacity: 0.3;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/30.css')">30%</button>
+            <button id="opacitySidebar40" style="opacity: 0.4;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/40.css')">40%</button>
+            <button id="opacitySidebar50" style="opacity: 0.5;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/50.css')">50%</button>
+            <button id="opacitySidebar60" style="opacity: 0.6;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/60.css')">60%</button>
+            <button id="opacitySidebar70" style="opacity: 0.7;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/70.css')">70%</button>
+            <button id="opacitySidebar80" style="opacity: 0.8;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/80.css')">80%</button>
+            <button id="opacitySidebar90" style="opacity: 0.9;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/90.css')">90%</button>
+            <button id="opacitySidebar1" style="opacity: 1;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/1.css')">100%</button>
+          </p>
+          <h3>Sidebar View</h3>
+          <p style="pointer-events: all !important;"><button style="margin-right: 10px;background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')"><i class="fas fa-toggle-on"></i> Open</button><button style="background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/close.css')"><i class="fas fa-toggle-off"></i> Close</button></p>
         </div>
       </div>
     </div>
     <script>require('./renderer.js')</script> <!-- Titlebar controls on Windows -->
+    <script src="./src/js/first_boot/disable.js"></script>
     <script src="./src/js/windows-or-mac.js"></script> <!-- Detecting Windows or macOS -->
     <script src="./src/js/etc/tabs.js"></script>
     <!-- Scripts - Panel -->
@@ -171,8 +194,11 @@
     <!-- Scripts - ETC -->
     <script src="./src/js/etc/offline.js"></script>
     <script src="./src/js/etc/include.js"></script>
+    <script src="./src/js/etc/dropdown-menu.js"></script>
     <!-- Scripts - Application Setting -->
     <script src="./src/js/settings/theme.js"></script>
+    <script src="./src/js/settings/sidebar-opacity.js"></script>
+    <script src="./src/js/settings/sidebar-collapse.js"></script>
     <script>includeHTML();</script>
   </body>
 </html>

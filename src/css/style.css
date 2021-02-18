@@ -5,8 +5,9 @@ html.mac [data-for-os=windows] { /* Hide the custom titlebar if user is using ma
     display: none !important
 }
 html.windows [data-for-os=mac] { /* Hide macOS adjustments if user is using Windows */
-    display: none !important
+    display: none !important;
 }
+button:focus{outline:none}
 
 html::before {
   content: "";
@@ -156,6 +157,7 @@ webview#fullscreen {
   padding: 20px 20px;
   animation: 1s fadeInSB ease;
   background: rgba(35, 35, 35, 0.85);
+  opacity: 1;
 }
 .sidebar .menu {
   display: grid;
@@ -255,6 +257,7 @@ p#loading_takingLong {
   height: 100%;
   background: #232323;
   animation: 1s fadeIn ease;
+  opacity: 1;
 }
 .panel_unloaded {
   text-align: center;
@@ -449,6 +452,10 @@ button#home {
   width: 30px;
 }
 
+div#dashboard {
+  opacity: 1;
+}
+
 #load_panel {
   display: none;
   background-color: black;
@@ -609,9 +616,63 @@ button#darkMode {
 }
 button#settings {
   position: absolute;
-  width: 200px;
+  width: 143px;
   bottom: 60px;
+  left: 77px;
+}
+button#menuDropDown {
+  position: absolute;
+  width: 43px;
+  bottom: 60px;
+}
+button#menuDropDown i {
+  margin-left: -6px;
 }
 button i {
   margin-right: 10px;
+}
+.ddLinux, .ddMac, .ddWindows {
+  display: grid;
+}
+.ddLinux i, .ddMac i, .ddWindows i {
+  margin-right: 10px;
+}
+
+p#sidebarOpacity-grid button {
+  color: transparent;
+  transition: transform 0.3s;
+  border: none;
+  border-radius: 0px;
+  height: 140px;
+  filter: brightness(0.2);
+  transition: 0.2s transform;
+}
+p#sidebarOpacity-grid button:hover {
+  transform: scale(1.1);
+  transition: 0.3s transform;
+}
+
+div#myDropdown {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #313131;
+  display: none;
+  width: 200px;
+  border-radius: 10px;
+}
+div#myDropdown a {
+  padding: 13px;
+  cursor: pointer;
+}
+div#myDropdown a:hover {
+  opacity: 0.3;
+}
+div#myDropdown p {position: absolute;}
+.dropdown-content i.fas.fa-caret-down {
+  position: fixed;
+  bottom: 60px;
+  left: 30px;
+  color: #313131;
+  font-size: 40px;
 }
