@@ -15,5 +15,5 @@
  - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`v9.4.3`](https://www.npmjs.com/package/electron/v/9.4.3)
  - Removed auto update from Windows(discontinued)
  - Switching macOS' setup file from ZIP to DMG
- - Switching from Electron Builder package to Electron Packager package
  - Updated [titlebar detection](https://github.com/KorbsStudio/electron-titlebar-os-detection)([with Glasstron](https://github.com/KorbsStudio/electron-titlebar-os-detection-glasscord))
+ - Added loading text in Dashboard for news

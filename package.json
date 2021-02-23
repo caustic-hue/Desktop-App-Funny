@@ -28,7 +28,7 @@
       "target": "pkg"
     },
     "linux": {
-      "target": "snap",
+      "target": "appimage",
       "icon": "src/img/app/icon.png",
       "maintainer": "package.korbsstudio.falixnodes",
       "synopsis": "A quick access to your servers.",

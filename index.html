@@ -6,6 +6,7 @@
     <link id="theme-setting" rel="stylesheet" type="text/css" href="./src/css/settings/theme/dark.css">
     <link id="theme-setting-1" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/collapse/open.css">
     <link id="theme-setting-2" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/opacity/75.css">
+    <link id="theme-setting-3" rel="stylesheet" type="text/css" href="./src/css/settings/accent-color/default.css">
     <link id="first-boot-s" rel="stylesheet" type="text/css" href="./src/css/first_boot/on.css">
   </head>
   <header data-for-os="windows" id="titlebar" class="titlebar">
@@ -41,11 +42,11 @@
   <body>
     <div class="sidebar">
       <div class="menu">
-        <button class="tablink" onclick="openPage('dashboard', this, '#6B5FD7')" id="defaultOpen"><i class="fas fa-home"></i> Dashboard</button>
-        <button class="tablink" onclick="openPage('client', this, '#6B5FD7')"><i class="fas fa-id-card"></i> Client</button>
-        <button class="tablink" onclick="openPage('panel', this, '#6B5FD7')"><i class="fas fa-server"></i> Panel</button>
+        <button class="tablink" onclick="openPage('dashboard', this, 'var(--accent-color)')" id="defaultOpen"><i class="fas fa-home"></i> Dashboard</button>
+        <button class="tablink" onclick="openPage('client', this, 'var(--accent-color)')"><i class="fas fa-id-card"></i> Client</button>
+        <button class="tablink" onclick="openPage('panel', this, 'var(--accent-color)')"><i class="fas fa-server"></i> Panel</button>
         <button id="menuDropDown" onclick="dropDown();"><i class="fas fa-ellipsis-h"></i></button>
-        <button id="settings" class="tablink" onclick="openPage('setting', this, '#6B5FD7')"><i class="fas fa-cog"></i> Settings</button>
+        <button id="settings" class="tablink" onclick="openPage('setting', this, 'var(--accent-color)')"><i class="fas fa-cog"></i> Settings</button>
       </div>
       <div id="myDropdown" class="dropdown-content">
         <div data-for-os="windows" class="ddWindows">
@@ -82,6 +83,9 @@
           <h2>News</h2>
           <div class="news">
             <div w3-include-html="https://software.falixnodes.net/posts/grab-posts.html"></div>
+            <div class="news_loading">
+              <p>Loading...</p>
+            </div>
           </div>
         </div>
       </div>
@@ -171,6 +175,9 @@
           </p>
           <h3>Sidebar View</h3>
           <p style="pointer-events: all !important;"><button style="margin-right: 10px;background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')"><i class="fas fa-toggle-on"></i> Open</button><button style="background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/close.css')"><i class="fas fa-toggle-off"></i> Close</button></p>
+          <h2>Danger Zone</h2>
+          <h3>Reset</h3>
+          <button onclick="reset()" style="display: flex;margin-right: 10px;background: #ff4b4b;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;"><div id="sad-webview-icon">⚠</div> Reset</button>
         </div>
       </div>
     </div>
@@ -182,6 +189,7 @@
     <script src="./src/js/panel/browser.js"></script>
     <script src="./src/js/panel/loadPanel.js"></script>
     <!-- Scripts - Opening External Windows -->
+    <script src="./src/js/openWin/all/reset.js"></script>
     <script src="./src/js/openWin/win32/about.js"></script>
     <script src="./src/js/openWin/win32/help-center.js"></script>
     <script src="./src/js/openWin/win32/uptime.js"></script>
@@ -199,6 +207,10 @@
     <script src="./src/js/settings/theme.js"></script>
     <script src="./src/js/settings/sidebar-opacity.js"></script>
     <script src="./src/js/settings/sidebar-collapse.js"></script>
+    <script src="./src/js/settings/accent-color.js"></script>
+
+    <script src="./reset.js"></script>
+
     <script>includeHTML();</script>
   </body>
 </html>

@@ -7,7 +7,7 @@ const path = require('path');
 const url = require('url');
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 
-var osvar = process.platform; /* Detecting OS */
+var osvar = process.platform;
 if (osvar == 'darwin') {electron.app.on("ready", () => {setTimeout(spawnWindowMac,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
 }else if(osvar == 'win32'){electron.app.on("ready", () => {setTimeout(spawnWindow,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
 }else{electron.app.on("ready", () => {setTimeout(spawnWindowLinux,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});}
@@ -16,6 +16,8 @@ function spawnWindow(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
+		minWidth: 790,
+		minHeight: 500,
 		backgroundColor: "#00000000",
 		title: "FalixNodes Software",
 		resizable: true,
@@ -28,17 +30,17 @@ function spawnWindow(){
 		blurCornerRadius: 20,
 		vibrancy: "fullscreen-ui",
 		webPreferences: {
-			preload: path.join(__dirname, "preload.js"), // use a preload script
-			icon: path.join(__dirname, '/src/img/app/icon.png'), // Set app icon
+			preload: path.join(__dirname, "preload.js"),
+			icon: path.join(__dirname, '/src/img/app/icon.png'), 
 			nodeIntegration: true,
 			webviewTag: true
 		}
 })
 
-win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
+win.setIcon(path.join(__dirname, '/src/img/app/icon.png'));
 win.webContents.loadFile('index.html');
 win.webContents.on('did-finish-load', function() {
-  win.webContents.insertCSS('.ddLinux, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+  win.webContents.insertCSS('.ddLinux, .ddMac{display: none !important;}')
 });
     
 	if(process.platform === "linux"){
@@ -106,6 +108,8 @@ function spawnWindowMac(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
+		minWidth: 790,
+		minHeight: 500,
 		backgroundColor: "#00000000",
 		resizable: true,
 		autoHideMenuBar: true,
@@ -118,35 +122,31 @@ function spawnWindowMac(){
 		blurCornerRadius: 20,
 		vibrancy: "fullscreen-ui",
 		webPreferences: {
-			preload: path.join(__dirname, "preload.js"), // use a preload script
+			preload: path.join(__dirname, "preload.js"),
 			nodeIntegration: true,
 			webviewTag: true
 		}
 })
 
-win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
+win.setIcon(path.join(__dirname, '/src/img/app/icon.png'));
 win.webContents.loadFile('index.html');
 win.webContents.on('did-finish-load', function() {
   win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddLinux{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 });
 
 	const template = [
-		// { role: 'appMenu' }
 		...(isMac ? [{
 		  label: app.name,
 		  submenu: [
-			{ role: 'about' }, // This will replace link on the dashboard if user is using macOS
 			{ role: 'quit' }
 		  ]
 		}] : []),
-		// { role: 'fileMenu' }
 		{
 		  label: 'File',
 		  submenu: [
 			isMac ? { role: 'close' } : { role: 'quit' }
 		  ]
 		},
-		// { role: 'viewMenu' }
 		{
 		  label: 'View',
 		  submenu: [
@@ -161,7 +161,6 @@ win.webContents.on('did-finish-load', function() {
 			{ role: 'togglefullscreen' }
 		  ]
 		},
-		// { role: 'windowMenu' }
 		{
 		  label: 'Window',
 		  submenu: [
@@ -247,6 +246,8 @@ function spawnWindowLinux(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
+		minWidth: 790,
+		minHeight: 500,
 		backgroundColor: "#00000000",
 		resizable: true,
 		autoHideMenuBar: true,
@@ -258,14 +259,14 @@ function spawnWindowLinux(){
 		blurCornerRadius: 20,
 		vibrancy: "fullscreen-ui",
 		webPreferences: {
-			preload: path.join(__dirname, "preload.js"), // use a preload script
-			icon: path.join(__dirname, '/src/img/app/icon.png'), // Set app icon
+			preload: path.join(__dirname, "preload.js"),
+			icon: path.join(__dirname, '/src/img/app/icon.png'),
 			nodeIntegration: true,
 			webviewTag: true
 		}
 })
 
-win.setIcon(path.join(__dirname, '/src/img/app/icon.png')); // Set app icon
+win.setIcon(path.join(__dirname, '/src/img/app/icon.png'));
 win.webContents.loadFile('index.html');
 win.webContents.on('did-finish-load', function() {
   win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
