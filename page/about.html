@@ -6,14 +6,14 @@
         <button onclick="window.close();">Close</button>
         <div class="topAbout">
             <h1>FalixNodes Software</h1>
-            <h2 id="version">v2.3.0 Beta 3</h2>
+            <h2 id="version">v2.3.0 Beta 4</h2>
             <img src="../src/img/app/icon.png">
         </div>
         <div class="bottomAbout">
             <h3>Packages:</h3>
             <div class="grid_12">
                 <p>Electron: <span id="electron-version"></span></p>
-                <p>Electron Builder: 22.9.1</p>
+                <p>Electron Builder: 20.0.0</p>
                 <p>Glasstron: 0.0.7</p>
             </div>
             <h3>Information:</h3>
@@ -23,11 +23,11 @@
             </div>
             <h3>Extra Packages:</h3>
             <div style="margin-top: 55px;" class="grid_12">
-                <a href="#">Changelog</a>
-                <a href="#">Sofware License Agreement</a>
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/blob/v2.3/CHANGELOG.md');">Changelog</a>
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/blob/master/LICENSE');">Sofware License Agreement</a>
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/terms-and-conditions.php');">Terms and Conditions</a>
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/privacy-policy.php');">Privacy Policy</a>
+                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/cookie-policy.php');">Cookie Policy</a>
             </div>
         </div>
     </body>

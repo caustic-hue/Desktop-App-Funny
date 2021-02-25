@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
     <link id="theme-setting" rel="stylesheet" type="text/css" href="./src/css/settings/theme/dark.css">
     <link id="theme-setting-1" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/collapse/open.css">
-    <link id="theme-setting-2" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/opacity/75.css">
+    <link id="theme-setting-2" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/opacity/90.css">
     <link id="theme-setting-3" rel="stylesheet" type="text/css" href="./src/css/settings/accent-color/default.css">
     <link id="first-boot-s" rel="stylesheet" type="text/css" href="./src/css/first_boot/on.css">
   </head>
@@ -98,12 +98,10 @@
         </div>
         <div id="load_panel" class="panel_webiew">
           <div id="controls">
-      
             <button id="back" title="Go Back" disabled="true"><i class="fa fa-angle-left"></i></button>
             <button id="forward" title="Go Forward" disabled="true"><i class="fa fa-angle-right"></i></button>
             <button id="home" title="Unload Panel"><i class="fa fa-times"></i></button>
             <button id="reload" title="Reload"><i class="fa fa-hourglass-end"></i></button>
-      
             <form id="location-form">
               <div id="center-column">
                 <h2>Current Web Address:</h2>
@@ -135,7 +133,6 @@
           </div>
           <webview id="panel" src="https://software.falixnodes.net/blank/"></webview> <!-- Use blank domain first -->
           <!-- Even if the user hasn't loaded the panel yet, the site is still loading in the background. So using a blank site as default should help. -->
-      
           <div id="sad-webview">
             <div id="sad-webview-icon">&#9888;</div>
             <h2 id="crashed-label">Aw, Snap!</h2>
@@ -177,7 +174,7 @@
           <p style="pointer-events: all !important;"><button style="margin-right: 10px;background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')"><i class="fas fa-toggle-on"></i> Open</button><button style="background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/close.css')"><i class="fas fa-toggle-off"></i> Close</button></p>
           <h2>Danger Zone</h2>
           <h3>Reset</h3>
-          <button onclick="reset()" style="display: flex;margin-right: 10px;background: #ff4b4b;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;"><div id="sad-webview-icon">⚠</div> Reset</button>
+          <button onclick="const { shell } = require('electron'); shell.openExternal('https://help.falixnodes.net/software/desktop/clearing-cache/'); window.close();" style="display: flex;margin-right: 10px;background: #ff4b4b;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;"><div id="sad-webview-icon">⚠</div> Reset</button>
         </div>
       </div>
     </div>
@@ -208,9 +205,7 @@
     <script src="./src/js/settings/sidebar-opacity.js"></script>
     <script src="./src/js/settings/sidebar-collapse.js"></script>
     <script src="./src/js/settings/accent-color.js"></script>
-
-    <script src="./reset.js"></script>
-
+    <!---->
     <script>includeHTML();</script>
   </body>
 </html>

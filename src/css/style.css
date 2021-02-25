@@ -171,11 +171,13 @@ webview#fullscreen {
   text-align: left;
   padding: 15px 20px;
   border-radius: 10px;
+  transition: 0.3s background;
 }
 .sidebar .menu button:hover {
   cursor: pointer;
   background: var(--accent-color);
-  opacity: 0.3;
+  opacity: 0.6;
+  transition: 0.3s background;
 }
 .sidebar .menu button:active {
   background: var(--accent-color);
@@ -674,4 +676,14 @@ div#myDropdown p {position: absolute;}
   left: 30px;
   color: #313131;
   font-size: 40px;
+}
+
+button#ts_dashboard, button#ts_client, button#ts_panel {
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: var(--accent-color);
+  width: 160px;
 }
