@@ -1,6 +1,6 @@
 {
   "name": "falixnodes",
-  "version": "2.2.93",
+  "version": "2.2.94",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -34,7 +34,7 @@
       "synopsis": "A quick access to your servers.",
       "category": "Network",
       "vendor": "Korbs Studio",
-      "description": "Line 1"
+      "description": "Accessing FalixNodes, all from one place"
     },
     "nsis": {
       "deleteAppDataOnUninstall": true,

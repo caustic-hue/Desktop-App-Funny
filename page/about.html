@@ -3,32 +3,13 @@
         <title>About</title>
     </head>
     <body>
-        <button onclick="window.close();">Close</button>
         <div class="topAbout">
-            <h1>FalixNodes Software</h1>
-            <h2 id="version">v2.3.0 Beta 4</h2>
+            <h1>FalixNodes Software</h1></h2>
+            <h2 id="version">v2.3.0 Beta 5</h2>
             <img src="../src/img/app/icon.png">
         </div>
-        <div class="bottomAbout">
-            <h3>Packages:</h3>
-            <div class="grid_12">
-                <p>Electron: <span id="electron-version"></span></p>
-                <p>Electron Builder: 20.0.0</p>
-                <p>Glasstron: 0.0.7</p>
-            </div>
-            <h3>Information:</h3>
-            <div class="grid_12">
-                <p>Node: <span id="node-version"></span></p>
-                <p>Chromium: <span id="chrome-version"></span></p>
-            </div>
-            <h3>Extra Packages:</h3>
-            <div style="margin-top: 55px;" class="grid_12">
-                <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/blob/v2.3/CHANGELOG.md');">Changelog</a>
-                <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/blob/master/LICENSE');">Sofware License Agreement</a>
-                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/terms-and-conditions.php');">Terms and Conditions</a>
-                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/privacy-policy.php');">Privacy Policy</a>
-                <a onclick="const { shell } = require('electron'); shell.openExternal('https://falixnodes.net/cookie-policy.php');">Cookie Policy</a>
-            </div>
+        <div class="footer">
+            <p><a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/issues/');">GitHub</a> | <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/issues/');">Report Issue</a> | <a onclick="const { shell } = require('electron'); shell.openExternal('https://github.com/FalixNodes-Software/Desktop-App/blob/master/LICENSE');">License</a> | <a onclick="const { shell } = require('electron'); shell.openExternal('https://software.falixnodes.net/');">Website</a></p>
         </div>
     </body>
 </html>
@@ -43,6 +24,25 @@ h2 {pointer-events: none;}
 h3 {pointer-events: none;}
 p {pointer-events: none;}
 a {color: white;}
+
+body::before {
+    background: rgba(35, 35, 35, 0.95);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    content: "";
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+p {
+    cursor: default;
+}
 
 img {
     position: fixed;
@@ -71,7 +71,6 @@ button {
     left: 0px;
     height: 100px;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
     z-index: 5;
     -webkit-app-region: drag;
 }
@@ -81,31 +80,13 @@ button {
     margin-top: -17px;
     font-size: 14px;
 }
-
-.bottomAbout {
-    position: fixed;
-    top: 160px;
+.footer {
+    position: absolute;
+    top: 100px;
     left: 25px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-template-rows: 0px;
+    z-index: 5;
 }
-.bottomAbout::before {
-    content: "";
-    border-radius: 0px 0px 10px 10px;
-    background: #232323f2;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 75%;
-    z-index: -1;
-}
-.grid_12 {
-    margin-top: 45px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-rows: 24px 24px 24px 24px;
+.footer p {
+    pointer-events: all;
 }
 </style>

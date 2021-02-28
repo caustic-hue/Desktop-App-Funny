@@ -101,7 +101,7 @@
             <button id="back" title="Go Back" disabled="true"><i class="fa fa-angle-left"></i></button>
             <button id="forward" title="Go Forward" disabled="true"><i class="fa fa-angle-right"></i></button>
             <button id="home" title="Unload Panel"><i class="fa fa-times"></i></button>
-            <button id="reload" title="Reload"><i class="fa fa-hourglass-end"></i></button>
+            <button id="reload" title="Reload"><i class="fa fa-redo-alt"></i></button>
             <form id="location-form">
               <div id="center-column">
                 <h2>Current Web Address:</h2>
@@ -207,5 +207,11 @@
     <script src="./src/js/settings/accent-color.js"></script>
     <!---->
     <script>includeHTML();</script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#body').show();
+          $('#msg').hide();
+      });
+    </script>
   </body>
 </html>

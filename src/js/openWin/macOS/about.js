@@ -6,7 +6,7 @@ function openAboutWinM() {
 
   var win = new BrowserWindow({
 	width: 800,
-	height: 400,
+	height: 140,
 	backgroundColor: "#00000000",
 	title: "About",
 	resizable: false,
@@ -14,6 +14,7 @@ function openAboutWinM() {
 	alwaysOnTop: true,
 	center: true,
 	autoHideMenuBar: true,
+	titleBarStyle: 'hiddenInset',
 	frame: false,
 	transparent: true,
 	webPreferences: {

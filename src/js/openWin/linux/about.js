@@ -5,8 +5,8 @@ function openAboutWinL() {
   const BrowserWindow = remote.BrowserWindow;
 
   var win = new BrowserWindow({
-	width: 800,
-	height: 400,
+	width: 500,
+	height: 150,
 	backgroundColor: "#00000000",
 	title: "About",
 	resizable: false,
@@ -14,7 +14,7 @@ function openAboutWinL() {
 	alwaysOnTop: true,
 	center: true,
 	autoHideMenuBar: true,
-	frame: false,
+	frame: true,
 	transparent: true,
 	webPreferences: {
 		preload: path.join(__dirname, "preload.js"), // use a preload script
