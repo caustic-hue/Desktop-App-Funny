@@ -16,10 +16,12 @@ onload = function() {
   document.querySelector('#home').onclick = function() {
     navigateTo('https://software.falixnodes.net/blank/'); // Redirect panel webview away from gp.falixnodes.net, to improve performance
     loadPanel(); // Toggle DIV
+    refreshPanel();
   };
   document.querySelector('#gotopanel').onclick = function() {
     navigateTo('https://gp.falixnodes.net/');
     loadPanel(); // Toggle DIV
+    refreshPanel();
   };
 
   document.querySelector('#reload').onclick = function() {

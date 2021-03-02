@@ -29,6 +29,8 @@ h1{pointer-events: none;}
 h2{pointer-events: none;}
 h3{pointer-events: none;font-size: 14px;}
 p{pointer-events: none;}
+::selection {color: white;background: var(--accent-color);}
+
 
 webview#fullscreen {
   position: fixed;
@@ -515,14 +517,12 @@ form#location-form span#address {
 }
 
 
-
-div#loading_panel {
+.load_panel {
   position: fixed;
-  z-index: 6;
-  background: black;
-  padding: 3px 43px;
-  left: 0px;
-  top: 190px;
+  z-index: 5;
+  background: #232323;
+  width: 100%;
+  height: 100%;
   display: none;
 }
 
@@ -589,16 +589,17 @@ body.offline .wired {
   display: none;
 }
 .unwired.alert.alert-danger {
-  background: red;
+  background: #EC5556;
   font-weight: bold;
   position: fixed;
   width: 160px;
   left: 0px;
-  bottom: 0px;
-  padding: 10px 20px;
+  bottom: 60px;
+  padding: 14px 20px;
   margin: 20px;
   border-radius: 10px;
-  animation: 5s fadeIn ease;
+  animation: 2s fadeIn ease;
+  cursor: wait;
 }
 
 
@@ -694,3 +695,4 @@ button#ts_dashboard, button#ts_client, button#ts_panel {
 
 
 
+p#sidebarOpacity-grid {background: url(../img/backgrounds/Bliss.jpg)}

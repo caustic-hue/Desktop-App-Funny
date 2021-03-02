@@ -5,8 +5,8 @@ function openAboutWinM() {
   const BrowserWindow = remote.BrowserWindow;
 
   var win = new BrowserWindow({
-	width: 800,
-	height: 140,
+	width: 500,
+	height: 150,
 	backgroundColor: "#00000000",
 	title: "About",
 	resizable: false,
