@@ -21,11 +21,11 @@
     "win": {
       "icon": "src/img/app/icon.png",
       "asar": true,
-      "target": "nsis"
+      "target": "appx"
     },
     "mac": {
       "icon": "src/img/app/icon.icns",
-      "target": "pkg"
+      "target": "dmg"
     },
     "linux": {
       "target": "snap",
