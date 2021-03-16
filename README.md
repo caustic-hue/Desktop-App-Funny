@@ -1,16 +1,16 @@
 # FalixNodes Software v3
 ## To-Do List
- - [ ] Build new About window
+ - [x] Build new About window
  - [x] Add appearence settings
    - [x] Light and Dark mode
    - [x] Sidebar opacity
-   - [ ] Switch between custom or native titlebar
-   - [ ] Change titlebar layout(Linux)
-   - [ ] Change accent color
-   - [ ] Disable blur effect
+   - [ ] ~~Switch between custom or native titlebar~~ (Requires modifying main file)
+   - [ ] ~~Change titlebar layout(Linux)~~ (Requires modifying main file)
+   - [x] Change accent color
+   - [ ] ~~Disable blur effect~~ (Requires modifying main file)
    - [ ] Enable/Disable certain tabs in sidebar
    - [x] Switch between small and full sidebar
- - [ ] Finish new design and layout
+ - [x] Finish new design and layout
  - [x] Add load button to both client and panel
  - [x] Add new controls to panel
  - [x] Add new blur effect for Windows
