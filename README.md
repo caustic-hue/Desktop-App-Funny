@@ -19,6 +19,18 @@
  - [x] Fix titlebar button functions on Windows
  - [x] First boot screen
 
+## FAQ for Developers
+### Why Include Font Awesome in the Files? You could just use a script?
+Yes, a simple line of code could of added Font Awesome to the software.
+The reason why I choice to add it was for offline use, in case the user goes offline the icons would still load for them.
+
+### Why Electron?
+I'm mostly experienced with web code and have gained a lot of experience mostly in Electron in the past two years.
+So I take advantage of my skill set by using Electron.
+
+### Really? Why the unnecessary blur effect behind the window?
+I think it looks cool :)
+
 ## Building
 ### Requirements
 
