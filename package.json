@@ -6,32 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build",
-    "builmacd": "electron-builder build --mac"
-  },
-  "author": "KorbsStudio",
-  "license": "MIT",
-  "dependencies": {
-    "glasstron": "^0.0.7"
-  },
-  "devDependencies": {
-    "electron": "^9.4.3",
-    "electron-builder": "^22.9.1"
-  },
-  "build": {
-    "win": {
-      "icon": "src/img/app/icon.png",
-      "asar": true,
-      "target": "nsis"
-    },
-    "mac": {
-      "icon": "src/img/app/icon.icns",
-      "target": "pkg"
-    },
-    "linux": {
-      "target": "snap",
-      "icon": "src/img/app/icon.png",
-      "maintainer": "package.korbsstudio.falixnodes",
-      "synopsis": "A quick access to your servers.",
+    "builmo your servers.",
       "category": "Network",
       "vendor": "Korbs Studio",
       "description": "Accessing FalixNodes, all from one place"
