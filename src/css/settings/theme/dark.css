@@ -1,8 +1,7 @@
-/* Please delete this :) */
-/* Please don't use this */
-/* WHY WOULD YOU USE THIS */
-/* I SAID DELETE IT */
-
 body {
     color: white !important;
 }
+.sidebar {
+    background: rgba(35, 35, 35, var(--sidebarOpacity)) !important;
+}
+span#cb-dark{background: var(--accent-color)}

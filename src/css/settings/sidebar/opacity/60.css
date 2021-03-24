@@ -1,3 +1,11 @@
-.sidebar {
-    background: rgba(35, 35, 35, 0.6) !important;
+:root {
+    --sidebarOpacity: 0.6;
+}
+button#opacitySidebar60::after {
+    content: "";
+    width: 20px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    margin: 28px 0px 0px -23px;
 }

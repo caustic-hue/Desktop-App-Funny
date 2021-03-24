@@ -1,24 +1,36 @@
-/* Please delete this :) */
-/* Please don't use this */
-/* WHY WOULD YOU USE THIS */
-/* I SAID DELETE IT */
-
+span#cb-light{background: var(--accent-color)}
 body {
     color: black !important;
 }
 .sidebar {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(210, 210, 210, var(--sidebarOpacity)) !important;
 }
-.content, div#sad-webview {
+.splash-screen {
+    color: black !important;
+    background-color: rgba(255,255,255,0.9);
+}
+div#myDropdown {
+    color: black;
     background: white;
 }
+.dropdown-content i.fas.fa-caret-down{color: white;}
+.content, div#sad-webview {
+    background: white !important;
+}
 .sidebar .menu button {
-    color: black;
+    color: black !important;
 }
 div#dashboard .left .news .card, input#location, form#location-form span#address {
-    background: #eee;
-    color: black;
+    background: #eee !important;
+    color: black !important;
 }
 div#dashboard .right a, div#setting .right a {
-    color: black;
+    color: black !important;
+}
+div#refresh_panel {
+    background: white !important;
+}
+.loader {
+    border: 8px solid rgb(210, 210, 210) !important;
+    border-top: 8px solid var(--accent-color) !important;
 }

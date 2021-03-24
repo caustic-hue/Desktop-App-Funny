@@ -2,6 +2,7 @@
   <head>
     <title>FalixNodes Software</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/splash.css">
     <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
     <link id="theme-setting" rel="stylesheet" type="text/css" href="./src/css/settings/theme/dark.css">
     <link id="theme-setting-1" rel="stylesheet" type="text/css" href="./src/css/settings/sidebar/collapse/open.css">
@@ -40,9 +41,18 @@
     </div>
   </header>
   <body>
+    <div id="splashScreen" class="splash-screen">
+      <div class="co-ss">
+        <img src="./src/img/app/icon.png">
+        <h1>FalixNodes Software</h1>
+      </div>
+      <div class="loading-bar">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
     <div class="sidebar">
       <div class="menu">
-        <button class="tablink" onclick="openPage('dashboard', this, 'var(--accent-color)')" id="defaultOpen"><i class="fas fa-home"></i> Dashboard</button>
+        <button class="tablink" onclick="openPage('dashboard', this, 'var(--accent-color)')" id="defaultOpen"><i class="fas fa-newspaper"></i> News</button>
         <button class="tablink" onclick="openPage('client', this, 'var(--accent-color)')"><i class="fas fa-id-card"></i> Client</button>
         <button class="tablink" onclick="openPage('panel', this, 'var(--accent-color)')"><i class="fas fa-server"></i> Panel</button>
         <button id="menuDropDown" onclick="dropDown();"><i class="fas fa-ellipsis-h"></i></button>
@@ -64,7 +74,6 @@
           <a onclick="openHelpCenterWinL();"><i class="fas fa-question-circle"></i> Help</a>
           <a onclick="openUptimeWinL();"><i class="fas fa-clock"></i> Uptime</a>
         </div>
-        <p><i class="fas fa-caret-down"></i></p>
       </div>
       <div class="internet-checker">
         <div class="wired alert alert-success">You're online</div>
@@ -75,12 +84,12 @@
       <div class="first_boot">
         <h1>Welcome to FalixNodes Software</h1>
         <p>Accessing FalixNodes, all from one place</p>
+        <img src="./src/img/backgrounds/dots.png">
         <button onclick="swapFirstBoot('./src/css/first_boot/off.css');"></button>
       </div>
       <div id="dashboard" class="content_Tab">
         <div class="left">
-          <h1>Dashboard</h1>
-          <h2>News</h2>
+          <h1>News</h1>
           <div class="news">
             <div w3-include-html="https://software.falixnodes.net/posts/grab-posts.html"></div>
             <div class="news_loading">
@@ -158,19 +167,26 @@
           <h1>Settings</h1>
           <h2>Appearances</h2>
           <h3>Theme</h3>
-          <button id="lightMode" style="cursor: not-allowed;")><i class="fas fa-sun"></i> Light</button>
-          <button id="darkMode" onclick="swapStyle('./src/css/settings/theme/dark.css')")><i class="fas fa-moon"></i> Dark</button>
+          <div class="selector">
+            <span id="cb-light" class="checkbox"></span><button id="checked" onclick="swapStyle('./src/css/settings/theme/light.css')")>Light</button>
+            <span id="cb-dark" class="checkbox"></span><button onclick="swapStyle('./src/css/settings/theme/dark.css')")>Dark</button>
+          </div>
           <h3>Accent Color</h3>
-          <p style="pointer-events: all !important;">
-            <button style="background: #6B5FD2;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapAccentColor('./src/css/settings/accent-color/default.css')">Default</button>
-            <button style="background: #EC5556;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapAccentColor('./src/css/settings/accent-color/red.css')">Red</button>
-            <button style="background: #4E98E7;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapAccentColor('./src/css/settings/accent-color/blue.css')">Blue</button>
-            <button style="background: #6BB738;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapAccentColor('./src/css/settings/accent-color/green.css')">Green</button>
-            <button style="background: #333333;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapAccentColor('./src/css/settings/accent-color/gray.css')">Gray</button>
-          </p>
+          <div class="selector">
+            <span id="cb-cdefault" class="checkbox"></span><button id="checked" onclick="swapAccentColor('./src/css/settings/accent-color/default.css')">Default</button>
+            <span id="cb-cred" class="checkbox"></span><button onclick="swapAccentColor('./src/css/settings/accent-color/red.css')">Red</button>
+            <span id="cb-cblue" class="checkbox"></span><button onclick="swapAccentColor('./src/css/settings/accent-color/blue.css')">Blue</button>
+            <span id="cb-cgreen" class="checkbox"></span><button onclick="swapAccentColor('./src/css/settings/accent-color/green.css')">Green</button>
+            <span id="cb-cgray" class="checkbox"></span><button onclick="swapAccentColor('./src/css/settings/accent-color/gray.css')">Gray</button>
+          </div>
+          <h3>Sidebar Size</h3>
+          <div class="selector">
+            <span id="cb-large" class="checkbox"></span><button id="checked" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')">Large</button>
+            <span id="cb-small" class="checkbox"></span><button onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/close.css')">Small</button>
+          </div>
           <h3>Sidebar Opacity</h3>
-          <p id="sidebarOpacity-grid" style="pointer-events: all !important;width: fit-content;padding: 10px 20px;background-size: cover;background-position: center;border-radius: 7px;">
-            <button id="sidebarOpacity0" style="opacity: 0.0;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/0.css')">0%</button>
+          <div id="bg" class="slider">
+            <button id="opacitySidebar0" style="opacity: 0.0;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/0.css')">0%</button>
             <button id="opacitySidebar10" style="opacity: 0.1;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/10.css')">10%</button>
             <button id="opacitySidebar20" style="opacity: 0.2;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/20.css')">20%</button>
             <button id="opacitySidebar30" style="opacity: 0.3;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/30.css')">30%</button>
@@ -180,13 +196,15 @@
             <button id="opacitySidebar70" style="opacity: 0.7;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/70.css')">70%</button>
             <button id="opacitySidebar80" style="opacity: 0.8;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/80.css')">80%</button>
             <button id="opacitySidebar90" style="opacity: 0.9;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/90.css')">90%</button>
-            <button id="opacitySidebar1" style="opacity: 1;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/1.css')">100%</button>
-          </p>
-          <h3>Sidebar View</h3>
-          <p style="pointer-events: all !important;"><button style="margin-right: 10px;background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')"><i class="fas fa-toggle-on"></i> Open</button><button style="background: #3e3e3e;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;" onclick="swapCollapseSidebar('./src/css/settings/sidebar/collapse/close.css')"><i class="fas fa-toggle-off"></i> Close</button></p>
-          <h2>Danger Zone</h2>
+            <button id="opacitySidebar1" style="opacity: 1;border-radius: 0px 7px 7px 0px;" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/1.css')">100%</button>
+          </div>
+          <h2>Extra</h2>
           <h3>Reset</h3>
-          <button onclick="const { shell } = require('electron'); shell.openExternal('https://help.falixnodes.net/software/desktop/clearing-cache/'); window.close();" style="display: flex;margin-right: 10px;background: #EC5556;color: white;border: none;font-weight: bold;padding: 10px 20px;border-radius: 7px;"><div id="sad-webview-icon">⚠</div> Reset</button>
+          <div class="l-b">
+            <span id="cb-large" class="checkbox"></span><button id="checked" onclick="location.reload();">Reload</button>
+            <span id="cb-large" class="checkbox"></span><button id="checked" onclick="swapOpacitySidebar('./src/css/settings/sidebar/opacity/90.css'); swapAccentColor('./src/css/settings/accent-color/default.css'); swapStyle('./src/css/settings/theme/dark.css'); swapCollapseSidebar('./src/css/settings/sidebar/collapse/open.css')">Reset Settings</button>
+            <span id="cb-large" class="checkbox"></span><button id="checked" onclick="const { shell } = require('electron'); shell.openExternal('https://help.falixnodes.net/software/desktop/clearing-cache/'); window.close();">Reset</button>
+          </div>
         </div>
       </div>
     </div>
@@ -214,6 +232,7 @@
     <script src="./src/js/etc/offline.js"></script>
     <script src="./src/js/etc/include.js"></script>
     <script src="./src/js/etc/dropdown-menu.js"></script>
+    <script src="https://qdfvwx6wff10.statuspage.io/embed/script.js"></script>
     <!-- Scripts - Application Setting -->
     <script src="./src/js/settings/theme.js"></script>
     <script src="./src/js/settings/sidebar-opacity.js"></script>

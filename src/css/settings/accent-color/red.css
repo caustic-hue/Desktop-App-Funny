@@ -1,3 +1,4 @@
 :root {
-    --accent-color: #EC5556;
-  }
+  --accent-color: #EC5556;
+}
+span#cb-cred{background:var(--accent-color);}

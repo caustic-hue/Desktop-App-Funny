@@ -14,15 +14,11 @@ function openAboutWin() {
     alwaysOnTop: true,
     center: true,
     autoHideMenuBar: true,
-    frame: true,
+    frame: false,
     transparent: true,
     webPreferences: {
         preload: path.join(__dirname, "preload.js"), // use a preload script
         nodeIntegration: true
     }
 })
-  win.webContents.loadURL(`file://${__dirname}/page/about.html`);   
-  win.webContents.webContents.on('did-finish-load', function() {
-    win.webContents.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
-  });
 }
