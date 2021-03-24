@@ -1,12 +1,37 @@
 {
   "name": "falixnodes",
-  "version": "2.2.95",
+  "version": "2.2.96",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build",
-    "builmo your servers.",
+    "builmacd": "electron-builder build --mac"
+  },
+  "author": "KorbsStudio",
+  "license": "MIT",
+  "dependencies": {
+    "glasstron": "^0.0.7"
+  },
+  "devDependencies": {
+    "electron": "^9.4.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "win": {
+      "icon": "src/img/app/icon.png",
+      "asar": true,
+      "target": "appx"
+    },
+    "mac": {
+      "icon": "src/img/app/icon.icns",
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "snap",
+      "icon": "src/img/app/icon.png",
+      "maintainer": "package.korbsstudio.falixnodes",
+      "synopsis": "A quick access to your servers.",
       "category": "Network",
       "vendor": "Korbs Studio",
       "description": "Accessing FalixNodes, all from one place"
