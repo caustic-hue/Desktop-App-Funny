@@ -1,6 +1,6 @@
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabContent");
+    tabcontent = document.getElementsByClassName("content_Tab");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }

@@ -1,0 +1,34 @@
+# v2.3.0 Changelog - Design Refresh
+
+ - Added [Glasscord] dependency
+ - Added new screen during first boot
+ - Added loading indicator when news is loading
+ - Added social icons to News tab
+ - Added new blur effect behind window
+ - Added loading indicator if panel is loading or reloading
+ - Panel is unloaded by default on software startup giving a better performance boost
+ - Added crash screen if panel doesn't load
+ - Added new panel controls 🎉️
+   - Kill (Unload Panel)
+   - Reload
+   - Back
+   - Forward
+ - Added Settings
+   - Theme (Light or Dark)
+   - Accent Colors (Default(purple), Red, Blue, Green, or Gray)
+   - Sidebar Opacity
+   - Sidebar Size
+   - Reset Settings option
+   - Reset option
+   - Reload option
+ - Converted tabs into a sidebar
+ - Changed macOS setup file from ZIP to DMG
+ - Changed Windows setup file from EXE to APPX (Microsoft Store only)
+ - Change titlebar controls depending on operating system, merged [Glasscord Titlebar Detection](https://github.com/KorbsStudio/electron-titlebar-os-detection-glasscord)
+ - Moved dropdown menu to bottom left
+ - Renamed "Dashboard" to "News"
+ - Removed Release Notes
+ - Removed auto updating integration for Windows
+ - Removed "FalixNodes Software" text from Dashboard
+ - Removed version number text from Dashboard
+ - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`v9.4.3`](https://www.npmjs.com/package/electron/v/9.4.3)

@@ -1,0 +1,63 @@
+div#panel webview, div#client webview {
+    width: calc(100% - 70px) !important;
+}
+.sidebar {
+    width: 30px !important;
+}
+.sidebar button {
+    font-size: 0px !important;
+}
+.sidebar i {
+    font-size: 14px !important;
+}
+
+button#settings, .sidebar button {
+    width: 54px !important;
+    margin-left: -12px !important;
+}
+button#settings {
+    left: 20px;
+    bottom: 115px;
+}
+button#menuDropDown i {
+    margin-left: 0px;
+}
+
+div#myDropdown i {
+    font-size: 14px !important;
+}
+div#myDropdown {
+    font-size: 0px;
+}
+div#myDropdown {
+    width: 39px;
+    bottom: 130px;
+    left: 17px;
+}
+.dropdown-content i.fas.fa-caret-down {
+    bottom: 121px;
+    left: 32px;
+}
+
+.content {
+    width: calc(100% - 70px);
+}
+
+button#back, button#forward, button#reload, button#home {
+    left: 25px;
+}
+button#back {
+    top: 200px;
+}
+button#forward {
+    top: 240px;
+}
+button#reload {
+    top: 280px;
+}
+button#home {
+    top: 320px;
+}
+
+
+span#cb-small{background: var(--accent-color)}

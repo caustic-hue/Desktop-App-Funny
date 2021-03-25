@@ -1,0 +1,11 @@
+:root {
+    --sidebarOpacity: 0.7;
+}
+button#opacitySidebar70::after {
+    content: "";
+    width: 20px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    margin: 28px 0px 0px -23px;
+}

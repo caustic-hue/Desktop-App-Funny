@@ -1,64 +1,53 @@
-# FalixNodes
-![image](https://i.imgur.com/nHUmzBG.png)
-The FalixNodes application was built for users to have a quicker access to their FalixNodes client, panel, servers, and VPS(s) all through one place. We also include our help center in there if needed.
 
-## Building FalixNodes Software
+## FAQ for Developers
+### What is APPX File?
+As you may see, when packaging and building the software with Electron Builder, you're given a `.appx` file if you haven't modify the package file yet.
+The reason why we use a `.appx` file is because of the Microsoft Store on Windows 10. Microsoft Store only accepts .appx file, we can't just throw a .exe at it. On Windows 10’s Anniversary Update, Microsoft added a new “App Installer” tool that allows you to install .Appx or .AppxBundle applications graphically. To install them, just double-click a .Appx or .AppxBundle package.
 
+You can only install .Appx or .AppxBundle software if sideloading is enabled on your Windows 10 device.
+To check if sideloading is enabled, head to Settings > Update & Security > For Developers. Ensure the setting here is set to either “Sideload apps” or “Developer mode”. If it’s set to “Windows Store apps”, you won’t be able to install .Appx or .AppxBundle software from outside the Windows Store.
+New Windows 10 “Universal apps” or “Universal Windows Platform” apps are distributed in .Appx or .AppxBundle files. These are application packages that include the name, description, and permissions of an app along with the application’s binaries. Windows can install and uninstall these packages in a standard fashion, so developers don’t have to write their own installers. Windows can handle everything in a consistent way, allowing it to cleanly uninstall applications with no leftover registry entries. If a developer makes a .Appx program, you normally don’t download and install it directly. Instead, you visit the Windows Store, search for the program you want to install, and download it from the Store. All software in the Windows Store is in .Appx or .AppxBundle format behind the scenes. In some cases, you may need to install a .Appx or .AppxBundle package from outside the Store. For example, your workplace may provide an application you need in .Appx format, or you may be a developer who needs to test your own software before uploading it to the Store.
+
+Most of this information was provided by [HowToGeeks](https://www.howtogeek.com/285410/how-to-install-.appx-or-.appxbundle-software-on-windows-10/)
+
+### As for the question above, how do I get a EXE file instead of a APPX file?
+If you're not on a Windows 10 operating system, you can still get a EXE file when building the software.
+In the __package.json__ file, look for the build area, then simply change `appx` to `nsis`.
+[Learn more about NSIS](https://www.electron.build/configuration/nsis) for Electron Builder.
+
+### Why Include Font Awesome in the Files? You could just use a script?
+Yes, a simple line of code could of added Font Awesome to the software.
+The reason why I choice to add it was for offline use, in case the user goes offline the icons would still load for them.
+
+### Why Electron?
+I'm mostly experienced with web code and have gained a lot of experience mostly in Electron in the past two years.
+So I take advantage of my skill set by using Electron.
+
+## Building
 ### Requirements
-[Git](https://git-scm.com/downloads)
 
-[Node](https://nodejs.org/en/download/)(v12 or up)
+You're required to have the following in order to build FalixNodes Software:
+ - [Python](https://www.python.org/downloads/) v3.6 or later
+ - [Visual C++ Redistributable](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
+ - [Node](https://nodejs.org/en/download/) v12 or later
 
-### Building
-Clone project:
+### Install Packages
 ```
-git clone https://github.com/FalixNodes-Software/Desktop-App
-```
-Change directory:
-```
+git clone https://github.com/FalixNodes-Software/Desktop-App/
 cd Desktop-App
-```
-Install packages:
-```
-npm install electron@9.0.5
+npm install electron@9.4.3
+npm install glasstron
 npm install electron-builder
 ```
-*Electron 9.0.5 is recommended for FalixNodes Software, as certain things broke in newer versions*
+Please only use Electron v9.0.0 - v9.4.3 or variables will be undefined.
 
-Run Build command:
+### Running
+To start running the software, use:
 ```
-npm run build
+npm start
 ```
-When building, it will build a setup file for your operating system, so if you're on Windows, it will create a EXE file; or if you're on Linux, it will create an AppImage and a Snap file; or if you're on macOS, it will create a DMG file.
-
-### Setting up Auto Update
-If you're forking the project and want to create something similar, but also want auto updating, here's how. Electron Builder is required for this, which is why it's used in v2.20 of FalixNodes Software. From personal experience, this appears to mostly work on Windows only.
-
-There are some requirements in this:
- - A [GitHub token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
- - [`electron-builder`](https://www.npmjs.com/package/electron-builder) package
- 
- You need to change a few things in `package.json` so that Electron Builder knows where to publish updates, we recommend GitHub as provider.
- What you need to change, is the build area of the `package.json` file, example:
- ```
-   "build": {
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "UsernameOrOrangization",
-        "repo": "repo-name",
-        "token": "GITHUBTOKEN"
-      }
-    ]
-  }
-  ```
- 
- GitHub token is required so that Electron Builder has permission to create new releases in the repo.
- 
- Once you're ready to publish an update, make the version number in `package.json` has been raised to a newer number. Then run the publish command:
- ```
- npm run publish
- ```
- When running the publish command, Electron Builder will start building setup files for your operating system, create a new release under the name of the version number(x.x.x), and then upload setup files to the new release. By default, Electron Builder will create a new release as a draft, giving you time to add a changelog and such to the release. You'll need to set it to publish and you're done!
- 
- Once the release is set to publish on GitHub, the app will detect it, starting downloading, then install it.
+### Packaging
+To create a package of the software, use:
+```
+npm build
+```
