@@ -1,23 +1,3 @@
-# FalixNodes Software v3
-## To-Do List
- - [x] Build new About window
- - [x] Add appearence settings
-   - [x] Light and Dark mode
-   - [x] Sidebar opacity
-   - [ ] ~~Switch between custom or native titlebar~~ (Requires modifying main file)
-   - [ ] ~~Change titlebar layout(Linux)~~ (Requires modifying main file)
-   - [x] Change accent color
-   - [ ] ~~Disable blur effect~~ (Requires modifying main file)
-   - [ ] Enable/Disable certain tabs in sidebar
-   - [x] Switch between small and full sidebar
- - [x] Finish new design and layout
- - [x] Add load button to both client and panel
- - [x] Add new controls to panel
- - [x] Add new blur effect for Windows
- - [x] Add new blur effect for macOS
- - [x] Add new blur effect for Linux(should work with supported DEs)
- - [x] Fix titlebar button functions on Windows
- - [x] First boot screen
 
 ## FAQ for Developers
 ### What is APPX File?
