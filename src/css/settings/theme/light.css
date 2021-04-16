@@ -34,3 +34,9 @@ div#refresh_panel {
     border: 8px solid rgb(210, 210, 210) !important;
     border-top: 8px solid var(--accent-color) !important;
 }
+.selector button, button#back, button#forward, button#reload, button#home {
+    color: black;
+}
+#window-controls .button img {
+    filter: brightness(0);
+}

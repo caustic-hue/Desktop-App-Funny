@@ -822,3 +822,11 @@ div#bg button {
   background: rgb(12, 12, 12);
   margin: 0px -2.1px;
 }
+
+.l-b button {
+  background: #ec5556;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+}

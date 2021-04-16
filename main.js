@@ -114,7 +114,7 @@ function spawnWindowMac(){
 		resizable: true,
 		autoHideMenuBar: true,
 		frame: false,
-		titleBarStyle: "hiddenInset", // Show traffic light buttons, without frame
+		titleBarStyle: "hiddenInset",
 		show: false,
 		blur: true,
 		blurType: "vibrancy",
