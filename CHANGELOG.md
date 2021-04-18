@@ -31,5 +31,5 @@
  - Removed auto updating integration for Windows
  - Removed "FalixNodes Software" text from Dashboard
  - Removed version number text from Dashboard
- - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`v9.4.3`](https://www.npmjs.com/package/electron/v/9.4.3)
+ - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`v9.4.4`](https://www.npmjs.com/package/electron/v/9.4.3)
  - Change Game Panel's domain from __gp.falixnodes.net__ to __panel.falixnodes.net__
