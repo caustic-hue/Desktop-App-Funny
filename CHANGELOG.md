@@ -1,6 +1,6 @@
 # v2.3.0 Changelog - Design Refresh
 
- - Added [Glasscord] dependency
+ - Added [Glasstron](https://github.com/AryToNeX/Glasstron) dependency
  - Added new screen during first boot
  - Added loading indicator when news is loading
  - Added social icons to News tab
