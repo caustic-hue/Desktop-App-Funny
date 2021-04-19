@@ -142,7 +142,7 @@
             </form>
           </div>
           <webview id="panel" src="https://software.falixnodes.net/blank/"></webview> <!-- Use blank domain first -->
-          <!-- Even if the user hasn't loaded the panel yet, the site is still loading in the background. So using a blank site as default should help. -->
+          <!-- Even if the user hasn't loaded the panel yet, the site is still loading in the background. So using a blank site as default should help for performance. -->
           <div style="opacity: 0; z-index: 4; position: fixed !important;top: 0px !important;left: 233px !important;animation: 20s fadeOut ease;z-index: 5;width: 100%;height: 100%;background: #232323;" id="refresh_panel">
             <h1 class="loader" style="position: fixed;top: 46%;left: 57%;transform: translate(0%, -50%);"></h1>
             <p id="loading_takingLong">It's taking longer than usual to load</p>
@@ -231,6 +231,7 @@
     <script src="./src/js/openWin/linux/uptime.js"></script>
     <!-- Scripts - ETC -->
     <script src="./src/js/etc/offline.js"></script>
+    <script src="./src/js/etc/news.js"></script>
     <script src="./src/js/etc/include.js"></script>
     <script src="./src/js/etc/dropdown-menu.js"></script>
     <script src="https://qdfvwx6wff10.statuspage.io/embed/script.js"></script>

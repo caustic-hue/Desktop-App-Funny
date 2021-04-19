@@ -830,3 +830,7 @@ div#bg button {
   padding: 7px 10px;
   border-radius: 4px;
 }
+
+button.tablink_news:hover::before {
+  display: none;
+}
