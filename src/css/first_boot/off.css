@@ -2,7 +2,7 @@
     display: none !important;
 }
 .content, html::before {
-    background: #232323;
+    background: #121E2C;
 }
 .sidebar {
     background: #23232375;

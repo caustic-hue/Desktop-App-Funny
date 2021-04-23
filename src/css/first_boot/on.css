@@ -14,13 +14,17 @@
     display: none;
 }
 
+.windows_first_boot {
+    display: none;
+}
+
 .first_boot {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    background: #23232390;
+    background: rgba(18, 30, 43, 0.75);
     z-index: 100;
 }
 .first_boot h1 {

@@ -1,0 +1,4 @@
+:root {
+  --accent-color: #6B5FD2;
+}
+span#cb-cpurple{background:var(--accent-color);}

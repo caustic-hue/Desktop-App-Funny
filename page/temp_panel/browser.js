@@ -14,7 +14,7 @@ onload = function() {
   };
 
   document.querySelector('#home').onclick = function() {
-    navigateTo('https://panel.falixnodes.net/');
+    navigateTo('http://panel.falixnodes.net/');
   };
 
   document.querySelector('#reload').onclick = function() {

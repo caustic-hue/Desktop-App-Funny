@@ -2,6 +2,6 @@ body {
     color: white !important;
 }
 .sidebar {
-    background: rgba(35, 35, 35, var(--sidebarOpacity)) !important;
+    background: rgba(11, 23, 37, var(--sidebarOpacity)) !important;
 }
 span#cb-dark{background: var(--accent-color)}

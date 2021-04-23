@@ -32,6 +32,7 @@ h3{pointer-events: none;font-size: 14px;}
 p{pointer-events: none;}
 ::selection {color: white;background: var(--accent-color);}
 ::-webkit-scrollbar {width: 0px;}
+a{text-decoration: underline;}
 
 webview#fullscreen {
   position: fixed;
@@ -273,7 +274,7 @@ p#loading_takingLong {
   right: 0px;
   width: calc(100% - 235px);
   height: 100%;
-  background: #232323;
+  background: #121E2C;
   animation: 1s fadeIn ease;
   opacity: 1;
   animation: 1.9s fadeInWait ease;
@@ -285,6 +286,10 @@ p#loading_takingLong {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 570px;
+}
+.panel_unloaded a {
+  pointer-events: all;
+  cursor: pointer;
 }
 .panel_unloaded button {
   border: none;
@@ -515,7 +520,7 @@ div#dashboard {
 
 div#sad-webview {
   position: fixed;
-  background: #232323;
+  background: #121E2C;
   top: 0px;
   padding: 60px;
   text-align: left;
@@ -565,7 +570,7 @@ form#location-form span#address {
 .load_panel {
   position: fixed;
   z-index: 5;
-  background: #232323;
+  background: #121E2C;
   width: 100%;
   height: 100%;
   display: none;
@@ -707,7 +712,7 @@ div#myDropdown {
   position: fixed;
   bottom: 80px;
   left: 20px;
-  background: #232323;
+  background: #121E2C;
   display: none;
   width: 200px;
   border-radius: 10px;

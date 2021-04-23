@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
-    background: rgba(35, 35, 35, 0.90);
+    background: rgba(18, 30, 44, 0.90);
     animation: 2s fadeOutSplash ease;
     pointer-events: none;
     opacity: 0;

@@ -7,10 +7,17 @@ const path = require('path');
 const url = require('url');
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 
+// Auto detect operating system (Windows, macOS, and Linux)
 var osvar = process.platform;
 if (osvar == 'darwin') {electron.app.on("ready", () => {setTimeout(spawnWindowMac,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
 }else if(osvar == 'win32'){electron.app.on("ready", () => {setTimeout(spawnWindow,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});
 }else{electron.app.on("ready", () => {setTimeout(spawnWindowLinux,process.platform === "linux" ? 1000 : 0);electron.nativeTheme.on("updated", checkDarkTheme);});}
+
+
+
+// Open main window for Windows
+
+
 
 function spawnWindow(){
 	const win = new glasstron.BrowserWindow({
@@ -103,6 +110,12 @@ win.webContents.on('did-finish-load', function() {
 
 	return win;
 }
+
+
+
+// Open window for macOS
+
+
 
 function spawnWindowMac(){
 	const win = new glasstron.BrowserWindow({
@@ -242,6 +255,12 @@ win.webContents.on('did-finish-load', function() {
 	return win;
 }
 
+
+
+// Open Window for Linux
+
+
+
 function spawnWindowLinux(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
@@ -269,7 +288,7 @@ function spawnWindowLinux(){
 win.setIcon(path.join(__dirname, '/src/img/app/icon.png'));
 win.webContents.loadFile('index.html');
 win.webContents.on('did-finish-load', function() {
-  win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+	win.webContents.insertCSS('.#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, windows_first_boot, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 });
 
     
