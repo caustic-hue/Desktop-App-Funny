@@ -1,2 +1,2 @@
-- name: Electron Builder Action
+- name: test
   uses: samuelmeuli/action-electron-builder@v1.6.0
