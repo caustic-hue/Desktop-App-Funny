@@ -1,0 +1,46 @@
+.tab_area {
+    width: 70px;
+}
+.tabs button i {
+    margin-right: 0px;
+}
+.tabs button {
+    font-size: 0px;
+}
+.tabs i {
+    font-size: 16px;
+}
+.tabs {
+    margin: 33px 20px 0px 6px;
+}
+.bottom_a {
+    margin: 33px 20px 0px 6px;
+}
+.bottom_a i {
+    font-size: 16px;
+    margin: 0px;
+}
+.bottom_a button {
+    font-size: 0px;
+}
+.bottom_a button {
+    width: 57px;
+}
+button#help_external {
+    margin-bottom: 10px;
+}
+
+.content {
+    left: 70px;
+    width: calc(100% - 70px);
+}
+
+.selection_sb_comp {
+    background: #18283B !important;
+}
+
+.new_window_options::before {
+    width: 44px;
+    height: 91px;
+    margin: 0px 7px;
+}

@@ -1,0 +1,88 @@
+.tab_area {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+}
+.tabs {
+    margin: 33px 20px 0px 20px;
+    display: grid;
+    grid-gap: 20px;
+}
+.tabs button {
+    background: transparent;
+    color: white;
+    text-align: left;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.bottom_a {
+    margin: 33px 20px 0px 20px;
+    position: absolute;
+    bottom: 33px;
+}
+.bottom_a button {
+    background: transparent;
+    color: white;
+    text-align: left;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.bottom_a button {width: 150px;}
+
+.content {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 100%;
+}
+
+.notify button {
+    background: var(--bg-accent-two);
+    width: 100%;
+}
+
+span#selection_s_sidebar {
+    background: var(--accent);
+    padding: 2.5px 10px;
+    border-radius: 50px;
+    position: absolute;
+    margin-left: -180px;
+    height: 15px;
+    margin-top: 10px;
+}
+
+.selection_s_sidebar {
+    background: #18283c !important;
+}
+
+.new_window_options {
+    background: var(--accent);
+    border-radius: 10px;
+    padding: 50px 0px 8px 0px;
+    margin: -67px 0px 0px 0px;
+    z-index: 1;
+}
+.new_window_options a {
+    color: white;
+    text-decoration: none;
+}
+.new_window_options a:hover {
+    opacity: 0.5;
+}
+.new_window_options::before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 190px;
+    height: 87px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}

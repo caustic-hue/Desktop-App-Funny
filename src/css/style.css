@@ -1,0 +1,167 @@
+:root {
+    --bg-accent-one: #0b1725;
+    --bg-accent-two: #162230;
+}
+
+body {
+    background: transparent;
+    color: white;
+    font-family: arial;
+    overflow: hidden;
+    animation: 1s load ease-in-out;
+}
+
+::selection{background: var(--accent);color: white;}
+a{color: var(--accent);}
+p{color: white;}
+h1{pointer-events: none;}
+h2{pointer-events: none;}
+h3{pointer-events: none;}
+p{cursor: default;}
+button{cursor: pointer;}
+button:focus{outline: none}
+
+@keyframes load {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeAwayWait {
+    0% {opacity: 1}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.tab_area {
+    background: rgba(11, 23, 37, 0.90);
+}
+.tab_area button:hover {
+    color: rgba(255, 255, 255, 0.50);
+}
+.tabs button:focus {outline: none}
+.tabs button i {margin-right: 10px;}
+.bottom_a button:focus {outline: none}
+.bottom_a button i {margin-right: 10px;}
+button#help_external:hover {background: var(--accent);}
+
+.content {
+    background: #162230;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+div#settings {
+    padding-left: 25px;
+}
+
+.notify button {
+    background: var(--bg-accent-two);
+    width: 100%;
+    margin: 0px 0px 12px 0px;
+}
+.wired, .unwired {
+    display: none;
+}
+body.online .wired {
+    display: none;
+}
+body.offline .unwired {
+    display: block;
+    background-color: rgb(255, 111, 111);
+    pointer-events: none;
+}
+body.offline .wired {
+    display: none;
+}
+
+.content webview {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+button#set_layout {
+    border: 4px var(--bg-accent-one) solid;
+    background: transparent;
+    border-radius: 10px;
+    width: 400px;
+    height: 210px;
+}
+button#set_layout img {
+    width: 100%;
+}
+
+.grid_icons button {
+    width: 40px !important;
+    height: 40px !important;
+    margin-bottom: 10px;
+    border: none !important;
+    border-radius: 50px !important;
+}
+
+.color_default::before {
+    background: #2970CC !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+.color_purple::before {
+    background: #6B5FD3 !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+.color_red::before {
+    background: #c6262e !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+.color_green::before {
+    background: #28bca3 !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+.color_yellow::before {
+    background: #fff394 !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+.color_gray::before {
+    background: #abacae !important;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin: -8px 0px 0px -39px;
+}
+
+.set_selection_color button {
+    width: 160px !important;
+    text-align: left;
+    color: white;
+    padding: 0px 0px 0px 45px;
+}
+
+button.tab {
+    z-index: 5;
+}
+

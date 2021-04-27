@@ -1,0 +1,17 @@
+:root {
+    --accent: #c6262e;
+}
+
+span#color_selected_red {
+    background: #18273A;
+    position: absolute;
+    width: 155px;
+    height: 40px;
+    margin: 0px 0px 0px -159px;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+button#set_layout img {
+    filter: hue-rotate(132deg);
+}

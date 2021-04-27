@@ -1,0 +1,93 @@
+body {
+    background: rgba(29, 29, 29, 0.75);
+}
+
+div#controls {
+    background: gray;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+}
+
+input#location {
+    position: fixed;
+    top: 0px;
+    left: 90px;
+    border: none;
+    background: #333333;
+    color: white;
+    padding: 10px 10px;
+    width: calc(100% - 110px);
+    pointer-events: none;
+}
+
+button#back {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    background: #232323;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+button#forward {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 30px;
+    background: #232323;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+button#reload {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 60px;
+    background: #232323;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+input[type="submit"], button#zoom, button#find, div#zoom-box, div#find-box {
+    display: none;
+}
+
+webview {
+    position: fixed;
+    top: 35px;
+    left: 0px;
+    width: 100% !important;
+    height: calc(100% - 35px) !important;
+}
+
+div#sad-webview {
+    color: white;
+    font-family: arial;
+    width: 400px !important;
+    margin-left: 50px;
+    opacity: 1;
+    animation: 5s waitThenLoad ease-in;
+}
+
+*:focus{outline:none}
+::selection{background: transparent;color:white;}
+
+@keyframes waitThenLoad {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
