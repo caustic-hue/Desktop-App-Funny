@@ -7,5 +7,5 @@
 
 
 
-  grade: stabe,betaust be 'stable' to release into candidate/stable channels
+  grade: stabe,beta
   confinement: strict
