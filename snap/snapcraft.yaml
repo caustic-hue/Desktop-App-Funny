@@ -1,15 +1,12 @@
-
   name: falixnodes
   version: '32.95.10'
   summary: A quick access to your servers
   description: |
     The FalixNodes application was built for users to have a quicker access to their FalixNodes client, panel, servers, and more all through one place. We also include our help center and uptime in there if needed.
 
-
-
   grade: stable
   confinement: strict
 
-parts:
-  my-part:
-    plugin: null
+  parts:
+    my-part:
+      plugin: null
