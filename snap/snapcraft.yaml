@@ -8,6 +8,9 @@
   confinement: strict
 
 parts:
-  my-part:
-    # See 'snapcraft plugins'
-    plugin: nil
+  nodejs: 
+    source: .
+    plugin: nodejs
+    nodejs-version: "12.13.1"
+    nodejs-package-manager: "yarn"
+    nodejs-yarn-version: "v1.21.1"
