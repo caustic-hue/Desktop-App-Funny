@@ -11,7 +11,5 @@
   confinement: strict
 
 parts:
-  beV:
-    build-environment:
-      - LANG: C.UTF-8
-      - LC_ALL: C.UTF-8
+  my-part:
+    plugin: null
