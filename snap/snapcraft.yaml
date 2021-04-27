@@ -6,11 +6,8 @@
 
   grade: stable
   confinement: strict
-
+  
 parts:
-  nodejs: 
-    source: .
-    plugin: nodejs
-    nodejs-version: "12.13.1"
-    nodejs-package-manager: "yarn"
-    nodejs-yarn-version: "v1.21.1"
+  gnu-hello:
+    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+    plugin: autotools
