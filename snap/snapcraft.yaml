@@ -10,12 +10,6 @@
   parts:
     electron-quick-start:
       plugin: nil
-      source: https://github.com/electron/electron-quick-start
-      override-build: |
-          sudo snap install node --classic
-          npm install electron@9.4.4 electron-packager
-          npx electron-packager . --overwrite --platform=linux --output=release-build --prune=true
-          cp -rv ./electron-quick-start-linux-* $SNAPCRAFT_PART_INSTALL/electron-quick-start
       build-packages:
       - unzip
       stage-packages:
