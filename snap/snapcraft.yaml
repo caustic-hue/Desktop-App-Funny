@@ -16,7 +16,7 @@
           npx electron-packager . --overwrite --platform=linux --output=release-build --prune=true
           cp -rv ./electron-quick-start-linux-* $SNAPCRAFT_PART_INSTALL/electron-quick-start
       build-snaps:
-      - node/14/stable
+      - node/16/stable
       build-packages:
       - unzip
       stage-packages:
