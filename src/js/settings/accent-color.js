@@ -1,7 +1,7 @@
 var setTheme = localStorage.getItem('accent')
 console.log('Accent Color:', setTheme)
 if (setTheme == null){
-    swapAccentColor('./src/css/settings/accent/sidebar.css')
+    swapAccentColor('./src/css/settings/accent-color/default.css')
 }else{
     swapAccentColor(setTheme)
 }

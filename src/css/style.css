@@ -11,6 +11,11 @@ body {
     animation: 1s load ease-in-out;
 }
 
+body#body {
+    transition: 1s opacity;
+    opacity: 1;
+}
+
 ::selection{background: var(--accent);color: white;}
 a{color: var(--accent);}
 p{color: white;}

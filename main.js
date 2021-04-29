@@ -38,14 +38,12 @@ function spawnWindow(){
 		vibrancy: "fullscreen-ui",
 		webPreferences: {
 			preload: path.join(__dirname, "./src/js/electron/preload.js"),
-			icon: path.join(__dirname, '/src/images/icons/application/icon.png'), 
 			nodeIntegration: true,
 			webviewTag: true,
 			devTools: false
 		}
 })
 
-win.setIcon(path.join(__dirname, '/src/images/icons/application/icon.png'));
 win.webContents.on('did-finish-load', function() {
   win.webContents.insertCSS('.ddLinux, .ddMac{display: none !important;}')
 })
@@ -143,7 +141,6 @@ function spawnWindowMac(){
 		}
 })
 
-win.setIcon(path.join(__dirname, '/src/images/icons/application/icon.png'));
 win.webContents.on('did-finish-load', function() {
   win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddLinux{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 })
@@ -286,12 +283,11 @@ function spawnWindowLinux(){
 			icon: path.join(__dirname, '/src/images/icons/application/icon.png'),
 			nodeIntegration: true,
 			webviewTag: true,
-			devTools: false
+			devTools: true
 		}
 })
 
 
-win.setIcon(path.join(__dirname, '/src/images/icons/application/icon.png'));
 win.webContents.on('did-finish-load', function() {
 	win.webContents.insertCSS('.#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, windows_first_boot, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 })

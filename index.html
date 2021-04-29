@@ -3,15 +3,12 @@
         <title>Falix Software</title>
         <link rel="stylesheet"href="./src/css/style.css">
         <link rel="stylesheet" href="./src/css/splash.css">
+        <link id="accent-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/accent-color/default.css">
         <link id="layout-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/layout/sidebar.css">
         <link id="sidebar-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/sidebar/confortable.css">
-        <link id="accent-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/accent-color/default.css">
         <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
     </head>
-    <header>
-
-    </header>
-    <body>
+    <body id="body">
         <div class="tab_area">
             <div class="tabs">
                 <button class="tab" onclick="openTab('news', this, 'var(--accent)')" id="default_selection"><i class="fas fa-newspaper"></i> News</button>
@@ -27,7 +24,8 @@
                 <div class="notify">
                     <button class="unwired alert alert-danger"><i class="fas fa-wifi"></i> Connection lost</button>
                     <button class="wired alert alert-success"><i class="fas fa-exclamation-triangle"></i> Connection restored</button>
-                    <div include-html="https://software.falixnodes.net/beta/update/update.html"></div>
+                    <!-- <div include-html="https://software.falixnodes.net/beta/update/update.html"></div> -->
+                    <div include-html="http://localhost:5500/update.html"></div>
                 </div>
                 <button id="help_external" style="text-align: center; width: 54px;" title="Open Help Center in browser" onclick="const { shell } = require('electron'); shell.openExternal('https://help.falixnodes.net/');"><i style="margin: 0px 0px 0px 0px;" class="fas fa-question-circle"></i></button>
                 <button class="tab" onclick="openTab('settings', this, 'var(--accent)')"><i class="fas fa-cogs"></i> Settings</button>
@@ -47,7 +45,7 @@
                 <h1>Settings</h1>
                 <div class="about">
                     <p>UI Version: Beta 8</p>
-                    <p>Software Version: 35EmA1</p>
+                    <p>Software Version: 35EmA2</p>
                 </div>
                 <div class="set_selection">
                     <h2>Layout</h2>
@@ -76,6 +74,7 @@
         <script src="./src/js/settings/layout.js"></script>
         <script src="./src/js/settings/sidebar.js"></script>
         <script src="./src/js/addMenu.js"></script>
+        <script src="./src/js/ui/dim.js"></script>
         <script src="./src/js/settings/accent-color.js"></script>
         <script src="./src/js/network_detection.js"></script>
         <script src="./src/js/ui/include.js"></script>

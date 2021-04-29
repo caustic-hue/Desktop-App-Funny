@@ -1,6 +1,6 @@
 {
   "name": "falixnodes",
-  "version": "32.95.10",
+  "version": "32.95.20",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -19,26 +19,24 @@
   },
   "build": {
     "win": {
-      "icon": "src/images/icons/application/icon.png",
       "asar": true,
       "target": "appx"
     },
     "mac": {
-      "icon": "src/images/icons/application/icon.icns",
       "target": "dmg"
     },
     "linux": {
-      "target": "snap",
-      "icon": "src/images/icons/application/icon.png",
+      "target": "deb",
+      "executableName": "Falix Software",
       "maintainer": "package.korbsstudio.falixnodes",
-      "synopsis": "A quick access to your servers.",
+      "synopsis": "Accessing Falix, all from one place.",
       "category": "Network",
       "vendor": "Korbs Studio",
-      "description": "Accessing FalixNodes, all from one place"
+      "description": "Accessing Falix, all from one place"
     },
     "nsis": {
       "deleteAppDataOnUninstall": true,
-      "shortcutName": "FalixNodes Software"
+      "shortcutName": "Falix Software"
     }
   }
 }
