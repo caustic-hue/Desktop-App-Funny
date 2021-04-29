@@ -1,3 +1,4 @@
+[![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
 
 ## FAQ for Developers
 ### What is APPX File?
