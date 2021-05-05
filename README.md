@@ -52,3 +52,8 @@ To create a package of the software, use:
 ```
 npm build
 ```
+
+## 💡 Credits
+Game Panel controls were thanks to https://github.com/hokein/electron-sample-apps/tree/master/webview/browser
+
+Blur effect is thanks to https://github.com/AryToNeX/Glasstron
