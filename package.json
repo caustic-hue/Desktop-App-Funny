@@ -1,6 +1,6 @@
 {
   "name": "falixnodes",
-  "version": "32.95.20",
+  "version": "4.25.0",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -14,13 +14,13 @@
     "npm": "^7.11.1"
   },
   "devDependencies": {
-    "electron": "^9.4.3",
+    "electron": "^9.4.4",
     "electron-builder": "^20.0.0"
   },
   "build": {
     "win": {
       "asar": true,
-      "target": "appx"
+      "target": "zip"
     },
     "mac": {
       "target": "dmg"

@@ -73,3 +73,111 @@ span#selection_s_tab {
 div#remove_in_TabView {
     display: none;
 }
+.set_selection_sb {
+    display: none;
+}
+
+div#new_window_options {
+    background: var(--accent);
+    position: fixed;
+    top: 7px;
+    left: 428px;
+    padding: 4px 10px 4px 160px;
+    z-index: 1;
+    border-radius: 4px;
+}
+div#new_window_options button {
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    margin-right: -4px;
+    padding: 3px;
+    border-radius: 4px;
+}
+div#new_window_options button a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 14px;
+    border-radius: 0px;
+}
+div#new_window_options::before {
+    content: "";
+    position: fixed;
+    top: 10px;
+    left: 590px;
+    width: 268px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 4px;
+    filter: brightness(0.7);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+div#controls {
+    position: fixed;
+    top: 0px;
+    z-index: 101;
+    right: 216px;
+    background: var(--accent);
+    border-radius: 4px;
+    text-align: center;
+    top: 7px;
+    height: 28px;
+}
+
+input#location, input[type="submit"] {display: none;}
+div#controls {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 101;
+    background: var(--accent);
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    height: 29px;
+    width: 112px;
+    cursor: default;
+}
+div#controls button {
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+div#controls button:hover {
+    opacity: 0.8;
+}
+.fake-controls {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 101;
+    background: var(--accent);
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    height: 29px;
+    width: 112px;
+    cursor: default;
+}
+.fake-controls button {
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+}
+div#game_panel_loading {
+    width: 100%;
+}
+
+button#Zen {position: absolute;}
+
+i.fas.fa-level-up-alt {
+    display: none;
+}

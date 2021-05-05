@@ -1,7 +1,7 @@
 var setTheme = localStorage.getItem('sidebar')
 console.log('Sidebar:', setTheme)
 if (setTheme == null){
-    swapSidebarLayout('./src/css/settings/sidebar/confortable.css')
+    swapSidebarLayout('./src/css/settings/sidebar-size/confortable.css')
 }else{
     swapSidebarLayout(setTheme)
 }

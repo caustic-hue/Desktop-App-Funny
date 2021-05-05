@@ -1,3 +1,5 @@
+// This script is for files in the "new-window/" folder, not for the Game Panel.
+// Controls for Game Panel are in "/src/js/panel/controls.js"
 window.onresize = doLayout;
 var isLoading = false;
 

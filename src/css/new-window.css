@@ -2,6 +2,24 @@ body {
     background: rgba(29, 29, 29, 0.75);
 }
 
+button#close {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+    height: 35px;
+    width: 33px;
+    border: none;
+    color: white;
+    background: #333333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button#close:hover {
+    background-color: rgb(255, 83, 83);
+}
+
 div#controls {
     background: gray;
     position: fixed;
@@ -19,8 +37,9 @@ input#location {
     background: #333333;
     color: white;
     padding: 10px 10px;
-    width: calc(100% - 110px);
+    width: calc(100% - 143px);
     pointer-events: none;
+    -webkit-app-region: drag;
 }
 
 button#back {
@@ -73,21 +92,7 @@ div#sad-webview {
     font-family: arial;
     width: 400px !important;
     margin-left: 50px;
-    opacity: 1;
-    animation: 5s waitThenLoad ease-in;
 }
 
 *:focus{outline:none}
 ::selection{background: transparent;color:white;}
-
-@keyframes waitThenLoad {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}

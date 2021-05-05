@@ -86,3 +86,197 @@ span#selection_s_sidebar {
     pointer-events: none;
     z-index: -1;
 }
+
+
+
+
+
+
+
+
+
+button#gp_tab {
+    padding: 15px 20px 40px 20px;
+}
+
+div#controls {
+    position: fixed;
+    top: 195px;
+    left: 20px;
+    background: var(--accent);
+    width: 210px;
+    border-radius: 10px;
+    height: 40px;
+}
+button#back {
+    position: absolute;
+    left: 47px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#forward {
+    position: absolute;
+    left: 82px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#reload {
+    position: absolute;
+    left: 117px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#home {
+    position: absolute;
+    left: 155px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 18px;
+}
+button#viewAddress {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.fake-controls {
+    position: fixed;
+    top: 195px;
+    left: 20px;
+    background: var(--accent);
+    width: 210px;
+    border-radius: 10px;
+    height: 40px;
+}
+.fake-controls button {opacity: 0.5;} /* Present as disabled */
+button#back-fake {
+    position: absolute;
+    left: 47px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#forward-fake {
+    position: absolute;
+    left: 82px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#reload-fake {
+    position: absolute;
+    left: 117px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+button#home-fake {
+    position: absolute;
+    left: 155px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 18px;
+}
+button#viewAddress-fake {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border: none;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+input[type="submit"] {
+    display: none;
+}
+
+input#location {
+    display: none;
+}
+
+div#controls i.fas.fa-server {
+    margin: 12px 20px;
+}
+div#controls button:hover {
+    background: var(--bg-accent-one);
+}
+
+
+.sbo_10, .sbo_20, .sbo_30, .sbo_40, .sbo_50, .sbo_60, .sbo_70, .sbo_80, .sbo_90 {
+    color: white;
+    width: 197px !important;
+    height: 60px !important;
+    text-align: left;
+    font-weight: bold;
+    padding: 0px 0px 0px 20px;
+    margin-bottom: 10px;
+}
+
+.sbo_10::before, .sbo_20::before, .sbo_30::before, .sbo_40::before, .sbo_50::before, .sbo_60::before, .sbo_70::before, .sbo_80::before, .sbo_90::before {
+    content: "";
+    background: url(https://images.unsplash.com/photo-1620037721441-f3142537a7a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    width: 123px;
+    height: 52px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -19px 0px 0px 46px;
+    border-radius: 0px 4px 4px 0px;
+}
+.sbo_10::before {opacity: 0.9} .sbo_20::before {opacity: 0.8} .sbo_30::before {opacity: 0.7} .sbo_40::before {opacity: 0.6} .sbo_50::before {opacity: 0.5} .sbo_60::before {opacity: 0.4} .sbo_70::before {opacity: 0.3} .sbo_80::before {opacity: 0.2} .sbo_90::before {opacity: 0.1}
+
+
+i.fas.fa-slash {
+    opacity: 0.32;
+    pointer-events: none;
+}
+button#viewAddress, button#viewAddress-fake {
+    pointer-events: none;
+}

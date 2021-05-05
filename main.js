@@ -23,7 +23,7 @@ function spawnWindow(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
-		minWidth: 790,
+		minWidth: 1090,
 		minHeight: 500,
 		backgroundColor: "#00000000",
 		title: "FalixNodes Software",
@@ -44,6 +44,7 @@ function spawnWindow(){
 		}
 })
 
+win.setIcon(path.join(__dirname, '/src/images/icons/app/256x256.png'));
 win.webContents.on('did-finish-load', function() {
   win.webContents.insertCSS('.ddLinux, .ddMac{display: none !important;}')
 })
@@ -120,7 +121,7 @@ function spawnWindowMac(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
-		minWidth: 790,
+		minWidth: 1090,
 		minHeight: 500,
 		backgroundColor: "#00000000",
 		resizable: true,
@@ -142,8 +143,10 @@ function spawnWindowMac(){
 })
 
 win.webContents.on('did-finish-load', function() {
-  win.webContents.insertCSS('#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, .ddLinux{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+	win.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 })
+
+win.setIcon(path.join(__dirname, '/src/images/icons/app/256x256.png'));
 win.webContents.loadFile('index.html');
 
 	const template = [
@@ -264,7 +267,7 @@ function spawnWindowLinux(){
 	const win = new glasstron.BrowserWindow({
 		width: 1200,
 		height: 800,
-		minWidth: 790,
+		minWidth: 1090,
 		minHeight: 500,
 		backgroundColor: "#00000000",
 		resizable: true,
@@ -280,17 +283,19 @@ function spawnWindowLinux(){
 		devTools: false,
 		webPreferences: {
 			preload: path.join(__dirname, "./src/js/electron/preload.js"),
-			icon: path.join(__dirname, '/src/images/icons/application/icon.png'),
+			icon: path.join(__dirname, '/build/icons/icon.png'),
 			nodeIntegration: true,
 			webviewTag: true,
-			devTools: true
+			devTools: false
 		}
 })
 
 
 win.webContents.on('did-finish-load', function() {
-	win.webContents.insertCSS('.#titlebar{display: none !important;} ui#Win32_5792, .ddWindows, windows_first_boot, .ddMac{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
+	win.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
 })
+
+win.setIcon(path.join(__dirname, '/src/images/icons/app/256x256.png'));
 win.webContents.loadFile('index.html');
 
     

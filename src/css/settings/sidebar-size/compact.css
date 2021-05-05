@@ -44,3 +44,37 @@ button#help_external {
     height: 91px;
     margin: 0px 7px;
 }
+
+div#controls {
+    transform: rotate(90deg);
+    left: -70px !important;
+    top: 404px !important;
+}
+.fake-controls {
+    transform: rotate(90deg);
+    left: -70px !important;
+    top: 404px !important;
+}
+button#gp_tab {
+    padding: 15px 20px;
+}
+
+div#game_panel_loading {
+    width: calc(100% - 70px);
+}
+
+.bottom_a button i {
+    margin: 0px 0px 0px -2px;
+}
+
+div#controls button {
+    transform: translate(0px, -50%) rotate(-90deg) !important;
+}
+.fake-controls button {
+    transform: translate(0px, -50%) rotate(-90deg) !important;
+}
+
+i.fas.fa-slash {
+    opacity: 0.32;
+    pointer-events: none;
+}

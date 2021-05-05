@@ -3,18 +3,37 @@
         <title>Falix Software</title>
         <link rel="stylesheet"href="./src/css/style.css">
         <link rel="stylesheet" href="./src/css/splash.css">
+        <link id="first-boot-slideshow" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/first-boot/slideshow-on.css">
         <link id="accent-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/accent-color/default.css">
         <link id="layout-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/layout/sidebar.css">
-        <link id="sidebar-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/sidebar/confortable.css">
+        <link id="sidebar-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/sidebar-size/confortable.css">
+        <link id="sidebar-opacity-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./src/css/settings/sidebar-opacity/90.css">
         <link rel="stylesheet" href="./src/fonts/fontawesome-free-5.15.2-web/css/all.css">
     </head>
+    <header data-for-os="windows" id="titlebar" class="titlebar">
+      <div>
+        <div id="window-controls">
+          <div class="button" id="min-button">
+            <img class="icon" srcset="./src/images/icons/titlebar/min-w-10.png 1x, ./src/images/icons/titlebar/min-w-12.png 1.25x, ./src/images/icons/titlebar/min-w-15.png 1.5x, ./src/images/icons/titlebar/min-w-15.png 1.75x, ./src/images/icons/titlebar/min-w-20.png 2x, ./src/images/icons/titlebar/min-w-20.png 2.25x, ./src/images/icons/titlebar/min-w-24.png 2.5x, ./src/images/icons/titlebar/min-w-30.png 3x, ./src/images/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="./src/images/icons/titlebar/max-w-10.png 1x, ./src/images/icons/titlebar/max-w-12.png 1.25x, ./src/images/icons/titlebar/max-w-15.png 1.5x, ./src/images/icons/titlebar/max-w-15.png 1.75x, ./src/images/icons/titlebar/max-w-20.png 2x, ./src/images/icons/titlebar/max-w-20.png 2.25x, ./src/images/icons/titlebar/max-w-24.png 2.5x, ./src/images/icons/titlebar/max-w-30.png 3x, ./src/images/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="./src/images/icons/titlebar/restore-w-10.png 1x, ./src/images/icons/titlebar/restore-w-12.png 1.25x, ./src/images/icons/titlebar/restore-w-15.png 1.5x, ./src/images/icons/titlebar/restore-w-15.png 1.75x, ./src/images/icons/titlebar/restore-w-20.png 2x, ./src/images/icons/titlebar/restore-w-20.png 2.25x, ./src/images/icons/titlebar/restore-w-24.png 2.5x, ./src/images/icons/titlebar/restore-w-30.png 3x, ./src/images/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="./src/images/icons/titlebar/close-w-10.png 1x, ./src/images/icons/titlebar/close-w-12.png 1.25x, ./src/images/icons/titlebar/close-w-15.png 1.5x, ./src/images/icons/titlebar/close-w-15.png 1.75x, ./src/images/icons/titlebar/close-w-20.png 2x, ./src/images/icons/titlebar/close-w-20.png 2.25x, ./src/images/icons/titlebar/close-w-24.png 2.5x, ./src/images/icons/titlebar/close-w-30.png 3x, ./src/images/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
+          </div>
+      </div>
+    </header>
     <body id="body">
         <div class="tab_area">
             <div class="tabs">
                 <button class="tab" onclick="openTab('news', this, 'var(--accent)')" id="default_selection"><i class="fas fa-newspaper"></i> News</button>
                 <button class="tab" onclick="openTab('client_panel', this, 'var(--accent)')"><i class="fas fa-id-card"></i> Client Panel</button>
-                <button class="tab" onclick="openTab('game_panel', this, 'var(--accent)')"><i class="fas fa-server"></i> Game Panel</button>
-                <button class="tab" onclick="openAddMenu();"><i class="fas fa-window-restore"></i> New Window</button>
+                <button id="gp_tab" class="tab" onclick="openTab('game_panel', this, 'var(--accent)')"><i class="fas fa-server"></i> Game Panel</button>
+                <button style="z-index: 5;" id="Zen" class="tab" onclick="openAddMenu();"><i class="fas fa-window-restore"></i> New Window</button>
                 <div style="display: none;" id="new_window_options" class="new_window_options">
                     <button onclick="openAddMenu();"><a href="./new-window/client.html" target="_blank" title="Open a new window display Client Panel"><i class="fas fa-id-card"></i> Client Panel</a></button>
                     <button onclick="openAddMenu();"><a href="./new-window/panel.html" target="_blank" title="Open a new window display Game Panel"><i class="fas fa-server"></i> Game Panel</a></button>
@@ -24,28 +43,143 @@
                 <div class="notify">
                     <button class="unwired alert alert-danger"><i class="fas fa-wifi"></i> Connection lost</button>
                     <button class="wired alert alert-success"><i class="fas fa-exclamation-triangle"></i> Connection restored</button>
-                    <!-- <div include-html="https://software.falixnodes.net/beta/update/update.html"></div> -->
-                    <div include-html="http://localhost:5500/update.html"></div>
+                    <div include-html="https://software.falixnodes.net/beta/update/update.html"></div>
+                    <!-- <div include-html="http://localhost:5500/update.html"></div> -->
                 </div>
                 <button id="help_external" style="text-align: center; width: 54px;" title="Open Help Center in browser" onclick="const { shell } = require('electron'); shell.openExternal('https://help.falixnodes.net/');"><i style="margin: 0px 0px 0px 0px;" class="fas fa-question-circle"></i></button>
                 <button class="tab" onclick="openTab('settings', this, 'var(--accent)')"><i class="fas fa-cogs"></i> Settings</button>
             </div>
         </div>
         <div class="content">
+            <div class="FIRST_BOOT">
+                <div class="ssh5">
+                    <div class="slideshow-container">
+                      <div class="ftb_slide fade">
+                        <div class="ct3">
+                          <h1>New Panel Controls</h1>
+                          <p>You've asked for it, now it's here!</p>
+                          <p>You can finally control the Game Panel by navigating back or forth, reload, and also unload the panel to improve performance.</p>
+                        </div>
+                        <div class="numbertext">1 / 3</div>
+                        <img src="./src/images/slideshow/slide_one.png">
+                        <div class="slide_text">Caption Text</div>
+                      </div>
+                
+                      <div class="ftb_slide fade">
+                        <div class="ct3">
+                          <h1>Performance Improvement</h1>
+                          <p>By unloading the Game Panel tab by default, the amount of resources used on your system has been reduced.</p>
+                        </div>
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./src/images/slideshow/slide_two.png">
+                        <div class="slide_text">Caption Two</div>
+                      </div>
+                
+                      <div class="ftb_slide fade">
+                        <div class="ct3">
+                          <h1>New Appearance Settings</h1>
+                          <p>It's been in the works for two months, but you can finally adjust certain appearances like accent colors, sidebar opacity and size, along with the UI layout.</p>
+                        </div>
+                        <div class="numbertext">3 / 3</div>
+                        <img src="./src/images/slideshow/slide_three.png">
+                        <button id="closeSlideshow" onclick="swapSlideshow('./src/css/first-boot/slideshow-off.css')">Continue <i class="fas fa-check-circle"></i></button>
+                        <div class="slide_text">Caption Three</div>
+                      </div>
+                
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">Next <i class="fas fa-long-arrow-alt-right"></i></a>
+                
+                      </div>
+                      <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                      </div>
+                    </div>
+                </div>
+            <div id="game_panel" class="tab_content">
+                <div class="fake-controls">
+                    <button id="back-fake"><i class="fas fa-arrow-left"></i></button>
+                    <button id="forward-fake"><i class="fas fa-arrow-right"></i></button>
+                    <button id="reload-fake"><i class="fas fa-redo"></i></button>
+                    <button id="home-fake"><i class="fas fa-times-circle"></i></button>
+                    <button id="viewAddress-fake"><i class="fas fa-slash"></i></button>
+                </div>
+                <div id="unloaded" class="game_panel_unloaded">
+                    <h1>Game Panel is Unloaded</h1>
+                    <p>The Game Panel is unloaded by default when starting up Falix Software.</p>
+                    <p>This is to help with performance.</p>
+                    <button id="load" onclick="load_game_panel();">Load Panel</button>
+                </div>
+                <div id="loaded" class="game_panel_loaded">
+                    <div id="controls">
+                        
+                        <button id="back" title="Go Back" disabled="true"><i class="fas fa-arrow-left"></i></button>
+                        <button id="forward" title="Go Forward" disabled="true"><i class="fas fa-arrow-right"></i></button>
+                        <button id="reload" title="Reload"><i class="fas fa-redo"></i></button>
+                        <button id="home" title="Unload Game Panel"><i class="fas fa-times-circle"></i></button>
+                        <button id="viewAddress"><i class="fas fa-slash"></i></button>
+                  
+                        <form id="location-form">
+                          <div id="center-column">
+                            <input readonly id="location" type="text" value="https://software.falixnodes.net/blank/">
+                          </div>
+                          <input type="submit" value="Go">
+                        </form>
+
+                        <!-- Find and zoom box are currently not setup to be used in Falix Software -->
+                        <button id="zoom" title="Change Zoom">&#128270;</button>
+                        <button id="find" title="Find in Page">&#128294;</button>
+                  
+                      </div>
+                  
+                      <div id="zoom-box">
+                        <form id="zoom-form">
+                          <input id="zoom-text" type="text">
+                          <input type="submit" value="&#128270;">
+                          <button id="zoom-in">&#10133;</button>
+                          <button id="zoom-out">&#10134;</button>
+                        </form>
+                      </div>
+                  
+                      <div id="find-box">
+                        <form id="find-form">
+                          <input id="find-text" type="text">
+                          <div id="find-results"></div>
+                          <input type="submit" style="position:absolute; visibility:hidden">
+                          <button id="match-case">aA</button>
+                          <button id="find-backward">&#60;</button>
+                          <button id="find-forward">&#62;</button>
+                        </form>
+                      </div>
+                  
+                      <webview src="https://software.falixnodes.net/blank/" style="width:640px; height:480px"></webview>
+                      
+                      <div id="game_panel_loading" class="panel_stillLoading">
+                          <span id="load-spin"></span>
+                      </div>
+                      <div id="sad-webview">
+                        <div id="sad-webview-icon">&#9762;</div>
+                        <h2 id="crashed-label">Aw, Snap!</h2>
+                        <h2 id="killed-label">Something may of went wrong.</h2>
+                  
+                        <p>The page is taking too long to load or it has crashed.</p>
+                        <p>Try to unload the panel and load again.</p>
+                      </div>
+                </div>
+            </div>
             <div id="news" class="tab_content">
-                <div include-html="https://falixnodes.gq/index.html"></div> <!-- Other domains won't work, using GQ domain instead, domain is managed by Korbs Studio -->
+              <div include-html="https://falixnodes.gq/index.html"></div> <!-- Other domains won't work, using GQ domain instead, domain is managed by Korbs Studio -->
+              <!-- <div include-html="http://localhost:5500"></div> TESTING ONLY -->
             </div>
             <div id="client_panel" class="tab_content">
                 <webview src="https://client.falixnodes.net"></webview>
             </div>
-            <div id="game_panel" class="tab_content">
-                <webview src="https://panel.falixnodes.net"></webview>
-            </div>
             <div id="settings" class="tab_content">
                 <h1>Settings</h1>
                 <div class="about">
-                    <p>UI Version: Beta 8</p>
-                    <p>Software Version: 35EmA2</p>
+                    <p>UI Version: v3 Pre-Release 4</p>
+                    <p>Software Version: 4.25.0</p>
                 </div>
                 <div class="set_selection">
                     <h2>Layout</h2>
@@ -54,8 +188,19 @@
                 </div>
                 <div id="remove_in_TabView" class="set_selection">
                     <h2>Sidebar Layout</h2>
-                    <button id="set_layout" class="selection_sb_comf" onclick="swapSidebarLayout('./src/css/settings/sidebar/confortable.css')"><p>Confortable</p> <img src="./src/images/Sidebar.png"></button>
-                    <button id="set_layout" class="selection_sb_comp" onclick="swapSidebarLayout('./src/css/settings/sidebar/compact.css')"><p>Compact</p> <img src="./src/images/SidebarCompact.png"></button>
+                    <button id="set_layout" class="selection_sb_comf" onclick="swapSidebarLayout('./src/css/settings/sidebar-size/confortable.css')"><p>Confortable</p> <img src="./src/images/Sidebar.png"></button>
+                    <button id="set_layout" class="selection_sb_comp" onclick="swapSidebarLayout('./src/css/settings/sidebar-size/compact.css')"><p>Compact</p> <img src="./src/images/SidebarCompact.png"></button>
+                </div>
+                <div class="set_selection_sb">
+                    <h2>Sidebar Opacity</h2>
+                    <button id="set_layout" class="sbo_10" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/10.css')">10%</button>
+                    <button id="set_layout" class="sbo_20" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/20.css')">20%</button>
+                    <button id="set_layout" class="sbo_40" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/40.css')">40%</button>
+                    <button id="set_layout" class="sbo_50" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/50.css')">50%</button>
+                    <button id="set_layout" class="sbo_60" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/60.css')">60%</button>
+                    <button id="set_layout" class="sbo_70" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/70.css')">70%</button>
+                    <button id="set_layout" class="sbo_80" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/80.css')">80%</button>
+                    <button id="set_layout" class="sbo_90" onclick="swapSidebarOpacity('./src/css/settings/sidebar-opacity/90.css')">90%</button>
                 </div>
                 <div class="set_selection_color">
                     <h2>Accent Color</h2>
@@ -71,12 +216,22 @@
                 </div>
             </div>
         </div>
+        <script src="./src/js/electron/renderer.js"></script>
+
+        <script src="./src/js/network_detection.js"></script>
+        <script src="./src/js/addMenu.js"></script>
+        <script src="./src/js/ui/slideshow.js"></script>
+
+        <script src="./src/js/panel/controls.js"></script>
+
         <script src="./src/js/settings/layout.js"></script>
         <script src="./src/js/settings/sidebar.js"></script>
-        <script src="./src/js/addMenu.js"></script>
-        <script src="./src/js/ui/dim.js"></script>
+        <script src="./src/js/settings/sidebar-opacity.js"></script>
         <script src="./src/js/settings/accent-color.js"></script>
-        <script src="./src/js/network_detection.js"></script>
+
+
+        <script src="./src/js/first-boot.js"></script>
+        <script src="./src/js/ui/dim.js"></script>
         <script src="./src/js/ui/include.js"></script>
         <script src="./src/js/ui/tabs.js"></script>
         <script>includeHTML();</script>
