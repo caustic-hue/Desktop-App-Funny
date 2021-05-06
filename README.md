@@ -1,5 +1,3 @@
-[![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
-
 ## FAQ for Developers
 ### What is APPX File?
 As you may see, when packaging and building the software with Electron Builder, you're given a `.appx` file if you haven't modify the package file yet.
