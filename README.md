@@ -17,35 +17,7 @@ I'm mostly experienced with web code and have gained a lot of experience mostly 
 So I take advantage of my skill set by using Electron.
 
 ## Building
-### Requirements
-
-You're required to have the following in order to build FalixNodes Software:
- - [Python](https://www.python.org/downloads/) v3.6 or later
- - [Visual C++ Redistributable](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
- - [Node](https://nodejs.org/en/download/) v12 or later
-
-### Install Packages
-```
-git clone https://github.com/FalixNodes-Software/Desktop-App/
-cd Desktop-App
-npm install electron@9.4.4
-npm install glasstron
-npm install electron-builder
-```
-Please only use Electron v9.0.0 - v9.4.4 or variables will be undefined.
-
-### Running
-To start running the software, use:
-```
-npm start
-```
-### Packaging
-To create a package of the software, use:
-```
-npm build
-```
-
-If you're using an older version of Windows and not Windows 10, please change `appx` to `exe` in the build configuration found in __package.json__.
+[Learn here](https://help.falixnodes.net/falix/software/building/)
 
 ## 💡 Credits
 Game Panel controls were thanks to https://github.com/hokein/electron-sample-apps/tree/master/webview/browser
