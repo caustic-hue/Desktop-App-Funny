@@ -1,23 +1,36 @@
 {
   "name": "falixnodes",
-  "version": "4.25.0",
+  "version": "4.26.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/js/electron/index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build"
+    "build": "electron-builder",
+    "rebuild": "electron-rebuild"
   },
   "author": "KorbsStudio",
   "license": "MIT",
   "dependencies": {
+    "electron-tools": "^2.4.2",
     "glasstron": "^0.0.7",
-    "npm": "^7.11.1"
+    "node-abi": "^2.26.0",
+    "node-pty": "^0.10.1",
+    "npm": "^7.11.1",
+    "os-utils": "^0.0.14",
+    "xterm": "^4.8.1"
   },
   "devDependencies": {
     "electron": "^9.4.4",
-    "electron-builder": "^20.0.0"
+    "electron-rebuild": "^1.11.0",
+    "electron-builder": "^22.11.3"
   },
   "build": {
+    "protocols": {
+      "name": "falix",
+      "schemes": [
+        "falix"
+      ]
+    },
     "win": {
       "asar": true,
       "target": "zip"
@@ -26,10 +39,8 @@
       "target": "dmg"
     },
     "linux": {
-      "target": "deb",
-      "executableName": "Falix Software",
+      "target": "snap",
       "maintainer": "package.korbsstudio.falixnodes",
-      "synopsis": "Accessing Falix, all from one place.",
       "category": "Network",
       "vendor": "Korbs Studio",
       "description": "Accessing Falix, all from one place"

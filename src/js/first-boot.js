@@ -1,7 +1,7 @@
 var setTheme = localStorage.getItem('slideshow')
 console.log('Slideshow:', setTheme)
 if (setTheme == null){
-  swapSlideshow('./src/css/first-boot/slideshow-on.css')
+  swapSlideshow('../css/first-boot/slideshow-on.css')
 }else{
   swapSlideshow(setTheme)
 }

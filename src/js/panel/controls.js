@@ -24,6 +24,7 @@ onload = function() {
     document.getElementById("game_panel_loading").style.display = "block";
     document.getElementById("loaded").style.display = "block";
     document.getElementById("unloaded").style.display = "none";
+    document.getElementById("unload").style.display = "none";
     setTimeout(() => { 
       document.getElementById("game_panel_loading").style.display = "none";
     }, 10000);

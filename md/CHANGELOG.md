@@ -1,10 +1,7 @@
-# v2.3.0 Changelog - Design Refresh
-
- - Added [Glasstron](https://github.com/AryToNeX/Glasstron) dependency
+# v2.3.0 Changelog - Vivify
  - Added new screen during first boot
  - Added loading indicator when news is loading
  - Added social icons to News tab
- - Added new blur effect behind window
  - Added loading indicator if panel is loading or reloading
  - Panel is unloaded by default on software startup giving a better performance boost
  - Added crash screen if panel doesn't load
@@ -24,12 +21,13 @@
  - Converted tabs into a sidebar
  - Changed macOS setup file from ZIP to DMG
  - Changed Windows setup file from EXE to APPX (Microsoft Store only)
- - Change titlebar controls depending on operating system, merged [Glasscord Titlebar Detection](https://github.com/KorbsStudio/electron-titlebar-os-detection-glasscord)
+ - Change titlebar controls depending on operating system, merged [Titlebar Detection](https://github.com/KorbsStudio/electron-titlebar-os-detection)
  - Moved dropdown menu to bottom left
+ - Moved code from __renderer.js__ to __preload.js__
  - Renamed "Dashboard" to "News"
  - Removed Release Notes
  - Removed auto updating integration for Windows
  - Removed "FalixNodes Software" text from Dashboard
  - Removed version number text from Dashboard
- - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`v9.4.4`](https://www.npmjs.com/package/electron/v/9.4.3)
+ - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`latest`](https://www.npmjs.com/package/electron/)
  - Change Game Panel's domain from __gp.falixnodes.net__ to __panel.falixnodes.net__

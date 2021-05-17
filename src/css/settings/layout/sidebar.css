@@ -8,14 +8,14 @@
 .tabs {
     margin: 33px 20px 0px 20px;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 .tabs button {
     background: transparent;
     color: white;
     text-align: left;
     border: none;
-    padding: 15px 20px;
+    padding: 12px 20px;
     border-radius: 10px;
 }
 .bottom_a {
@@ -28,10 +28,12 @@
     color: white;
     text-align: left;
     border: none;
-    padding: 15px 20px;
+    padding: 12px 20px;
     border-radius: 10px;
+}.bottom_a button {
+    margin-top: 10px;
 }
-.bottom_a button {width: 150px;}
+.bottom_a button {width: -webkit-fill-available;}
 
 .content {
     position: fixed;
@@ -95,22 +97,19 @@ span#selection_s_sidebar {
 
 
 
-button#gp_tab {
-    padding: 15px 20px 40px 20px;
-}
 
 div#controls {
     position: fixed;
-    top: 195px;
+    top: 131px;
     left: 20px;
-    background: var(--accent);
+    background: transparent;
     width: 210px;
     border-radius: 10px;
-    height: 40px;
+    height: 38px;
 }
 button#back {
     position: absolute;
-    left: 47px;
+    left: 83px;
     top: 50%;
     transform: translate(0px, -50%);
     border: none;
@@ -121,7 +120,7 @@ button#back {
 }
 button#forward {
     position: absolute;
-    left: 82px;
+    left: 113px;
     top: 50%;
     transform: translate(0px, -50%);
     border: none;
@@ -132,7 +131,7 @@ button#forward {
 }
 button#reload {
     position: absolute;
-    left: 117px;
+    left: 140px;
     top: 50%;
     transform: translate(0px, -50%);
     border: none;
@@ -143,7 +142,7 @@ button#reload {
 }
 button#home {
     position: absolute;
-    left: 155px;
+    left: 168px;
     top: 50%;
     transform: translate(0px, -50%);
     border: none;
@@ -151,7 +150,7 @@ button#home {
     background: transparent;
     border-radius: 10px;
     padding: 8px;
-    font-size: 18px;
+    font-size: 14px;
 }
 button#viewAddress {
     position: absolute;
@@ -163,73 +162,7 @@ button#viewAddress {
     background: transparent;
     border-radius: 10px;
     padding: 8px 12px;
-}
-
-.fake-controls {
-    position: fixed;
-    top: 195px;
-    left: 20px;
-    background: var(--accent);
-    width: 210px;
-    border-radius: 10px;
-    height: 40px;
-}
-.fake-controls button {opacity: 0.5;} /* Present as disabled */
-button#back-fake {
-    position: absolute;
-    left: 47px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border: none;
-    color: white;
-    background: transparent;
-    border-radius: 10px;
-    padding: 8px;
-}
-button#forward-fake {
-    position: absolute;
-    left: 82px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border: none;
-    color: white;
-    background: transparent;
-    border-radius: 10px;
-    padding: 8px;
-}
-button#reload-fake {
-    position: absolute;
-    left: 117px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border: none;
-    color: white;
-    background: transparent;
-    border-radius: 10px;
-    padding: 8px;
-}
-button#home-fake {
-    position: absolute;
-    left: 155px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border: none;
-    color: white;
-    background: transparent;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 18px;
-}
-button#viewAddress-fake {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border: none;
-    color: white;
-    background: transparent;
-    border-radius: 10px;
-    padding: 8px 12px;
+    display: none;
 }
 
 input[type="submit"] {
@@ -279,4 +212,10 @@ i.fas.fa-slash {
 }
 button#viewAddress, button#viewAddress-fake {
     pointer-events: none;
+}
+
+
+button#gp_tab p {
+    position: absolute;
+    margin: -14px 0px 0px 28px;
 }

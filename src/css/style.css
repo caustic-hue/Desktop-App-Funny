@@ -14,6 +14,22 @@ html.windows [data-for-os=mac] { /* Hide macOS adjustments if user is using Wind
     display: none !important
 }
 
+.xterm-screen {
+    height: 100% !important;
+}
+
+.box {
+    position: fixed;
+    z-index: 100;
+    color: white;
+    bottom: 25px;
+    right: 25px;
+    background: var(--accent);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: default;
+}
+
 #titlebar {
     display: block;
     position: fixed;
@@ -121,7 +137,17 @@ body {
     color: white;
     font-family: arial;
     overflow: hidden;
-    animation: 1s load ease-in-out;
+}
+
+span#cc {
+    position: absolute;
+    z-index: 100;
+    background: #0b152166;
+    top: 0px;
+    left: 0px;
+    width: 248px;
+    height: 100%;
+    pointer-events: none;
 }
 
 body#body {
@@ -152,9 +178,14 @@ button:focus{outline: none}
 
 .tab_area {
     background: rgba(11, 23, 37, var(--sidebar-opacity));
+    cursor: default;
+}
+.tab_area button {
+    cursor: default;
 }
 .tab_area button:hover {
-    color: rgba(255, 255, 255, 0.50);
+    background: rgba(0, 0, 0, 0.1);
+    cursor: default;
 }
 .tabs button:focus {outline: none}
 .tabs button i {margin-right: 10px;}
