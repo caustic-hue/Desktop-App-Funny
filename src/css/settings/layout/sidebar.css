@@ -65,8 +65,8 @@ span#selection_s_sidebar {
 .new_window_options {
     background: var(--accent);
     border-radius: 10px;
-    padding: 50px 0px 8px 0px;
-    margin: -67px 0px 0px 0px;
+    padding: 50px 0px 15px 0px;
+    margin: -51px 0px 0px 0px;
     z-index: 1;
 }
 .new_window_options a {
