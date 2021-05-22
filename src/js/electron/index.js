@@ -7,12 +7,14 @@ const { remote } = require('electron');
 const pty = require("node-pty");
 const osUI = require('os-utils');
 const os = require("os");
+
 var shell = os.platform() === "win32" ? "powershell.exe" : "bash";
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 var osvar = process.platform; /* Detecting OS */
 if (osvar == 'darwin') {app.whenReady().then(() => {createWindowMac()})
 }else if(osvar == 'win32'){app.whenReady().then(() => {createWindowWin()})
 }else{app.whenReady().then(() => {createWindowLinux()})}
+
 function createWindowWin () { /* Windows */
   const mainWindow = new BrowserWindow({
     backgroundColor: '#162230',
@@ -29,7 +31,8 @@ function createWindowWin () { /* Windows */
 			nodeIntegration: true,
 			webviewTag: true,
 			devTools: false,
-      enableRemoteModule: true
+      enableRemoteModule: true,
+      contextIsolation: false
     }
   })
   const loadWindow = new BrowserWindow({
@@ -37,7 +40,7 @@ function createWindowWin () { /* Windows */
     frame: false,
     minimizable: false,
     maximizable: false,
-    closable: false,
+    closable: true,
     width: 250,
     height: 10,
     webPreferences: {
@@ -67,7 +70,7 @@ function createWindowWin () { /* Windows */
   });
   ptyProcess.on('data', function(data) {
       mainWindow.webContents.send("terminal.incomingData", data);
-      console.log("Data sent");
+      console.log("");
   });
   ipcMain.on("terminal.keystroke", (event, key) => {
       ptyProcess.write(key);
@@ -94,7 +97,8 @@ function createWindowMac () { /* macOS */
 			nodeIntegration: true,
 			webviewTag: true,
 			devTools: false,
-      enableRemoteModule: true
+      enableRemoteModule: true,
+      contextIsolation: false
     }
   })
   const loadWindow = new BrowserWindow({
@@ -102,7 +106,7 @@ function createWindowMac () { /* macOS */
     frame: false,
     minimizable: false,
     maximizable: false,
-    closable: false,
+    closable: true,
     width: 250,
     height: 10,
     webPreferences: {
@@ -135,7 +139,7 @@ function createWindowMac () { /* macOS */
   });
   ptyProcess.on('data', function(data) {
       mainWindow.webContents.send("terminal.incomingData", data);
-      console.log("Data sent");
+      console.log("");
   });
   ipcMain.on("terminal.keystroke", (event, key) => {
       ptyProcess.write(key);
@@ -161,8 +165,9 @@ function createWindowLinux () { /* Linux */
       preload: path.join(__dirname, "preload.js"),
 			nodeIntegration: true,
 			webviewTag: true,
-			devTools: false,
-      enableRemoteModule: true
+      devTools: true,
+      enableRemoteModule: true,
+      contextIsolation: false
     }
   })
   const loadWindow = new BrowserWindow({
@@ -170,7 +175,7 @@ function createWindowLinux () { /* Linux */
     frame: false,
     minimizable: false,
     maximizable: false,
-    closable: false,
+    closable: true,
     width: 250,
     height: 10,
     webPreferences: {
@@ -203,7 +208,7 @@ function createWindowLinux () { /* Linux */
  });
  ptyProcess.on('data', function(data) {
      mainWindow.webContents.send("terminal.incomingData", data);
-     console.log("Data sent");
+     console.log("");
  });
  ipcMain.on("terminal.keystroke", (event, key) => {
      ptyProcess.write(key);
@@ -216,7 +221,5 @@ function createWindowLinux () { /* Linux */
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
-function function1() {
-  // stuff you want to happen right away
-  console.log('Welcome to My Console,');
-}
+
+

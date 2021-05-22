@@ -1,0 +1,12 @@
+div#terminal_mining {
+    width: 720px;
+    height: 408px;
+}
+.xterm .xterm-screen {
+    position: relative;
+    border: 9px #18273a solid;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 10px;
+}
+.xterm .xterm-viewport{background: transparent !important;}
