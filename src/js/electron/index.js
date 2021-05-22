@@ -1,5 +1,5 @@
 const electron = require("electron");
-const {app, BrowserWindow, Menu, protocol, ipcMain, ipcRenderer, TouchBarColorPicker} = require('electron');
+const {app, BrowserWindow, Menu, protocol, ipcMain, ipcRenderer} = require('electron');
 const isMac = process.platform === 'darwin'
 const path = require('path');
 const url = require('url');
@@ -13,7 +13,7 @@ electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 var osvar = process.platform; /* Detecting OS */
 if (osvar == 'darwin') {app.whenReady().then(() => {createWindowMac()})
 }else if(osvar == 'win32'){app.whenReady().then(() => {createWindowWin()})
-}else{app.whenReady().then(() => {createWindowLinux()})}
+}else{app.whenReady().then(() => {setTimeout(() => {createWindowLinux()}, 400)})} 
 
 function createWindowWin () { /* Windows */
   const mainWindow = new BrowserWindow({
@@ -36,15 +36,17 @@ function createWindowWin () { /* Windows */
     }
   })
   const loadWindow = new BrowserWindow({
-    backgroundColor: '#162230',
     frame: false,
     minimizable: false,
     maximizable: false,
     closable: true,
-    width: 250,
-    height: 10,
+    transparent: true,
+    skipTaskbar: true,
+    center: true,
+    width: 382,
+    height: 382,
     webPreferences: {
-      devTools: false
+      devTools: true
     }
   })
   loadWindow.loadFile('src/html/loading/index.html');
@@ -102,15 +104,17 @@ function createWindowMac () { /* macOS */
     }
   })
   const loadWindow = new BrowserWindow({
-    backgroundColor: '#162230',
     frame: false,
     minimizable: false,
     maximizable: false,
     closable: true,
-    width: 250,
-    height: 10,
+    transparent: true,
+    skipTaskbar: true,
+    center: true,
+    width: 382,
+    height: 382,
     webPreferences: {
-      devTools: false
+      devTools: true
     }
   })
   loadWindow.loadFile('src/html/loading/index.html');
@@ -171,15 +175,17 @@ function createWindowLinux () { /* Linux */
     }
   })
   const loadWindow = new BrowserWindow({
-    backgroundColor: '#162230',
     frame: false,
     minimizable: false,
     maximizable: false,
     closable: true,
-    width: 250,
-    height: 10,
+    transparent: true,
+    skipTaskbar: true,
+    center: true,
+    width: 382,
+    height: 382,
     webPreferences: {
-      devTools: false
+      devTools: true
     }
   })
   loadWindow.loadFile('src/html/loading/index.html');
@@ -187,18 +193,17 @@ function createWindowLinux () { /* Linux */
   mainWindow.webContents.on('did-finish-load', function() {
     mainWindow.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
  })
- setTimeout(() => {
-  mainWindow.show();
- }, 5000); 
- setTimeout(() => {
-  loadWindow.close();
- }, 4000); 
  setInterval(() => {
    osUI.cpuUsage(function(v){
     mainWindow.webContents.send('cpu',v*100);
-    mainWindow.webContents.send('gpu',v*100);
   });
  },1000);
+ setTimeout(() => {
+  mainWindow.show();
+ }, 5000);
+ setTimeout(() => {
+  loadWindow.close();
+ }, 4900);
  var ptyProcess = pty.spawn(shell, [], {
      name: "xterm-color",
      cols: 80,

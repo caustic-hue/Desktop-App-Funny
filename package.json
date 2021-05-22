@@ -4,9 +4,10 @@
   "description": "",
   "main": "src/js/electron/index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron --enable-transparent-visuals --disable-gpu .",
     "build": "electron-builder",
     "rebuild": "electron-rebuild"
+
   },
   "author": "KorbsStudio",
   "license": "MIT",
