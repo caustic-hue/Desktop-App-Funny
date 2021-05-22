@@ -16,7 +16,7 @@
     text-align: left;
     border: none;
     padding: 12px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .bottom_a {
     margin: 33px 20px 0px 20px;
@@ -29,8 +29,9 @@
     text-align: left;
     border: none;
     padding: 12px 20px;
-    border-radius: 10px;
-}.bottom_a button {
+    border-radius: 5px;
+}
+.bottom_a button {
     margin-top: 10px;
 }
 .bottom_a button {width: -webkit-fill-available;}
@@ -64,7 +65,7 @@ span#selection_s_sidebar {
 
 .new_window_options {
     background: var(--accent);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 50px 0px 15px 0px;
     margin: -51px 0px 0px 0px;
     z-index: 1;
@@ -81,7 +82,7 @@ span#selection_s_sidebar {
     position: absolute;
     background: white;
     width: 190px;
-    height: 87px;
+    height: 100px;
     margin: 0px 10px;
     border-radius: 10px;
     opacity: 0.2;
@@ -89,6 +90,11 @@ span#selection_s_sidebar {
     z-index: -1;
 }
 
+.new_window_options button {
+    width: 170px;
+    cursor: pointer;
+    margin: 7px 10px 0px 20px;
+}
 
 
 

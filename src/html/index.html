@@ -39,11 +39,11 @@
                 <button class="tab" onclick="openTab('client_panel', this, 'var(--accent)')"><i class="fas fa-id-card"></i> Client Panel</button>
                 <button id="gp_tab" class="tab" onclick="openTab('game_panel', this, 'var(--accent)')"><i class="fas fa-server"></i> <p id="unload">Game Panel</p> <p id="unload">Ga...</p></button>
                 <button class="tab" onclick="openTab('terminal_mining', this, 'var(--accent)')"><i class="fas fa-coins"></i> FalixCoins Mining</button>
-                <button style="z-index: 5;" id="Zen" class="tab" onclick="openAddMenu();"><i class="fas fa-window-restore"></i> New Window</button>
-                <div style="display: none;" id="new_window_options" class="new_window_options">
-                    <button onclick="openAddMenu();"><a href="./new-window/client.html" target="_blank" title="Open a new window display Client Panel"><i class="fas fa-id-card"></i> Client Panel</a></button>
-                    <button onclick="openAddMenu();"><a href="./new-window/panel.html" target="_blank" title="Open a new window display Game Panel"><i class="fas fa-server"></i> Game Panel</a></button>
-                </div>
+                <!-- <button style="z-index: 5;" id="Zen" class="tab" onclick="openAddMenu();"><i class="fas fa-window-restore"></i> New Window</button> -->
+                <!-- <div style="display: none;" id="new_window_options" class="new_window_options">
+                    <button onclick="openAddMenu();"><a href="../../new-window/client.html" target="_blank" title="Open a new window display Client Panel"><i class="fas fa-id-card"></i> Client Panel</a></button>
+                    <button onclick="openAddMenu();"><a href="../../new-window/panel.html" target="_blank" title="Open a new window display Game Panel"><i class="fas fa-server"></i> Game Panel</a></button>
+                </div> -->
             </div>
             <div class="bottom_a">
                 <div class="notify">
@@ -52,7 +52,6 @@
                     <div include-html="https://software.falixnodes.net/beta/update/update.html"></div>
                     <!-- <div include-html="http://localhost:5500/update.html"></div> -->
                 </div>
-                <button class="tab" style="cursor: not-allowed;"><i class="fas fa-bell"></i> Notifications</button>
                 <button class="tab" onclick="openTab('help_center', this, 'var(--accent)')"><i class="fas fa-question-circle"></i> Help Center</button>
                 <button class="tab" onclick="openTab('support', this, 'var(--accent)')"><i class="fas fa-headset"></i> Support</button>
                 <button class="tab" onclick="openTab('settings', this, 'var(--accent)')"><i class="fas fa-cogs"></i> Settings</button>
@@ -184,6 +183,7 @@
                 <webview src="https://software.falixnodes.net/support.html"></webview>
             </div>
             <div id="terminal_mining" class="tab_content">
+              <span id="beta"></span>
               <div id="terminal"></div>
               <div class="box">
                 <span class="label">CPU (%)</span>
@@ -193,7 +193,7 @@
             <div id="settings" class="tab_content">
                 <h1>Settings</h1>
                 <div class="about">
-                    <p>Software Version: 2.3.0 Pre-Release 6</p>
+                    <p>Software Version: 3.0.0 Pre-Release 6</p>
                 </div>
                 <!-- <div class="set_selection">
                     <h2>Layout</h2>
@@ -231,6 +231,7 @@
           });
         </script>
         <script src="../js/electron/terminal.js"></script>
+        <script src="../js/newTerm.js"></script>
 
         <script src="../js/network_detection.js"></script>
         <script src="../js/addMenu.js"></script>
