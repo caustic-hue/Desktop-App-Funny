@@ -1,4 +1,8 @@
 # v2.3.0 Changelog - Vivify
+ - Added new protocol `falix://`
+ - Added FalixCoins Mining tab
+ - Added intergrated terminal
+ - Added new splash window
  - Added new screen during first boot
  - Added loading indicator when news is loading
  - Added social icons to News tab
@@ -11,17 +15,14 @@
    - Back
    - Forward
  - Added Settings
-   - Theme (Light or Dark)
-   - Accent Colors (Default(purple), Red, Blue, Green, or Gray)
-   - Sidebar Opacity
+   - Sidebar Layout
+   - Accent Colors (Default(Blue), Red, Purple, Green, or Gray)
    - Sidebar Size
-   - Reset Settings option
-   - Reset option
-   - Reload option
  - Converted tabs into a sidebar
  - Changed macOS setup file from ZIP to DMG
  - Changed Windows setup file from EXE to APPX (Microsoft Store only)
  - Change titlebar controls depending on operating system, merged [Titlebar Detection](https://github.com/KorbsStudio/electron-titlebar-os-detection)
+ - Change Game Panel's domain from __gp.falixnodes.net__ to __panel.falixnodes.net__
  - Moved dropdown menu to bottom left
  - Moved code from __renderer.js__ to __preload.js__
  - Renamed "Dashboard" to "News"
@@ -30,4 +31,3 @@
  - Removed "FalixNodes Software" text from Dashboard
  - Removed version number text from Dashboard
  - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`latest`](https://www.npmjs.com/package/electron/)
- - Change Game Panel's domain from __gp.falixnodes.net__ to __panel.falixnodes.net__
