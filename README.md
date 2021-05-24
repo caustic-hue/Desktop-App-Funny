@@ -7,11 +7,11 @@
 ### Download
 Windows:
 
-<a id="download" style="padding: 0px; background: transparent;" data-for-os="windows" href="ms-windows-store://pdp/?productid=9P5MMNFS825P"><img width="160" src="https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png"></a>
+[![foo](https://i.imgur.com/vh5hmVa.png)](ms-windows-store://pdp/?productid=9P5MMNFS825P)
 
 Linux:
 
-<a id="download" style="padding: 0px; background: transparent;" data-for-os="windows" href="snap:falixnodes"><img width="160" src="https://raw.githubusercontent.com/snapcore/snap-store-badges/master/EN/%5BEN%5D-snap-store-black-uneditable.png"></a>
+[![foo](https://raw.githubusercontent.com/snapcore/snap-store-badges/master/EN/%5BEN%5D-snap-store-black-uneditable.png)](snap:falixnodes)
 
 ### Websites
 [Software Website](https://software.falixnodes.net)
