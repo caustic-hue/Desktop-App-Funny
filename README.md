@@ -4,6 +4,7 @@
 ![preview](https://i.imgur.com/eTVgn6E.png)
 
 ## Links
+
 ### Download
 Windows:
 
@@ -17,6 +18,9 @@ Linux:
 [Software Website](https://software.falixnodes.net)
 
 [Help Center](https://help.falixnodes.net/falix/software)
+
+### Other
+[License](https://github.com/FalixNodes-Software/Desktop-App/blob/master/md/LICENSE)
 
 
 ## FAQ for Developers
