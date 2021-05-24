@@ -98,4 +98,4 @@ Built and maintained by [Korbs Studio](https://github.com/KorbsStudio).
 
 Game Panel controls possible thanks to [/webview/browser/ in Electron Sample Apps by Hokein](https://github.com/hokein/electron-sample-apps/tree/master/webview/browser).
 
-Blur composition effect possible thanks to [Glasstron (by AryToNex](https://github.com/AryToNeX/Glasstron).
+Blur composition effect possible thanks to [Glasstron by AryToNex](https://github.com/AryToNeX/Glasstron).
