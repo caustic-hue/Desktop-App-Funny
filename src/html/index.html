@@ -156,7 +156,7 @@
                       <webview src="https://software.falixnodes.net/blank/" style="width:640px; height:480px"></webview>
                       
                       <div id="game_panel_loading" class="panel_stillLoading">
-                          <span id="load-spin"></span>
+                        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                       </div>
                       <div id="sad-webview">
                         <div id="sad-webview-icon">&#9762;</div>
@@ -169,8 +169,9 @@
                 </div>
             </div>
             <div id="news" class="tab_content">
-              <div include-html="https://falixnodes.gq/index.html"></div> <!-- Other domains won't work, using GQ domain instead, domain is managed by Korbs Studio -->
-              <!-- <div include-html="http://localhost:5500"></div> TESTING ONLY -->
+              <!-- <div include-html="https://falixnodes.gq/index.html"></div> -->
+              <div id="nL" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              <div include-html="http://localhost:5500"></div> 
             </div>
             <div id="client_panel" class="tab_content">
                 <webview src="https://client.falixnodes.net"></webview>

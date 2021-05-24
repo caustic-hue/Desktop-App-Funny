@@ -1,28 +1,26 @@
 {
   "name": "falixnodes",
-  "version": "4.27.0",
+  "version": "4.27.4",
   "description": "",
   "main": "src/js/electron/index.js",
   "scripts": {
     "start": "electron --enable-transparent-visuals --disable-gpu .",
-    "build": "electron-builder",
+    "build": "electron-builder build",
     "rebuild": "electron-rebuild"
-
   },
   "author": "KorbsStudio",
   "license": "MIT",
   "dependencies": {
     "electron-tools": "^2.4.2",
-    "glasstron": "^0.0.7",
     "node-abi": "^2.26.0",
     "node-pty": "^0.10.1",
-    "npm": "^7.11.1",
+    "npm": "^7.14.0",
     "os-utils": "^0.0.14",
     "xterm": "^4.8.1"
   },
   "devDependencies": {
     "electron": "^12.0.9",
-    "electron-builder": "^22.11.3",
+    "electron-builder": "^20.44.4",
     "electron-rebuild": "^1.11.0"
   },
   "build": {
@@ -34,7 +32,7 @@
     },
     "win": {
       "asar": true,
-      "target": "zip"
+      "target": "appx"
     },
     "mac": {
       "target": "dmg"
