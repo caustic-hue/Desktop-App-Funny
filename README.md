@@ -7,11 +7,11 @@
 ### Download
 Windows:
 
-[![foo](https://i.imgur.com/vh5hmVa.png)](ms-windows-store://pdp/?productid=9P5MMNFS825P)
+[![Microsoft Store](https://i.imgur.com/vh5hmVa.png)](https://www.microsoft.com/en-us/p/falixnodes-software/9p5mmnfs825p)
 
 Linux:
 
-[![foo](https://raw.githubusercontent.com/snapcore/snap-store-badges/master/EN/%5BEN%5D-snap-store-black-uneditable.png)](snap:falixnodes)
+[![Snap Store](https://raw.githubusercontent.com/snapcore/snap-store-badges/master/EN/%5BEN%5D-snap-store-black-uneditable.png)](https://snapcraft.io/falixnodes)
 
 ### Websites
 [Software Website](https://software.falixnodes.net)
