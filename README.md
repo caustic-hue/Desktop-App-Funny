@@ -39,6 +39,16 @@ There are tons of other good reasons why to use Electron, you can read more abou
 ### Why all these requirements to just build it?
 The reason why the software needs all these requirements like Python and Visual Studio(Desktop Development with C++) is because of technology that was coded into the software like [Glasstron](https://www.npmjs.com/package/glasstron) and [XTerm](https://xtermjs.org/).
 
+## Timeline
+ - 2021
+   - May
+     - 25th - Upgrade Electron from `v12` or `v9.4.4` to `v13`
+   - October 
+     - 19th - Upgrade requirements of NodeJS from `v14` to `v16`
+ - 2022
+   - October 
+     - 18th - Upgrade requirements of NodeJS from `v16` to `v18`
+
 ## Preparing to Build
 ### Requirements
  - [NodeJS](https://nodejs.org/en/) 14.16.0 or above
