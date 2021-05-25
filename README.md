@@ -3,7 +3,7 @@
 # Falix Software (Formly FalixNodes Software)
 ![preview](https://i.imgur.com/eTVgn6E.png)
 
-## Links
+## 🔗 Links
 
 ### Download
 Windows:
@@ -23,7 +23,7 @@ Linux:
 [License](https://github.com/FalixNodes-Software/Desktop-App/blob/master/md/LICENSE)
 
 
-## FAQ for Developers
+## ❔ Q&A for Developers
 ### Why is Font Awesome included offline? You could use a script instead.
 Yes, I could of ended up using one of code that includes Font Awesome with the software. The reason why I include Font Awesome with the software in the `/src/fonts/` folder is for offline usage. This way, if the user goes offline unexpectly, icons will stay load. Something would look off if the icons didn't load.
 
@@ -39,7 +39,7 @@ There are tons of other good reasons why to use Electron, you can read more abou
 ### Why all these requirements to just build it?
 The reason why the software needs all these requirements like Python and Visual Studio(Desktop Development with C++) is because of technology that was coded into the software like [Glasstron](https://www.npmjs.com/package/glasstron) and [XTerm](https://xtermjs.org/).
 
-## Timeline
+## 🕑 Timeline
  - 2021
    - May
      - 25th - Upgrade Electron from `v12` or `v9.4.4` to `v13`
@@ -49,7 +49,7 @@ The reason why the software needs all these requirements like Python and Visual 
    - October 
      - 18th - Upgrade requirements of NodeJS from `v16` to `v18`
 
-## Preparing to Build
+## 🔧 Preparing to Build
 ### Requirements
  - [NodeJS](https://nodejs.org/en/) 14.16.0 or above
  - [Python](https://www.python.org/) 3.9 or above (Windows 7 no longer supprted)
