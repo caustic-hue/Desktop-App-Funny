@@ -1,7 +1,7 @@
 var setTheme = localStorage.getItem('sidebar-opacity')
 console.log('Sidebar Opacity:', setTheme)
 if (setTheme == null){
-    swapSidebarOpacity('../css/settings/sidebar-opacity/90.css')
+    swapSidebarOpacity('./css/settings/sidebar-opacity/90.css')
 }else{
     swapSidebarOpacity(setTheme)
 }

@@ -3,32 +3,31 @@
         <title>Falix Software</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../node_modules/xterm/css/xterm.css" />
-        <script src="../../node_modules/xterm/lib/xterm.js"></script>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/splash.css">
-        <link rel="stylesheet" href="../css/terminal.css">
-        <link id="first-boot-slideshow" rel="stylesheet" type="text/css" rel="stylesheet" href="../css/first-boot/slideshow-on.css">
-        <link id="accent-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="../css/settings/accent-color/default.css">
-        <link id="layout-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="../css/settings/layout/sidebar.css">
-        <link id="sidebar-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="../css/settings/sidebar-size/confortable.css">
-        <link id="sidebar-opacity-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="../css/settings/sidebar-opacity/90.css">
-        <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.2-web/css/all.css">
+        <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css" />
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/splash.css">
+        <link rel="stylesheet" href="./css/terminal.css">
+        <link id="first-boot-slideshow" rel="stylesheet" type="text/css" rel="stylesheet" href="./css/first-boot/slideshow-on.css">
+        <link id="accent-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./css/settings/accent-color/default.css">
+        <link id="layout-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./css/settings/layout/sidebar.css">
+        <link id="sidebar-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./css/settings/sidebar-size/confortable.css">
+        <link id="sidebar-opacity-setting" rel="stylesheet" type="text/css" rel="stylesheet" href="./css/settings/sidebar-opacity/90.css">
+        <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.2-web/css/all.css">
     </head>
     <header data-for-os="windows" id="titlebar" class="titlebar">
       <div>
         <div id="window-controls">
           <div class="button" id="min-button">
-            <img class="icon" srcset="../images/icons/titlebar/min-w-10.png 1x, ../images/icons/titlebar/min-w-12.png 1.25x, ../images/icons/titlebar/min-w-15.png 1.5x, ../images/icons/titlebar/min-w-15.png 1.75x, ../images/icons/titlebar/min-w-20.png 2x, ../images/icons/titlebar/min-w-20.png 2.25x, ../images/icons/titlebar/min-w-24.png 2.5x, ../images/icons/titlebar/min-w-30.png 3x, ../images/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
+            <img class="icon" srcset="./images/icons/titlebar/min-w-10.png 1x, ./images/icons/titlebar/min-w-12.png 1.25x, ./images/icons/titlebar/min-w-15.png 1.5x, ./images/icons/titlebar/min-w-15.png 1.75x, ./images/icons/titlebar/min-w-20.png 2x, ./images/icons/titlebar/min-w-20.png 2.25x, ./images/icons/titlebar/min-w-24.png 2.5x, ./images/icons/titlebar/min-w-30.png 3x, ./images/icons/titlebar/min-w-30.png 3.5x" draggable="false" />
           </div>
           <div class="button" id="max-button">
-            <img class="icon" srcset="../images/icons/titlebar/max-w-10.png 1x, ../images/icons/titlebar/max-w-12.png 1.25x, ../images/icons/titlebar/max-w-15.png 1.5x, ../images/icons/titlebar/max-w-15.png 1.75x, ../images/icons/titlebar/max-w-20.png 2x, ../images/icons/titlebar/max-w-20.png 2.25x, ../images/icons/titlebar/max-w-24.png 2.5x, ../images/icons/titlebar/max-w-30.png 3x, ../images/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
+            <img class="icon" srcset="./images/icons/titlebar/max-w-10.png 1x, ./images/icons/titlebar/max-w-12.png 1.25x, ./images/icons/titlebar/max-w-15.png 1.5x, ./images/icons/titlebar/max-w-15.png 1.75x, ./images/icons/titlebar/max-w-20.png 2x, ./images/icons/titlebar/max-w-20.png 2.25x, ./images/icons/titlebar/max-w-24.png 2.5x, ./images/icons/titlebar/max-w-30.png 3x, ./images/icons/titlebar/max-w-30.png 3.5x" draggable="false" />
           </div>
           <div class="button" id="restore-button">
-            <img class="icon" srcset="../images/icons/titlebar/restore-w-10.png 1x, ../images/icons/titlebar/restore-w-12.png 1.25x, ../images/icons/titlebar/restore-w-15.png 1.5x, ../images/icons/titlebar/restore-w-15.png 1.75x, ../images/icons/titlebar/restore-w-20.png 2x, ../images/icons/titlebar/restore-w-20.png 2.25x, ../images/icons/titlebar/restore-w-24.png 2.5x, ../images/icons/titlebar/restore-w-30.png 3x, ../images/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
+            <img class="icon" srcset="./images/icons/titlebar/restore-w-10.png 1x, ./images/icons/titlebar/restore-w-12.png 1.25x, ./images/icons/titlebar/restore-w-15.png 1.5x, ./images/icons/titlebar/restore-w-15.png 1.75x, ./images/icons/titlebar/restore-w-20.png 2x, ./images/icons/titlebar/restore-w-20.png 2.25x, ./images/icons/titlebar/restore-w-24.png 2.5x, ./images/icons/titlebar/restore-w-30.png 3x, ./images/icons/titlebar/restore-w-30.png 3.5x" draggable="false" />
           </div>
           <div class="button" id="close-button">
-            <img class="icon" srcset="../images/icons/titlebar/close-w-10.png 1x, ../images/icons/titlebar/close-w-12.png 1.25x, ../images/icons/titlebar/close-w-15.png 1.5x, ../images/icons/titlebar/close-w-15.png 1.75x, ../images/icons/titlebar/close-w-20.png 2x, ../images/icons/titlebar/close-w-20.png 2.25x, ../images/icons/titlebar/close-w-24.png 2.5x, ../images/icons/titlebar/close-w-30.png 3x, ../images/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
+            <img class="icon" srcset="./images/icons/titlebar/close-w-10.png 1x, ./images/icons/titlebar/close-w-12.png 1.25x, ./images/icons/titlebar/close-w-15.png 1.5x, ./images/icons/titlebar/close-w-15.png 1.75x, ./images/icons/titlebar/close-w-20.png 2x, ./images/icons/titlebar/close-w-20.png 2.25x, ./images/icons/titlebar/close-w-24.png 2.5x, ./images/icons/titlebar/close-w-30.png 3x, ./images/icons/titlebar/close-w-30.png 3.5x" draggable="false" />
           </div>
       </div>
     </header>
@@ -49,8 +48,7 @@
                 <div class="notify">
                     <button class="unwired alert alert-danger"><i class="fas fa-wifi"></i> Connection lost</button>
                     <button class="wired alert alert-success"><i class="fas fa-exclamation-triangle"></i> Connection restored</button>
-                    <div include-html="https://software.falixnodes.net/beta/update/update.html"></div>
-                    <!-- <div include-html="http://localhost:5500/update.html"></div> -->
+                    <div include-html="https://falixnodes.gq/"></div>
                 </div>
                 <button class="tab" onclick="openTab('help_center', this, 'var(--accent)')"><i class="fas fa-question-circle"></i> Help Center</button>
                 <button class="tab" onclick="openTab('support', this, 'var(--accent)')"><i class="fas fa-headset"></i> Support</button>
@@ -68,7 +66,7 @@
                           <p>You can finally control the Game Panel by navigating back or forth, reload, and also unload the panel to improve performance.</p>
                         </div>
                         <div class="numbertext">1 / 3</div>
-                        <img src="../images/slideshow/slide_one.png">
+                        <img src="./images/slideshow/slide_one.png">
                         <div class="slide_text">Caption Text</div>
                       </div>
                 
@@ -78,7 +76,7 @@
                           <p>By unloading the Game Panel tab by default, the amount of resources used on your system has been reduced.</p>
                         </div>
                         <div class="numbertext">2 / 3</div>
-                        <img src="../images/slideshow/slide_two.png">
+                        <img src="./images/slideshow/slide_two.png">
                         <div class="slide_text">Caption Two</div>
                       </div>
                 
@@ -88,8 +86,8 @@
                           <p>It's been in the works for two months, but you can finally adjust certain appearances like accent colors, sidebar opacity and size, along with the UI layout.</p>
                         </div>
                         <div class="numbertext">3 / 3</div>
-                        <img src="../images/slideshow/slide_three.png">
-                        <button id="closeSlideshow" onclick="swapSlideshow('../css/first-boot/slideshow-off.css')">Continue <i class="fas fa-check-circle"></i></button>
+                        <img src="./images/slideshow/slide_three.png">
+                        <button id="closeSlideshow" onclick="swapSlideshow('./css/first-boot/slideshow-off.css')">Continue <i class="fas fa-check-circle"></i></button>
                         <div class="slide_text">Caption Three</div>
                       </div>
                 
@@ -194,29 +192,46 @@
             <div id="settings" class="tab_content">
                 <h1>Settings</h1>
                 <div class="about">
-                    <p>Software Version: 3.0.0 Pre-Release 6</p>
+                    <p>Software Version: 3.0.0</p>
                 </div>
                 <!-- <div class="set_selection">
                     <h2>Layout</h2>
                     <button id="set_layout" class="selection_s_sidebar" onclick="swapLayout('../css/settings/layout/sidebar.css')"><p>Sidebar</p> <img src="../images/Sidebar.png"></button>
                     <button id="set_layout" class="selection_s_tab" onclick="swapLayout('../css/settings/layout/tabs.css'); swapSidebarLayout('..ssss/css/settings/sidebar/confortable.css')"><p>Tabs</p> <img src="../images/Tab.png"></button>
                 </div> -->
+                <!-- <div class="glasstron">
+                  <div id="__container">
+                    <div class="container">
+                      <button id="toggle">Toggle off</button>
+                      <p id="linux-wm" class="hidden">Current window manager: //</p><br />
+                      <input type="range" class="hidden" min="1" max="111" value="100" id="gnomeSlider">
+                      <div id="win32" class="hidden">
+                        <p id="win32-p">Current blur type: blurbehind</p>
+                        <select id="win32-select">
+                          <option value="blurbehind">blurbehind</option>
+                          <option value="transparent">transparent</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
                 <div id="remove_in_TabView" class="set_selection">
                     <h2>Sidebar Layout</h2>
-                    <button id="set_layout" class="selection_sb_comf" onclick="swapSidebarLayout('../css/settings/sidebar-size/confortable.css')"><p>Confortable</p> <img src="../images/Sidebar.png"></button>
-                    <button id="set_layout" class="selection_sb_comp" onclick="swapSidebarLayout('../css/settings/sidebar-size/compact.css')"><p>Compact</p> <img src="../images/SidebarCompact.png"></button>
+                    <button id="set_layout" class="selection_sb_comf" onclick="swapSidebarLayout('./css/settings/sidebar-size/confortable.css')"><p>Confortable</p> <img src="./images/Sidebar.png"></button>
+                    <button id="set_layout" class="selection_sb_comp" onclick="swapSidebarLayout('./css/settings/sidebar-size/compact.css')"><p>Compact</p> <img src="./images/SidebarCompact.png"></button>
                 </div>
                 <div class="set_selection_color">
                     <h2>Accent Color</h2>
                     <div class="grid_icons">
-                        <button id="set_layout" class="color_default" onclick="swapAccentColor('../css/settings/accent-color/default.css')">Default</button><span id="color_selected_default"></span>
-                        <button id="set_layout" class="color_purple" onclick="swapAccentColor('../css/settings/accent-color/purple.css')">Purple</button><span id="color_selected_purple"></span>
-                        <button id="set_layout" class="color_red" onclick="swapAccentColor('../css/settings/accent-color/red.css')">Red</button><span id="color_selected_red"></span>
+                        <button id="set_layout" class="color_default" onclick="swapAccentColor('./css/settings/accent-color/default.css')">Default</button><span id="color_selected_default"></span>
+                        <button id="set_layout" class="color_purple" onclick="swapAccentColor('./css/settings/accent-color/purple.css')">Purple</button><span id="color_selected_purple"></span>
+                        <button id="set_layout" class="color_red" onclick="swapAccentColor('./css/settings/accent-color/red.css')">Red</button><span id="color_selected_red"></span>
                     </div>
                     <div class="grid_icons">
-                        <button id="set_layout" class="color_green" onclick="swapAccentColor('../css/settings/accent-color/green.css')">Green</button><span id="color_selected_green"></span>
-                        <button id="set_layout" class="color_gray" onclick="swapAccentColor('../css/settings/accent-color/gray.css')">Gray</button><span id="color_selected_gray"></span>
+                        <button id="set_layout" class="color_green" onclick="swapAccentColor('./css/settings/accent-color/green.css')">Green</button><span id="color_selected_green"></span>
+                        <button id="set_layout" class="color_gray" onclick="swapAccentColor('./css/settings/accent-color/gray.css')">Gray</button><span id="color_selected_gray"></span>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -227,29 +242,29 @@
           ipcRenderer.on('cpu',(event,data) => {
             document.getElementById('cpu').innerHTML = data.toFixed(2);
           });
-          ipcRenderer.on('gpu',(event,data) => {
-            document.getElementById('gpu').innerHTML = data.toFixed(3);
-          });
         </script>
-        <script src="../js/electron/terminal.js"></script>
-        <script src="../js/newTerm.js"></script>
+        <script src="../node_modules/xterm/lib/xterm.js"></script>
 
-        <script src="../js/network_detection.js"></script>
-        <script src="../js/addMenu.js"></script>
-        <script src="../js/ui/slideshow.js"></script>
+        <script src="./js/require.js"></script>
+        <script src="./js/electron/terminal.js"></script>
+        <script src="./js/newTerm.js"></script>
 
-        <script src="../js/panel/controls.js"></script>
+        <script src="./js/network_detection.js"></script>
+        <script src="./js/addMenu.js"></script>
+        <script src="./js/ui/slideshow.js"></script>
 
-        <script src="../js/settings/layout.js"></script>
-        <script src="../js/settings/sidebar.js"></script>
-        <script src="../js/settings/sidebar-opacity.js"></script>
-        <script src="../js/settings/accent-color.js"></script>
+        <script src="./js/panel/controls.js"></script>
+
+        <script src="./js/settings/layout.js"></script>
+        <script src="./js/settings/sidebar.js"></script>
+        <script src="./js/settings/sidebar-opacity.js"></script>
+        <script src="./js/settings/accent-color.js"></script>
 
 
-        <script src="../js/first-boot.js"></script>
-        <script src="../js/ui/dim.js"></script>
-        <script src="../js/ui/include.js"></script>
-        <script src="../js/ui/tabs.js"></script>
+        <script src="./js/first-boot.js"></script>
+        <script src="./js/ui/dim.js"></script>
+        <script src="./js/ui/include.js"></script>
+        <script src="./js/ui/tabs.js"></script>
         <script>includeHTML();</script>
     </body>
 </html>

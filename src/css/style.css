@@ -3,7 +3,7 @@
     --bg-accent-two: #162230;
 }
 
-body {background: #191919;}
+body {background: transparent;}
 .linux #titlebar { /* Hide the custom titlebar if user is using Linux */
     display: none !important; 
 }

@@ -1,11 +1,11 @@
 {
   "name": "falixnodes",
-  "version": "4.27.4",
+  "version": "4.28.0",
   "description": "",
   "main": "src/js/electron/index.js",
   "scripts": {
     "start": "electron --enable-transparent-visuals --disable-gpu .",
-    "build": "electron-builder build",
+    "build": "build",
     "rebuild": "electron-rebuild"
   },
   "author": "KorbsStudio",
@@ -13,7 +13,7 @@
   "dependencies": {
     "electron-tools": "^2.4.2",
     "glasstron": "^0.0.7",
-    "node-abi": "^2.26.0",
+    "node-abi": "^2.30.0",
     "node-addon-api": "^3.0.0",
     "node-pty": "^0.11.0-beta7",
     "npm": "^7.14.0",
@@ -22,16 +22,9 @@
     "xterm": "^4.8.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
     "electron": "^13.0.1",
-    "electron-builder": "^20.44.4",
-    "electron-rebuild": "^1.11.0",
-    "eslint": "^7.12.1",
-    "windowbar": "^1.7.3"
+    "electron-builder": "^19.0.0",
+    "electron-rebuild": "^1.11.0"
   },
   "build": {
     "protocols": {
@@ -41,8 +34,7 @@
       ]
     },
     "win": {
-      "asar": true,
-      "target": "appx"
+      "target": "nsis"
     },
     "mac": {
       "target": "dmg"
