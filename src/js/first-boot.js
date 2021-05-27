@@ -1,11 +1,7 @@
-var setTheme = localStorage.getItem('slideshow')
-console.log('Slideshow:', setTheme)
-if (setTheme == null){
-  swapSlideshow('./css/first-boot/slideshow-on.css')
+if(!localStorage.getItem("firstTime")){
+  console.log('New user, showing welcome screen') // This will show trigger if you set cache or remove session cookies
+  window.open('https://software.falixnodes.net/welcome/', 'width=500,height=300frame=true,nodeIntegration=no');
+  localStorage.setItem("firstTime","true");
 }else{
-  swapSlideshow(setTheme)
-}
-function swapSlideshow(sheet){
-  document.getElementById('first-boot-slideshow').href = sheet
-  localStorage.setItem('slideshow', sheet)
+  console.log('Existing user, aborting welcome screen.')
 }

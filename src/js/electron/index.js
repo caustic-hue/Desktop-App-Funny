@@ -31,13 +31,14 @@ function createWindowWin () { /* Windows */
     closable: true,
     maximizable: true,
     minimizable: true,
+    nativeWindowOpen: true,
 		blur: true,
-		blurType: "blurbehind", // Usually Acrylic, but mouse lag issue as of now, use Blur Behind for now
+		blurType: "acrylic", // Usually Acrylic, but mouse lag issue as of now, use Blur Behind for now
     webPreferences: {
       preload: path.join(__dirname, "../../js/electron/preload.js"),
 			nodeIntegration: true,
 			webviewTag: true,
-			devTools: false,
+			devTools: true,
       enableRemoteModule: true,
       contextIsolation: false
     }
@@ -59,6 +60,7 @@ function createWindowWin () { /* Windows */
       devTools: false
     }
   })
+  mainWindow.setIcon(path.join(__dirname, '../../images/icons/app/256x256.ico'));
   loadWindow.loadFile('src/html/splash/index.html');
   mainWindow.loadFile('src/index.html');
   setTimeout(() => { // Show splash for 5 seconds (fixed time) then the main window
@@ -105,6 +107,7 @@ function createWindowMac () { /* macOS */
     closable: true,
     maximizable: true,
     minimizable: true,
+    nativeWindowOpen: true,
     titleBarStyle: 'hiddenInset', // Set the titlebar controls(known as Traffic light buttons on macOS) into app
     webPreferences: {
       preload: path.join(__dirname, "../../src/js/electron/preload.js"),
@@ -131,6 +134,7 @@ function createWindowMac () { /* macOS */
       devTools: false
     }
   })
+  mainWindow.setIcon(path.join(__dirname, '../../images/icons/app/icon.icns'));
   loadWindow.loadFile('src/html/splash/index.html');
   mainWindow.loadFile('src/index.html');
   mainWindow.webContents.on('did-finish-load', function() {
@@ -182,6 +186,7 @@ function createWindowLinux () { /* Linux */
     minimizable: true,
     autoHideMenuBar: true,
     webPreferences: {
+      nativeWindowOpen: true,
       preload: path.join(__dirname, "preload.js"),
 			nodeIntegration: true,
 			webviewTag: true,
@@ -208,6 +213,7 @@ function createWindowLinux () { /* Linux */
   })
   loadWindow.loadFile('src/html/splash/index.html');
   mainWindow.loadFile('src/index.html');
+  mainWindow.setIcon(path.join(__dirname, '../../images/icons/app/256x256.png'));
   mainWindow.webContents.on('did-finish-load', function() {
     mainWindow.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
  })

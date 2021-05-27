@@ -5,7 +5,7 @@
   "main": "src/js/electron/index.js",
   "scripts": {
     "start": "electron --enable-transparent-visuals --disable-gpu .",
-    "build": "electron-builder build --arch x64",
+    "build": "electron-builder build",
     "package": "electron-packager . Falix --overwrite=true --platform=win32 --arch=x64 --icon=./build/icons/256x256.ico",
     "rebuild": "electron-rebuild"
   },
@@ -37,7 +37,8 @@
       ]
     },
     "win": {
-      "target": "nsis"
+      "target": "zip",
+      "asar": "false"
     },
     "mac": {
       "target": "dmg"
