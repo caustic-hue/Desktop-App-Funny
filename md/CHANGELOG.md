@@ -1,33 +1,48 @@
-# v2.3.0 Changelog - Vivify
- - Added new protocol `falix://`
+# v3.0.0 Changelog - Vivify
+ - Added new protocol `falix://falix`
  - Added FalixCoins Mining tab
  - Added intergrated terminal
  - Added new splash window
  - Added new screen during first boot
+ - Added help center
+ - Added new ticket center
  - Added loading indicator when news is loading
  - Added social icons to News tab
- - Added loading indicator if panel is loading or reloading
+ - Added loading indicator if Game Panel is loading or reloading
  - Panel is unloaded by default on software startup giving a better performance boost
  - Added crash screen if panel doesn't load
- - Added new panel controls 🎉️
+ - Added new Game Panel controls 🎉️
    - Kill (Unload Panel)
    - Reload
    - Back
    - Forward
+   - Load (Shown when panel is unloaded)
  - Added Settings
-   - Sidebar Layout
    - Accent Colors (Default(Blue), Red, Purple, Green, or Gray)
    - Sidebar Size
- - Converted tabs into a sidebar
+ - Added New Packages
+   - `electron-tools`
+   - `glasstron`
+   - `node-abi`
+   - `node-addon-api`
+   - `os-utils`
+   - `x11`
+   - `xterm`
+   - `electron-packager`
+   - `electron-rebuild`
+   - `xmldom`
+   - `yargs-parser`
+ - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`latest`](https://www.npmjs.com/package/electron/)
+ - Changed Linux setup file from ZIP to Snap
  - Changed macOS setup file from ZIP to DMG
- - Changed Windows setup file from EXE to APPX (Microsoft Store only)
  - Change titlebar controls depending on operating system, merged [Titlebar Detection](https://github.com/KorbsStudio/electron-titlebar-os-detection)
  - Change Game Panel's domain from __gp.falixnodes.net__ to __panel.falixnodes.net__
  - Moved dropdown menu to bottom left
  - Moved code from __renderer.js__ to __preload.js__
  - Renamed "Dashboard" to "News"
+ - Converted tabs into a sidebar
+ - Removed Windows 7 support
  - Removed Release Notes
- - Removed auto updating integration for Windows
+ - Removed auto updating integration for Windows (Now managed by Microsoft Store)
  - Removed "FalixNodes Software" text from Dashboard
  - Removed version number text from Dashboard
- - Updated Electron from [`v9.0.5`](https://www.npmjs.com/package/electron/v/9.0.5) to [`latest`](https://www.npmjs.com/package/electron/)

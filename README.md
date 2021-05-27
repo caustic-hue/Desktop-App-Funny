@@ -43,6 +43,7 @@ The reason why the software needs all these requirements like Python and Visual 
  - 2021
    - May
      - 25th - ~~Upgrade Electron from `v12` or `v9.4.4` to `v13`~~
+     - 27th or 28th - Stable release of v3.0.0 for Windows 10 and Linux
    - October 
      - 19th - Upgrade requirements of NodeJS from `v14` to `v16`
  - 2022
