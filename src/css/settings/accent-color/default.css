@@ -1,5 +1,5 @@
 :root {
-    --accent: #2970CC;
+    --accent: #fff394;
 }
 
 span#color_selected_default {
@@ -13,5 +13,5 @@ span#color_selected_default {
 }
 
 button#set_layout img {
-    filter: inherit;
+    filter: hue-rotate(183deg);
 }
