@@ -1,7 +1,7 @@
 [![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
 
 # Read before using
-basically just a joke by changing mosr of the stuff to "funny".
+basically just a joke by changing most of the stuff to "funny".
 
 # Falix Software (Formly FalixNodes Software)
 ![preview](https://i.imgur.com/eTVgn6E.png)
