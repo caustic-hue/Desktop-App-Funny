@@ -44,7 +44,12 @@ The reason why the software needs all these requirements like Python and Visual 
  - 2021
    - May
      - 25th - ~~Upgrade Electron from `v12` or `v9.4.4` to `v13`~~
-     - 27th or 28th - Stable release of v3.0.0 for Windows 10 and Linux
+     - 27th or 28th - ~~Stable release of v3.0.0 for Windows 10~~
+   - June
+     - 11th - Will be removed from the Snapstore and switch to AppImage
+     - 11th - Stable release of v3.0.0 for macOS
+   - December
+     - 15th - v4.0.0 Beta opens
    - October 
      - 19th - Upgrade requirements of NodeJS from `v14` to `v16`
  - 2022
