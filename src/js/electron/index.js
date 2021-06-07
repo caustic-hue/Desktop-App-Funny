@@ -94,7 +94,8 @@ function createWindowWin () { /* Windows */
    require('electron').shell.openExternal(url);
   });
 }
-function createWindowMac () { /* macOS */
+
+function createWindowMac () { /* Linux */
   const mainWindow = new BrowserWindow({
     backgroundColor: '#162230',
     width: 1200,
@@ -102,18 +103,19 @@ function createWindowMac () { /* macOS */
     minWidth: 1000,
     minHeight: 520,
     frame: true,
-    transparent: false,
     show: false,
+    transparent: false,
     closable: true,
     maximizable: true,
     minimizable: true,
-    nativeWindowOpen: true,
+    autoHideMenuBar: true,
     titleBarStyle: 'hiddenInset', // Set the titlebar controls(known as Traffic light buttons on macOS) into app
     webPreferences: {
-      preload: path.join(__dirname, "../../src/js/electron/preload.js"),
+      nativeWindowOpen: true,
+      preload: path.join(__dirname, "preload.js"),
 			nodeIntegration: true,
 			webviewTag: true,
-			devTools: false,
+      devTools: false,
       enableRemoteModule: true,
       contextIsolation: false
     }
@@ -134,42 +136,41 @@ function createWindowMac () { /* macOS */
       devTools: false
     }
   })
-  mainWindow.setIcon(path.join(__dirname, '../../images/icons/app/icon.icns'));
   loadWindow.loadFile('src/html/splash/index.html');
   mainWindow.loadFile('src/index.html');
+  mainWindow.setIcon(path.join(__dirname, '../../images/icons/app/256x256.png'));
   mainWindow.webContents.on('did-finish-load', function() {
     mainWindow.webContents.insertCSS('#titlebar{display: none !important;}') /* Remove Windows Titlebar if OS is Linux */
  })
+ setInterval(() => {
+   osUI.cpuUsage(function(v){
+    mainWindow.webContents.send('cpu',v*100);
+  });
+ },1000);
  setTimeout(() => {
   mainWindow.show();
- }, 5000); 
+ }, 5000);
  setTimeout(() => {
   loadWindow.close();
- }, 4000);
-  setInterval(() => {
-    osUI.cpuUsage(function(v){
-     mainWindow.webContents.send('cpu',v*100);
-     mainWindow.webContents.send('gpu',v*100);
-   });
-  },1000);
-  var ptyProcess = pty.spawn(shell, [], {
-      name: "xterm-color",
-      cols: 80,
-      rows: 30,
-      cwd: process.env.HOME,
-      env: process.env
-  });
-  ptyProcess.on('data', function(data) {
-      mainWindow.webContents.send("terminal.incomingData", data);
-      console.log("");
-  });
-  ipcMain.on("terminal.keystroke", (event, key) => {
-      ptyProcess.write(key);
-  });
-  mainWindow.webContents.on('new-window', function(e, url) {
-   e.preventDefault();
-   require('electron').shell.openExternal(url);
-  });
+ }, 4900);
+ var ptyProcess = pty.spawn(shell, [], {
+     name: "xterm-color",
+     cols: 80,
+     rows: 30,
+     cwd: process.env.HOME,
+     env: process.env
+ });
+ ptyProcess.on('data', function(data) {
+     mainWindow.webContents.send("terminal.incomingData", data);
+     console.log("");
+ });
+ ipcMain.on("terminal.keystroke", (event, key) => {
+     ptyProcess.write(key);
+ });
+ mainWindow.webContents.on('new-window', function(e, url) {
+	e.preventDefault();
+	require('electron').shell.openExternal(url);
+ });
 }
 function createWindowLinux () { /* Linux */
   const mainWindow = new BrowserWindow({
