@@ -102,7 +102,7 @@ function createWindowMac () { /* Linux */
     height: 800,
     minWidth: 1000,
     minHeight: 520,
-    frame: true,
+    frame: false,
     show: false,
     transparent: false,
     closable: true,
