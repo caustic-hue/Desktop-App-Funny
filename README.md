@@ -1,5 +1,6 @@
 [![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
 
+
 # Falix Software (Formly FalixNodes Software)
 ![preview](https://i.imgur.com/eTVgn6E.png)
 
