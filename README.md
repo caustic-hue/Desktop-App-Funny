@@ -48,6 +48,10 @@ The reason why the software needs all these requirements like Python and Visual 
    - June
      - 11th - Will be removed from the Snapstore and switch to AppImage
      - 11th - Stable release of v3.0.0 for macOS
+   - July
+     - 12th - Release v3.1.0 with language support
+     - 12th - Add language support for software website
+     - 12th - Open new feedback website
    - December
      - 15th - v4.0.0 Beta opens
    - October 
