@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron --enable-transparent-visuals --disable-gpu .",
     "build": "electron-builder build",
+    "publish": "electron-builder build -p always",
     "package": "electron-packager . Falix --overwrite=true --platform=win32 --arch=x64 --icon=./build/icons/256x256.ico",
     "rebuild": "electron-rebuild"
   },
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "electron": "^13.0.1",
-    "electron-builder": "^20.0.0",
+    "electron-builder": "22.10.4",
     "electron-rebuild": "^1.11.0",
     "xmldom": "^0.5.0",
     "yargs-parser": "^13.1.2"

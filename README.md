@@ -1,10 +1,11 @@
-[![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
+![image](https://img.shields.io/badge/Translation%3A%20Chinese-0%25-lightgrey)
+![image](https://img.shields.io/badge/Translation%3A%20Spanish-0%25-lightgrey)
 
 # Read before using
 basically just a joke by changing most of the stuff to "funny".
 
 # Falix Software (Formly FalixNodes Software)
-![preview](https://i.imgur.com/eTVgn6E.png)
+![image](https://user-images.githubusercontent.com/51213244/121123903-fe27d080-c7f1-11eb-9aba-4102590265f7.png)
 
 ## 🔗 Links
 
@@ -46,7 +47,16 @@ The reason why the software needs all these requirements like Python and Visual 
  - 2021
    - May
      - 25th - ~~Upgrade Electron from `v12` or `v9.4.4` to `v13`~~
-     - 27th or 28th - Stable release of v3.0.0 for Windows 10 and Linux
+     - 27th or 28th - ~~Stable release of v3.0.0 for Windows 10~~
+   - June
+     - 11th - Will be removed from the Snapstore and switch to AppImage
+     - 11th - Stable release of v3.0.0 for macOS
+   - July
+     - 12th - Release v3.1.0 with language support
+     - 12th - Add language support for software website
+     - 12th - Open new feedback website
+   - December
+     - 15th - v4.0.0 Beta opens
    - October 
      - 19th - Upgrade requirements of NodeJS from `v14` to `v16`
  - 2022
