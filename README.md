@@ -1,5 +1,5 @@
-[![falixnodes](https://snapcraft.io/falixnodes/badge.svg)](https://snapcraft.io/falixnodes)
-
+![image](https://img.shields.io/badge/Translation%3A%20Chinese-0%25-lightgrey)
+![image](https://img.shields.io/badge/Translation%3A%20Spanish-0%25-lightgrey)
 
 # Falix Software (Formly FalixNodes Software)
 ![image](https://user-images.githubusercontent.com/51213244/121123903-fe27d080-c7f1-11eb-9aba-4102590265f7.png)
